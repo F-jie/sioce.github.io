@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>JS</title>
+      <link href="/2020/07/28/JS/"/>
+      <url>/2020/07/28/JS/</url>
+      
+        <content type="html"><![CDATA[<h2 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h2><h3 id="JavaScript的六种数据类型"><a href="#JavaScript的六种数据类型" class="headerlink" title="JavaScript的六种数据类型"></a>JavaScript的六种数据类型</h3><ol><li>String、Number、Boolean、null、undefined、object；</li><li>数据类型的转换可以使用函数也可以使用强制类型转换；</li></ol><h3 id="JavaScript的"><a href="#JavaScript的" class="headerlink" title="JavaScript的"></a>JavaScript的</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/07/28/hello-world/"/>
       <url>/2020/07/28/hello-world/</url>

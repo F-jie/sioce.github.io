@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sioce.me/"/>
-  <updated>2020-07-28T07:07:54.512Z</updated>
+  <updated>2020-07-28T13:15:59.318Z</updated>
   <id>http://sioce.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS</title>
+    <link href="http://sioce.me/2020/07/28/JS/"/>
+    <id>http://sioce.me/2020/07/28/JS/</id>
+    <published>2020-07-28T13:12:37.000Z</published>
+    <updated>2020-07-28T13:15:59.318Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h2><h3 id="JavaScript的六种数据类型"><a href="#JavaScript的六种数据类型" class="headerlink" title="JavaScript的六种数据类型"></a>JavaScript的六种数据类型</h3><ol><li>String、Number、Boolean、null、undefined、object；</li><li>数据类型的转换可以使用函数也可以使用强制类型转换；</li></ol><h3 id="JavaScript的"><a href="#JavaScript的" class="headerlink" title="JavaScript的"></a>JavaScript的</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;JavaScript基础&quot;&gt;&lt;a href=&quot;#JavaScript基础&quot; class=&quot;headerlink&quot; title=&quot;JavaScript基础&quot;&gt;&lt;/a&gt;JavaScript基础&lt;/h2&gt;&lt;h3 id=&quot;JavaScript的六种数据类型&quot;&gt;&lt;a hre
+      
+    
+    </summary>
+    
+    
+      <category term="JS" scheme="http://sioce.me/categories/JS/"/>
+    
+    
+      <category term="JS" scheme="http://sioce.me/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
