@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>computer network</title>
+      <link href="/2020/07/28/computer-network/"/>
+      <url>/2020/07/28/computer-network/</url>
+      
+        <content type="html"><![CDATA[<h2 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h2><ol><li><p>总分为七层，这里忽略应用层后的表示层和会话层：</p><table><thead><tr><th>名称</th><th>协议</th></tr></thead><tbody><tr><td>应用层</td><td>DHCP、HTTP、HTTPS、TRTMP、P2P、DNS、GTP、RPC</td></tr><tr><td>传输层</td><td>UDP、TCP</td></tr><tr><td>网络层</td><td>IMCP、IP、OSPF、BGP、IPSec、GRE</td></tr><tr><td>链路层</td><td>ARP、VLAN、STP</td></tr><tr><td>物理层</td><td>网络跳线</td></tr></tbody></table></li><li><p>网络层的IP地址和链路层的MAC地址虽均能唯一确定用户：</p><ul><li>但IP可能是动态分布的，用户可能随时下线，此时就需要使用MAC进行区分；</li><li>MAC是早期局域网通信的产物；</li><li>之所以提出IP协议是因为MAC的查找效率低下，另外MAC地址是通过ARP协议获取的，不易处理广播风暴问题；</li></ul></li><li><p>关于网络分层的四个问题：</p><ul><li>TCP三次握手，MAC和IP对应什么操作？</li><li>已知原始地址和目标地址，其间需通过两个中转站B、C，包在中转站时是如何知道最终目的地的呢？</li><li>我们知道二层设备和三层设备，那么二层设备处理的包的内容是否包含第七层的的内容呢？</li><li>SSH登录公有云主机，都经历那些过程呢？<ol><li><em>解答：复杂的程序都是要分层的，网络协议同样如此，网络中的包可以由下层没上层，反之则不成立</em>；</li><li>**</li></ol></li></ul></li><li><p>ifconfig</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Computer network </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Computer network </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript leaning</title>
       <link href="/2020/07/28/JavaScript-leaning/"/>
       <url>/2020/07/28/JavaScript-leaning/</url>
