@@ -39,20 +39,146 @@
 </li>
 <li><p>关于网络分层的四个问题：</p>
 <ul>
-<li>TCP三次握手，MAC和IP对应什么操作？</li>
-<li>已知原始地址和目标地址，其间需通过两个中转站B、C，包在中转站时是如何知道最终目的地的呢？</li>
-<li>我们知道二层设备和三层设备，那么二层设备处理的包的内容是否包含第七层的的内容呢？</li>
-<li>SSH登录公有云主机，都经历那些过程呢？<ol>
+<li><p>TCP三次握手，MAC和IP对应什么操作？</p>
+</li>
+<li><p>已知原始地址和目标地址，其间需通过两个中转站B、C，包在中转站时是如何知道最终目的地的呢？</p>
+</li>
+<li><p>我们知道二层设备和三层设备，那么二层设备处理的包的内容是否包含第七层的的内容呢？</p>
+</li>
+<li><p>SSH登录公有云主机，都经历那些过程呢？</p>
+<ol>
 <li><em>解答：复杂的程序都是要分层的，网络协议同样如此，网络中的包可以由下层没上层，反之则不成立</em>；</li>
-<li>**</li>
+<li><em>经过网口的网络包会被相应的程序处理(混杂模式)</em>：<ul>
+<li>首先摘掉第二层的头进行比对，若MAC地址一致，则交给网络层处理；</li>
+<li>其次摘掉第三层的头比对IP，不一致则进行转发，否则交给传输层处理；</li>
+<li>再其次拿掉第四层的头，交给TCP或者UDP处理，若是一个正常的数据包，则交给监听相应端口的应用程序，若是发起或应答，则需要发送回复包。</li>
+</ul>
+</li>
+<li>二层设备仅处理链路层的MAC地址，三层设备另外需要处理网络层的IP地址；</li>
 </ol>
 </li>
 </ul>
 </li>
-<li><p>ifconfig</p>
+</ol>
+<h2 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h2><ol>
+<li><p>查询IP地址的指令：ifconfig、ip addr、ipconfig；</p>
+</li>
+<li><p>IP地址的分类：</p>
+<table>
+<thead>
+<tr>
+<th align="center">类别</th>
+<th align="center">头标识</th>
+<th align="center">网络号(bit)</th>
+<th align="center">主机号(bit)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A</td>
+<td align="center">0</td>
+<td align="center">7</td>
+<td align="center">24</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">10</td>
+<td align="center">14</td>
+<td align="center">16</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">110</td>
+<td align="center">21</td>
+<td align="center">8</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">类别</th>
+<th align="center">头标识</th>
+<th align="center">其他</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">D</td>
+<td align="center">1110</td>
+<td align="center">多播组号(28)</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">11110</td>
+<td align="center">留待后用(27)</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">类别</th>
+<th align="center">IP地址范围</th>
+<th align="center">最大主机数</th>
+<th align="center">私有IP地址范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A</td>
+<td align="center">0.0.0.0-127.255.255.255</td>
+<td align="center">16777214</td>
+<td align="center">10.0.0.0-10.255.255.255</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">128.0.0.0-191.255.255.255</td>
+<td align="center">65534</td>
+<td align="center">172.16.0.0-172.31.255.255</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">162.0.0.0-233.255.255.255</td>
+<td align="center">254</td>
+<td align="center">192.168.0.0-192.168.255.255</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>由上表可见，A、B、C三类IP的主机数分配严重不均，因而出现了<strong>无类型域间选路(CIDR)</strong>:</p>
+<ul>
+<li>CIDR将IP地址分为两部分，前面是网络号，后面是主机号，如10.100.122.2/24，24表示网络号长度；</li>
+<li>和CIDR共存的是<strong>广播地址</strong>和<strong>子网掩码</strong>，如10.100.122.2/24对应的广播地址为10.100.122.255，子网掩码是255.255.255.0，向广播地址发送数据，则10.100.122.:中的所有机器都能收到；将IP和子网掩码进行与操作，即可得网络号。</li>
+</ul>
+</li>
+<li><p>工作中几乎不涉及IP分类，仅使用CIDR，但需要区分公有IP和私有IP。每个网段中的第一个地址往往是网络的出口地址，最后一个地址则是广播地址；</p>
+</li>
+<li><p><strong>组播地址</strong>，使用这类地址，属于某个组的机器都能收到；</p>
+</li>
+<li><p><strong>MAC地址</strong>，它虽然是唯一的，但不具备大范围定位功能。它能避免组网过程中的冲突问题。</p>
+</li>
+<li><p><strong>网络的状态标识(net_device flags)</strong>：</p>
+<ul>
+<li><strong>UP</strong>：表示网卡启动；</li>
+<li><strong>BROADCAST</strong>：表示网卡有广播地址，可发送广播包；</li>
+<li><strong>MULTICAST</strong>：表示网卡可发送多播包；</li>
+<li><strong>LOWER_UP</strong>：表示L1启动，即网线插入；</li>
+<li><strong>MTU1500</strong>：表示最大传输单元，它属于第二层链路层概念，当MAC头加正文大于1500自己时，需要启动分片传输；</li>
+<li><strong>queueing discipline</strong>：表示排队规则，内核通过网络接口发送数据，需要为该接口配置排队规则将数据包加入队列<ul>
+<li><em>pfifo</em>：先入先出；</li>
+<li><em>pfifo-fast</em>：它的队列包含三个波段，每个波段先入先出，根据服务类型<strong>TOC</strong>将数据包放入不同的波段；</li>
+</ul>
+</li>
+</ul>
 </li>
 </ol>
-</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">本文作者：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Fujie</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">本文链接：</span><span class="p-copytight-value"><a href="/2020/07/28/computer-network/">http://sioce.me/2020/07/28/computer-network/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">版权声明：</span><span class="p-copytight-value">本博客所有文章除特殊声明外，均采用<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>许可协议。转载请注明出处 <a href="http://sioce.me">Fujie的博客</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tag"></i><a href="/tags/Computer-network/">Computer network</a></span></div><aside id="toc"><div class="toc-title">目录</div><nav><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#分层"><span class="toc-number">1.</span> <span class="toc-text">分层</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="next" href="/2020/07/28/JavaScript-leaning/">JavaScript leaning &gt;</a></div></section><footer><p>Copyright © 2020 - 2020 <a href="/." rel="nofollow">Fujie's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/js/search.js"></script><script type="text/javascript" src="/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+<h2 id="IP地址的分配"><a href="#IP地址的分配" class="headerlink" title="IP地址的分配"></a>IP地址的分配</h2><ol>
+<li><p>手动配置：</p>
+<pre><code class="{.line-numbers}"> # 使用ifconfig
+ sudo ifconfig eth1 10.0.0.1/24
+ sudo ifconfig eth1 up
+
+ #使用iproute2
+ sudo ip addr add 10.0.0.1/24 dev eth1
+ sudo ip link set up eth1</code></pre>
+</li>
+</ol>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">本文作者：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Fujie</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">本文链接：</span><span class="p-copytight-value"><a href="/2020/07/28/computer-network/">http://sioce.me/2020/07/28/computer-network/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">版权声明：</span><span class="p-copytight-value">本博客所有文章除特殊声明外，均采用<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>许可协议。转载请注明出处 <a href="http://sioce.me">Fujie的博客</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tag"></i><a href="/tags/Computer-network/">Computer network</a></span></div><aside id="toc"><div class="toc-title">目录</div><nav><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#分层"><span class="toc-number">1.</span> <span class="toc-text">分层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址"><span class="toc-number">2.</span> <span class="toc-text">IP地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址的分配"><span class="toc-number">3.</span> <span class="toc-text">IP地址的分配</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="next" href="/2020/07/28/JavaScript-leaning/">JavaScript leaning &gt;</a></div></section><footer><p>Copyright © 2020 - 2020 <a href="/." rel="nofollow">Fujie's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/js/search.js"></script><script type="text/javascript" src="/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
 if (search_path.length == 0) {
     search_path = 'search.xml';
 }
