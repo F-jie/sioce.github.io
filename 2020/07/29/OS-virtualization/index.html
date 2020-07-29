@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>OS virtualization | Fujie's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Fujie's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/plugins/prettify/doxy.css"><script type="text/javascript" src="/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Fujie's Blog</a></h1></div><p class="m-desc">学习&生活记录</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/archives/">归档</a></li><li><span class="dot">●</span><a href="/categories/">分类</a></li><li><span class="dot">●</span><a href="/tags/">标签</a></li><li><span class="dot">●</span><a href="/about/">关于</a></li><li><span class="dot">●</span><a href="/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="搜索" onfocus="if(this.value=='搜索'){this.value='';}" onblur="if(this.value==''){this.value='搜索';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">OS virtualization</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/2020/07/29/OS-virtualization/">2020-07-29</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/categories/OS/">OS</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><h3 id="第一章-操作系统简介"><a href="#第一章-操作系统简介" class="headerlink" title="第一章 操作系统简介"></a>第一章 操作系统简介</h3><ol>
+<li>冯·诺伊曼计算机模型：取指令、解码、运行。</li>
+<li><strong>操作系统</strong>使程序的运行更加容易，且高效正确。为了实现这一目的，操作系统需要使用<strong>虚拟化技术</strong>——即将物理资源转化为更通用、更强大且易于使用的虚拟形式。用户使用操作系统提供的<strong>API</strong>访问硬件资源。</li>
+<li><strong>虚拟化CPU</strong>，这使得系统在只有一个处理器的前提下同时运行多个程序，为了控制程序的开始和结束，需要使用相关的接口，向操作系统传递需求。操作系统的策略将会控制特定时间运行哪个程序——这由<strong>操作系统的基本机制</strong>决定。</li>
+<li><strong>虚拟化内存</strong>，现代机器提供的物理内存就是一个字节数组，读数据需要指定地址，写数据需要指定地址和数据。操作系统虚拟化内存时，每个进程访问私有的<strong>虚拟地址空间</strong>，OS以某种方式将该地址空间映射到机器的物理内存上。</li>
+<li><strong>并发问题</strong>，这一问题首先出现在操作系统本身上，此外在现代多线程程序中也存在这样的问题；</li>
+<li><strong>持久性</strong>，内存中的数据需要依靠硬件和软件辅助存储，硬件通常指磁盘，软件则为文件系统，软件负责将用户创建的内容存储到硬盘中。<ul>
+<li>操作系统会提供CPU和内存的抽象，但不会为每个应用程序创建虚拟磁盘；</li>
+</ul>
+</li>
+<li><strong>总结</strong>：操作系统取得CPU、内存以及磁盘等物理资源，并对之进行虚拟化；处理并发可能引起的问题；对文件进行持久化存储。这些过程最重要的是<strong>抽象</strong>，抽象是编写大型程序必不可少的部分。</li>
+<li>操作系统设计的目标：<ul>
+<li>高性能，操作系统的开销以额外的时间和空间的形式出现，但必须容忍不完美；</li>
+<li>提供程序间以及OS和程序间的保护，为了实现这一目标，<strong>隔离</strong>是一种基本原理；</li>
+<li>可靠性：事实上，这方面有许多正在进行的研究；</li>
+<li>其他目标主要有：能源效率、安全性和移动性等。</li>
+</ul>
+</li>
+</ol>
+<h3 id="第四章-操作系统的基本抽象——进程"><a href="#第四章-操作系统的基本抽象——进程" class="headerlink" title="第四章 操作系统的基本抽象——进程"></a>第四章 操作系统的基本抽象——进程</h3><ol>
+<li>进程的非正式定义——运行中的程序</li>
+<li>为了实现CPU的虚拟化，需要使用分时共享CPU技术，虽然不可避免的引入潜在的性能损失但很值得。实现优秀的CPU虚拟化，需要搭配使用低级机制和高级智能：<ul>
+<li>低级机制——<strong>机制(mechanism)</strong>，如上下文切换；</li>
+<li>高级智能——<strong>策略(policy)</strong>，这指的是操作系内的决定算法；</li>
+</ul>
+</li>
+<li>进程的机器状态对理解进程的构成十分重要：<ul>
+<li>机器状态一——<strong>地址空间</strong>，即内存，内存中保存着程序的指令、读取的数据等；</li>
+<li>机器状态二——<strong>寄存器</strong>，许多指令需要对寄存器进程读写；</li>
+<li>机器状态三——<strong>程序计数器(指令指针，IP)</strong>；</li>
+</ul>
+</li>
+<li>进程API<ul>
+<li>创建(create)</li>
+<li>销毁(destroy)</li>
+<li>等待(wait)</li>
+<li>其他控制(miscellaneous control)</li>
+<li>状态(status)</li>
+</ul>
+</li>
+<li>进程的创建，程序-&gt; -&gt;进程：<ul>
+<li>操作系统加载代码和静态数据至内存中属于进程的地址空间；(现代操作系统惰性执行该过程，这涉及到分页和交换机制——内存虚拟化)；</li>
+<li>为程序的运行时栈分配内存，C语言拥栈保存局部变量、函数参数和返回地址；</li>
+<li>为程序的堆分配内存，C语言中堆用于存储显示动态分配数据，数据结构也需要堆，堆的大小会变化；</li>
+<li>为输入输出任务创建三个文件描述符，用于标准的输入输出以及错误。</li>
+</ul>
+</li>
+<li>进程的状态：<ul>
+<li><strong>运行</strong>：正在处理器上执行；</li>
+<li><strong>就绪</strong>：等待被调用；</li>
+<li><strong>阻塞</strong>：等待某种操作完成。</li>
+</ul>
+</li>
+<li>数据结构，操作系统需要使用某些关键的数据结构跟踪相关的信息：<ul>
+<li>为所有就绪的进程保留进程列表；</li>
+<li>跟踪正在运行进程的附加信息；</li>
+<li>跟踪被阻塞进程；</li>
+<li>I/O完成时，正确地唤醒进程；</li>
+</ul>
+</li>
+</ol>
+<h3 id="第五章-进程API"><a href="#第五章-进程API" class="headerlink" title="第五章 进程API"></a>第五章 进程API</h3><ol>
+<li>UNIX系统使用一对系统调用<code>fork()/exec()</code>创建进程，另外进程还可以使用系统调用<code>wait()</code>等待其创建子进程执行完成；</li>
+<li><code>fork()</code>系统调用：使用该系统调用创建子进程，子进程fork()调用的返回值为0，父进程fork()调用返回值为子进程PID；</li>
+<li><code>wait()</code>系统调用，该系统调用在子进程运行结束后才返回；</li>
+<li><code>exec()</code>系统调用，它还有其他几种变体：execl、execle、execlp、execv、execvp。假设使用execvp运行字符计数程序，exec会从可执行程序中加载代码和静态数据并覆写自己的代码段，堆栈及相应的地址空间也会重新初始化。</li>
+<li>之所以设计fork和exec，是为了程序能够运行fork之后，exec之前构建的代码，比如shell，它首先显示命令提示符，等待用户输入，用户输入指令后，shell调用fork创建新的进程，再调用exec的某个变体执行命令中的可执行程序，最后调用wait等待该子进程结束，子进程结束后，shell再输出命令提示符；</li>
+<li>重定向的实现原理：再创建子进程之后，关闭标准输入输出，同时打开重定向的文件，最后调用exec。</li>
+<li>UNIX系统的管道，pipe()系统调用可以将一个进程的输出无缝连接到另一个进程的输入上，如<code>grep -o foo file | wc -l</code></li>
+</ol>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">本文作者：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Fujie</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">本文链接：</span><span class="p-copytight-value"><a href="/2020/07/29/OS-virtualization/">http://sioce.me/2020/07/29/OS-virtualization/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">版权声明：</span><span class="p-copytight-value">本博客所有文章除特殊声明外，均采用<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>许可协议。转载请注明出处 <a href="http://sioce.me">Fujie的博客</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tag"></i><a href="/tags/OS/">OS</a></span></div><aside id="toc"><div class="toc-title">目录</div><nav><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一章-操作系统简介"><span class="toc-number">1.</span> <span class="toc-text">第一章 操作系统简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四章-操作系统的基本抽象——进程"><span class="toc-number">2.</span> <span class="toc-text">第四章 操作系统的基本抽象——进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五章-进程API"><span class="toc-number">3.</span> <span class="toc-text">第五章 进程API</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="next" href="/2020/07/28/computer-network/">computer network &gt;</a></div></section><footer><p>Copyright © 2020 - 2020 <a href="/." rel="nofollow">Fujie's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/js/search.js"></script><script type="text/javascript" src="/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.1" async></script></body></html>
