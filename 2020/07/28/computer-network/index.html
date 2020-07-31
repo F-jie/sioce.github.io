@@ -491,11 +491,201 @@ ip rule add from 192.168.1.0/24 table 10</code></pre>
 <li><p>TCP的拥塞控制问题：</p>
 <ul>
 <li>TCP的策略就是在不堵塞不丢包的情况下，尽量发挥宽带，同时避免超时和重传；</li>
-<li>为了探测网络的宽带，TCP采用慢启动的方式，开始只发送一个，收到应答后每次发送两个，收到两个的应答后，每次发送四个···，如此循环指数增长，当值大于ssthresh时每</li>
+<li>为了探测网络的宽带，TCP采用慢启动的方式，开始只发送一个，收到应答后每次发送两个，收到两个的应答后，每次发送四个···，如此循环指数增长，当值大于ssthresh时，每收到一个确认增加cwnd分之一，这样就变成了线性增长。当增长到溢出时，将sshresh设为cwnd/2，cwnd设为一，重新开始慢启动；</li>
+<li>针对上述快速重传机制，当出现丢包时，发送三四前一个包的ACk，即可触发快速重传机制，此时cwnd减半，sshthresh设为cwnd，仍呈线性增长；</li>
+<li>拥塞控制存在的两个问题：<ul>
+<li>丢包不代表宽带耗尽；</li>
+<li>等宽带耗尽发生丢包才启动拥塞控制，为时已晚；</li>
+</ul>
+</li>
+<li>如何优化上述两个问题：<ul>
+<li><strong>TCP BBR拥塞算法</strong>：增加发送速度将宽带填满，但不填中间设备的缓存，寻找到这个平衡点，可以很好的达到高宽带和低时延的平衡；</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
-</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">本文作者：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Fujie</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">本文链接：</span><span class="p-copytight-value"><a href="/2020/07/28/computer-network/">http://sioce.me/2020/07/28/computer-network/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">版权声明：</span><span class="p-copytight-value">本博客所有文章除特殊声明外，均采用<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>许可协议。转载请注明出处 <a href="http://sioce.me">Fujie的博客</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tag"></i><a href="/tags/Computer-network/">Computer network</a></span></div><aside id="toc"><div class="toc-title">目录</div><nav><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#分层"><span class="toc-number">1.</span> <span class="toc-text">分层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-总分为七层，这里忽略应用层后的表示层和会话层"><span class="toc-number">1.1.</span> <span class="toc-text">一、 总分为七层，这里忽略应用层后的表示层和会话层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-网络层的IP地址和链路层的MAC地址虽均能唯一确定用户"><span class="toc-number">1.2.</span> <span class="toc-text">二、 网络层的IP地址和链路层的MAC地址虽均能唯一确定用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-关于网络分层的四个问题"><span class="toc-number">1.3.</span> <span class="toc-text">三、 关于网络分层的四个问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址"><span class="toc-number">2.</span> <span class="toc-text">IP地址</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-查询IP地址的指令：ifconfig、ip-addr、ipconfig"><span class="toc-number">2.1.</span> <span class="toc-text">一、 查询IP地址的指令：ifconfig、ip addr、ipconfig</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-IP地址的分类"><span class="toc-number">2.2.</span> <span class="toc-text">二、 IP地址的分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址的分配"><span class="toc-number">3.</span> <span class="toc-text">IP地址的分配</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-手动配置"><span class="toc-number">3.1.</span> <span class="toc-text">一、 手动配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-动态主机配置协议-DHCP-，主要机制"><span class="toc-number">3.2.</span> <span class="toc-text">二、 动态主机配置协议(DHCP)，主要机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-预启动执行环境-PXE-，使用PXE管理员可以自动给数据中心的服务器安装操作系统"><span class="toc-number">3.3.</span> <span class="toc-text">三、 预启动执行环境(PXE)，使用PXE管理员可以自动给数据中心的服务器安装操作系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MAC——媒体访问控制"><span class="toc-number">4.</span> <span class="toc-text">MAC——媒体访问控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-网络中的第一层"><span class="toc-number">4.1.</span> <span class="toc-text">一、 网络中的第一层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-网络中的第二层——数据链路层"><span class="toc-number">4.2.</span> <span class="toc-text">二、 网络中的第二层——数据链路层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-多台交换机——拓扑结构"><span class="toc-number">4.3.</span> <span class="toc-text">三、 多台交换机——拓扑结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络层"><span class="toc-number">5.</span> <span class="toc-text">网络层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-IMCP协议"><span class="toc-number">5.1.</span> <span class="toc-text">一、 IMCP协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网关"><span class="toc-number">6.</span> <span class="toc-text">网关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-MAC头和IP头细节"><span class="toc-number">6.1.</span> <span class="toc-text">一、 MAC头和IP头细节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-路由器"><span class="toc-number">6.2.</span> <span class="toc-text">二、 路由器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-静态路由"><span class="toc-number">6.3.</span> <span class="toc-text">三、 静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、-路由协议"><span class="toc-number">6.4.</span> <span class="toc-text">四、 路由协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层"><span class="toc-number">7.</span> <span class="toc-text">传输层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-TCP和UDP"><span class="toc-number">7.1.</span> <span class="toc-text">一、 TCP和UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、UDP"><span class="toc-number">7.2.</span> <span class="toc-text">二、UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、TCP"><span class="toc-number">7.3.</span> <span class="toc-text">三、TCP</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/2020/07/29/OS-virtualization/">&lt; OS virtualization</a><a class="next" href="/2020/07/28/JavaScript-leaning/">JavaScript leaning &gt;</a></div></section><footer><p>Copyright © 2020 - 2020 <a href="/." rel="nofollow">Fujie's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/js/search.js"></script><script type="text/javascript" src="/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+<h3 id="四、-socket"><a href="#四、-socket" class="headerlink" title="四、 socket"></a>四、 socket</h3><ol>
+<li>socker进行的是端到端的通信，无法获知网络中间设备的信息，因此它的参数仅涉及网络层和传输层；<ul>
+<li>网络层的设置主要为指定IP协议版本，使用TCP还是UDP；</li>
+</ul>
+</li>
+<li>基于TCP协议的socket程序函数调用：<ul>
+<li>服务端：<ul>
+<li>调用<code>bind()</code>函数，赋予socket一个IP地址和端口，因为服务端可能包含多张网卡；</li>
+<li>调用<code>listen()</code>函数开始监听，等待客户端发起连接；</li>
+<li>操作系统内核会为每个Socket维护两个队列，一个是处于established状态的连接，另一个是处于syn_rcvd状态的连接；</li>
+<li>调用<code>accept()</code>函数，取一个established状态的连接进行处理；</li>
+</ul>
+</li>
+<li>客户端：<ul>
+<li>调用<code>connect()</code>函数，指明IP和端口，发起三次握手；</li>
+<li>内核分配临时端口给客户端，握手成功，服务端就会返回另一个socket；</li>
+<li><strong>注意：</strong>监听使用的socket和传输数据使用的socket并不是同一个；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>基于UDP协议的socket程序调用：简单；</li>
+<li>服务器如何维护多个连接：<ul>
+<li>服务器的<strong>最大连接数</strong>，系统使用四元数标识一个TCP连接：<code>{本机IP、本机端口、对端IP、对端端口}</code>，理论上一个服务端socket监听可以容纳2的48次方个TCP连接数，但由于Socket都是文件，受到<strong>文件描述符限制</strong>，另外还受到内存的限制；</li>
+</ul>
+</li>
+</ol>
+<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h2><h3 id="一、-HTTP1-x"><a href="#一、-HTTP1-x" class="headerlink" title="一、 HTTP1.x"></a>一、 HTTP1.x</h3><ol>
+<li><a href="https://static001.geekbang.org/resource/image/10/74/10ff27d1032bf32393195f23ef2f9874.jpg" target="_blank" rel="noopener">HTTP请求格式示意图</a>:<ul>
+<li><strong>请求行</strong>，其中url就是对应的网址，版本为HTTP版本，目前多为1.1，方法分多种类型：<ul>
+<li><strong>GET</strong>，从服务器获取资源；</li>
+<li><strong>GET</strong>，向服务器传送一些信息；</li>
+<li><strong>PUT</strong>，向指定资源位置上传最新内容；</li>
+<li><strong>DELETE</strong>，删除资源；</li>
+</ul>
+</li>
+<li><strong>首部字段</strong>，采用key-value的格式，用于保存一些重要的字段：<ul>
+<li>缓存：对于网页中的一些静态资源，由于长时间不会改变，所以不用每次请求都发送静态资源，只需发送动态资源，从而节省宽带：<ul>
+<li><strong>cache control</strong>就是控制缓存的，它使用max-age决定客户端是否接收缓存资源；</li>
+<li><strong>If-Modified-Since</strong>也是用于控制缓存的，如果服务器资源从某个时间更新了，则客户端需要下载最新资源；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>HTTP请求的发送，HTTP是基于TCP的，符合TCP的基本行为；</li>
+<li><a href="https://static001.geekbang.org/resource/image/1c/c1/1c2cfd4326d0dfca652ac8501321fac1.jpg" target="_blank" rel="noopener">HTTP请求的返回示意图</a><ul>
+<li><strong>状态码</strong>标识请求的结果，如200、404等，<strong>短语</strong>会描述出现该结果的原因；</li>
+</ul>
+</li>
+</ol>
+<h3 id="二、-HTTP2-0"><a href="#二、-HTTP2-0" class="headerlink" title="二、 HTTP2.0"></a>二、 HTTP2.0</h3><ol>
+<li>HTTP1.x的缺陷：<ul>
+<li>以纯文本的形式通信，每次通信都携带完整HTTP头，实时性和并发性有待提高；</li>
+</ul>
+</li>
+<li>HTTP2.0的改进：<ul>
+<li>对HTTP头进行了压缩，建立key-value的索引，相同的头进发送索引；</li>
+<li>将一个TCP的连接切分为多个流，流具有ID和优先级；</li>
+<li>将传输信息分为更小的消息和帧，如<strong>Header帧</strong>传输头信息，<strong>Data帧</strong>传输正文实体；</li>
+<li>通过这些机制，HTTP2.0将不同的请求分配到不同的流中，进行二进制传输，帧还可以打乱顺序，再根据标识符重组，并根据优先级决定先处理哪个流的数据；</li>
+</ul>
+</li>
+</ol>
+<h3 id="三、-QUIC协议"><a href="#三、-QUIC协议" class="headerlink" title="三、 QUIC协议"></a>三、 QUIC协议</h3><ol>
+<li>这是谷歌提出的基于UDP的通信协议，用于解决TCP丢包重传问题：<ul>
+<li><strong>自定义连接机制</strong>：TCP使用四元数标识一个连接，四元数一旦变化，就需要重新连接，不适用于移动设备。而QUIC使用64位随机数标作为标识，而且使用UDP这种无连接的协议，只要ID不变，即使IP和端口变化也不用重新连接；</li>
+<li><strong>自定义重传机制</strong>：TCP使用序号和应答解决顺序和丢包问题，根据自适应重传算法采样超时时间精确度不够。QUIC也是由序号的，但每个序号的包只发送一次，下次就需要加一，从而保证RTT时间的精确性。那么如何识别不同序号的包是同一个呢？根据每个包在整个数据流中的偏移量进行区分；</li>
+<li><strong>无阻塞多路复用</strong>：同一条QUIC可以创建多个stream，发送多个HTTP请求，同时QUIC是基于UDP的，一个连接上的多个stream间没有以来，即使其中一个stream丢了也不影响其他的流；</li>
+<li><strong>自定义流量控制</strong>：TCP使用<strong>滑动窗口协议</strong>进行流量控制，QUIC也是使用window_update沟通可接收字节数，但QUIC不但在一个连接上控制窗口，还在连接的每个流上控制窗口。QUIC的ACK是基于offset的，每个offset的包到来后即可进行应答。</li>
+</ul>
+</li>
+</ol>
+<h3 id="四、-HTTPS"><a href="#四、-HTTPS" class="headerlink" title="四、 HTTPS"></a>四、 HTTPS</h3><ol>
+<li>为了解决数据传输中的安全问题，需要使用加密技术，分为对称加密和非对称加密；<ul>
+<li><strong>对称加密</strong>，加密和解密使用的是同一个密钥；相对来说效率更高，交互场景多采用对称加密算法，但这种加密传输需要解决密钥约定问题</li>
+<li><strong>非对称加密</strong>，加密和解密使用不同的钥匙，这种技术可以解决对称加密过程中的密钥约定问题；</li>
+</ul>
+</li>
+<li><strong>数字证书</strong>，这是为了解决公钥的权威性问题；数字证书上应该有公钥、所有者、发证机构和有效期；发证的集构称为<strong>CA</strong>，权威集构使用<strong>签名算法</strong>给证书卡章。发证机构也是需要层层背书的；</li>
+<li>HTTPS工作模式：<ul>
+<li>客户端发送client hello消息到服务，使用明文传输TLS版本、加密套件候选表、压缩算法候选表、协商对称密钥的随机数等；</li>
+<li>服务端发送server hello消息，并发送使用的协议版本、加密算法、压缩算法、协商后续密钥的随机数等；</li>
+<li>服务端将自己的证书信息发送给客户端；</li>
+<li>客户端验证服务端证书，生成随机数字Pre-master，同Client Key Exchange信息使用服务端公钥加密后发给服务端；</li>
+<li>根据上文的三个随机数字，客户端和服务端分别生成对称密钥，之后双方使用对称密钥进行数据传输；</li>
+<li>使用对称密钥进行传输之前，先使用对称密钥进行测试；</li>
+</ul>
+</li>
+</ol>
+<h3 id="五、-流媒体协议"><a href="#五、-流媒体协议" class="headerlink" title="五、 流媒体协议"></a>五、 流媒体协议</h3><ol>
+<li>视频传输之前必须进行压缩，使用压缩技术去除视频中的：<ul>
+<li>空间冗余——像素与像素之间具有强关联性，没必要保存每一个像素；</li>
+<li>时间冗余——视频序列帧与帧之间具有相似性；</li>
+<li>视觉冗余——人眼对视频中的某些细节不敏感；</li>
+<li>编码冗余——不同像素出现的概率不同；</li>
+</ul>
+</li>
+<li>两种视频编码标准：<ul>
+<li><strong>VCEG</strong>，侧重传输，H.xxx系列；</li>
+<li><strong>MPEG</strong>，MPEG-x系列，本是做视频存储的；</li>
+<li><strong>ITU-T</strong>，与MPEG共同之内搞定了H.264/MPEG-4 AVC标准</li>
+</ul>
+</li>
+<li>视频直播的基本过程：<ul>
+<li><strong>推流</strong>：采集视频并编码后推送到服务端；</li>
+<li>服务端<strong>接流</strong>后，进行一些处理，如<strong>转码</strong>以适应多种客户端</li>
+<li><strong>拉流</strong>，观众请求流处理完毕的视频流；为了降低服务器压力，服务器需要一个视频<strong>分发</strong>网络，预先将视频加载到就近边缘节点；</li>
+<li><strong>解码</strong>，观众对视频流进行解码播放；</li>
+</ul>
+</li>
+<li>视频编码原理：<ul>
+<li>视频中的三种帧：<ul>
+<li><strong>I帧</strong>，关键帧，里面是完整的图片；、</li>
+<li><strong>P帧</strong>，前向预测编码帧，表示当前帧和前一帧的差异；</li>
+<li><strong>B帧</strong>，双向预测内插编码帧，记录本帧与前后帧的差别</li>
+</ul>
+</li>
+<li>编码过程：<ul>
+<li>首先通过<strong>时序进行编码</strong>，编码后IBBP间隔出现；</li>
+<li><strong>空间编码</strong>，一帧分为多个片，每片分为多个宏块，每个宏块分为多个子块；</li>
+<li>将上述时序空间立体的视频帧压缩位二进制流，该二进制流以<strong>网络提取层单元NALU</strong>为基本结构；</li>
+<li>每个NALU的内容：<ul>
+<li>起始标识符；</li>
+<li>NALU头，配置NALU类型，SPS是序列参数集，PPS是图像参数集，顾名思义，他们表示Payload中保存的是图像相关的参数；IPB帧类型，表示Payload中保存的是真正的视频数据；</li>
+<li>NALU Payload，承载NALU承载的数据；</li>
+</ul>
+</li>
+<li>如此就将一个视频拆分为一些列的帧，每帧拆为一系列的片，每一片都放在一个NALU中，NALU之间通过特殊的标识符分隔，每个I帧的前面必须插入单独保存SPS和PPS的NALU；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>推流——RTMP协议：<ul>
+<li>RTMP是基于TCP的，建立TCP连接之后还需要建立RTMP连接，之所以建立额外的连接，是因为需要沟通相应的版本号和时间戳，<a href="https://static001.geekbang.org/resource/image/de/c7/de6301500d02c5afa3e6c6f5fa47bac7.jpg" target="_blank" rel="noopener">RTMP连接建立状态示意图</a></li>
+<li>握手完成，双方传递控制信息，如块大小、窗口大小等；</li>
+<li>创建stream流，进行数据传输：<ul>
+<li>将NALU放入Message中，称为RTMP Packet包，<a href="https://static001.geekbang.org/resource/image/1a/4b/1a97a0b90c2304cbdf22a2bc8a8ce94b.jpg" target="_blank" rel="noopener">包格式示意图</a>;</li>
+<li>去掉NALU的起始标识符，将SPS和PPS参数封装为RTMP包进行发送，然后再发送一个个片的NALU数据；、</li>
+<li>RTMP将Message拆分为块，逐个发送；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="六、-P2P协议"><a href="#六、-P2P协议" class="headerlink" title="六、 P2P协议"></a>六、 P2P协议</h3><ol>
+<li>使用HTTP下载大文件速度过慢，需要使用文件传输协议<strong>FTP</strong>，FTP采用两个TCP连接传送一个文件：<ul>
+<li><strong>控制连接</strong>：服务器以被动的方式打开FTP端口21，客户端发起连接，将命令传送给服务器：常用的命令如：list、reter、store等</li>
+<li><strong>数据连接</strong>：当文件在客户端和服务端进行传输时，就需要创建连接；</li>
+</ul>
+</li>
+<li>FTP的两种工作模式：<ul>
+<li><strong>主动模式PORT</strong>：客户端随机打开大于1024一个端口N，向服务器的端口21发起连接，同时开放监听N+1端口，由服务器从自己的数据端口20主动连接客户端的N+1端口；</li>
+<li><strong>被动模式PASV</strong>：客户端打开本地两个任意端口N和N+1第一个端口连接服务器21端口，提交PASV命令，服务器开启任意大于1024的端口，返回消息，告知客户端FTP服务器开放用来传输数据的端口，客户端连接对应端口进行数据传输；</li>
+</ul>
+</li>
+<li><strong>P2P</strong>，使用HTTP和FTP都会给服务器造成较大的宽带压力，而P2P的诞生解决了这一问题，P2P假设资源分散地存储在多台设备上，下载文件的时候只需要知道那些设备上保存有目标文件，即可通过建立点对点连接就近获取文件，获取文件之后，自己的机器也成为分散存储文件设备的一部分；<ul>
+<li>存储分散存储设备位置的文件——<strong>种子(.torrent文件)</strong>，种子文件由两部分构成：<ul>
+<li><strong>announce(tracker URL)</strong>：</li>
+<li><strong>文件信息</strong>，主要包含：<ul>
+<li><em>info区</em>，指定种子有几个文件，文件长度、目录结构、目录和结构的名字；</li>
+<li><em>Name字段</em>，顶层目录的名字；</li>
+<li><em>每个段的大小</em>，bitTorrent协议把文件分为很多小段，然后分段下载；</li>
+<li><em>段哈希值</em>：将整个种子中每个段的SHA-1哈希值拼接到一起；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>下载流程：<ul>
+<li>客户端解析种子文件，得到tracker地址；</li>
+<li>客户端向tracker地址请求其他下载者的IP地址；</li>
+<li>客户端连接其他下载者，根据种子文件，与相关下载设备互相告知自己一下载内容，并交换双方为下载内容；</li>
+<li>下载这验证每个得到块的哈希值，一致则保存；</li>
+<li>这种模式需要以来中心tracker中心服务器。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">本文作者：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Fujie</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">本文链接：</span><span class="p-copytight-value"><a href="/2020/07/28/computer-network/">http://sioce.me/2020/07/28/computer-network/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">版权声明：</span><span class="p-copytight-value">本博客所有文章除特殊声明外，均采用<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>许可协议。转载请注明出处 <a href="http://sioce.me">Fujie的博客</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tag"></i><a href="/tags/Computer-network/">Computer network</a></span></div><aside id="toc"><div class="toc-title">目录</div><nav><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#分层"><span class="toc-number">1.</span> <span class="toc-text">分层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-总分为七层，这里忽略应用层后的表示层和会话层"><span class="toc-number">1.1.</span> <span class="toc-text">一、 总分为七层，这里忽略应用层后的表示层和会话层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-网络层的IP地址和链路层的MAC地址虽均能唯一确定用户"><span class="toc-number">1.2.</span> <span class="toc-text">二、 网络层的IP地址和链路层的MAC地址虽均能唯一确定用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-关于网络分层的四个问题"><span class="toc-number">1.3.</span> <span class="toc-text">三、 关于网络分层的四个问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址"><span class="toc-number">2.</span> <span class="toc-text">IP地址</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-查询IP地址的指令：ifconfig、ip-addr、ipconfig"><span class="toc-number">2.1.</span> <span class="toc-text">一、 查询IP地址的指令：ifconfig、ip addr、ipconfig</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-IP地址的分类"><span class="toc-number">2.2.</span> <span class="toc-text">二、 IP地址的分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址的分配"><span class="toc-number">3.</span> <span class="toc-text">IP地址的分配</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-手动配置"><span class="toc-number">3.1.</span> <span class="toc-text">一、 手动配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-动态主机配置协议-DHCP-，主要机制"><span class="toc-number">3.2.</span> <span class="toc-text">二、 动态主机配置协议(DHCP)，主要机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-预启动执行环境-PXE-，使用PXE管理员可以自动给数据中心的服务器安装操作系统"><span class="toc-number">3.3.</span> <span class="toc-text">三、 预启动执行环境(PXE)，使用PXE管理员可以自动给数据中心的服务器安装操作系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MAC——媒体访问控制"><span class="toc-number">4.</span> <span class="toc-text">MAC——媒体访问控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-网络中的第一层"><span class="toc-number">4.1.</span> <span class="toc-text">一、 网络中的第一层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-网络中的第二层——数据链路层"><span class="toc-number">4.2.</span> <span class="toc-text">二、 网络中的第二层——数据链路层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-多台交换机——拓扑结构"><span class="toc-number">4.3.</span> <span class="toc-text">三、 多台交换机——拓扑结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络层"><span class="toc-number">5.</span> <span class="toc-text">网络层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-IMCP协议"><span class="toc-number">5.1.</span> <span class="toc-text">一、 IMCP协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网关"><span class="toc-number">6.</span> <span class="toc-text">网关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-MAC头和IP头细节"><span class="toc-number">6.1.</span> <span class="toc-text">一、 MAC头和IP头细节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-路由器"><span class="toc-number">6.2.</span> <span class="toc-text">二、 路由器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-静态路由"><span class="toc-number">6.3.</span> <span class="toc-text">三、 静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、-路由协议"><span class="toc-number">6.4.</span> <span class="toc-text">四、 路由协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层"><span class="toc-number">7.</span> <span class="toc-text">传输层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-TCP和UDP"><span class="toc-number">7.1.</span> <span class="toc-text">一、 TCP和UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、UDP"><span class="toc-number">7.2.</span> <span class="toc-text">二、UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、TCP"><span class="toc-number">7.3.</span> <span class="toc-text">三、TCP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、-socket"><span class="toc-number">7.4.</span> <span class="toc-text">四、 socket</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用层"><span class="toc-number">8.</span> <span class="toc-text">应用层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-HTTP1-x"><span class="toc-number">8.1.</span> <span class="toc-text">一、 HTTP1.x</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-HTTP2-0"><span class="toc-number">8.2.</span> <span class="toc-text">二、 HTTP2.0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-QUIC协议"><span class="toc-number">8.3.</span> <span class="toc-text">三、 QUIC协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、-HTTPS"><span class="toc-number">8.4.</span> <span class="toc-text">四、 HTTPS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、-流媒体协议"><span class="toc-number">8.5.</span> <span class="toc-text">五、 流媒体协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、-P2P协议"><span class="toc-number">8.6.</span> <span class="toc-text">六、 P2P协议</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/2020/07/29/OS-virtualization/">&lt; OS virtualization</a><a class="next" href="/2020/07/28/JavaScript-leaning/">JavaScript leaning &gt;</a></div></section><footer><p>Copyright © 2020 - 2020 <a href="/." rel="nofollow">Fujie's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/js/search.js"></script><script type="text/javascript" src="/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
 if (search_path.length == 0) {
     search_path = 'search.xml';
 }
