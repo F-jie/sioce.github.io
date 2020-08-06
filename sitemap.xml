@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://sioce.me/2020/07/28/computer-network/</loc>
+    <loc>http://sioce.me/categories/index.html</loc>
     
-    <lastmod>2020-07-31T13:55:41.493Z</lastmod>
+    <lastmod>2020-08-06T13:17:46.051Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sioce.me/2020/08/06/computer-network-OSI2/</loc>
+    
+    <lastmod>2020-08-06T12:56:51.570Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sioce.me/2020/08/06/computer-network-OSI1/</loc>
+    
+    <lastmod>2020-08-06T12:56:50.267Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sioce.me/2020/08/06/computer-network-review/</loc>
+    
+    <lastmod>2020-08-06T09:10:43.058Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sioce.me/2020/08/06/20200804%E5%B0%8F%E8%AE%B0/</loc>
+    
+    <lastmod>2020-08-06T09:10:41.035Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sioce.me/2020/08/06/database/</loc>
+    
+    <lastmod>2020-08-06T09:10:39.038Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sioce.me/2020/07/28/JavaScript-leaning/</loc>
+    
+    <lastmod>2020-08-06T09:10:38.495Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://sioce.me/2020/07/29/OS-virtualization/</loc>
     
-    <lastmod>2020-07-29T14:48:04.651Z</lastmod>
+    <lastmod>2020-08-06T09:10:35.688Z</lastmod>
     
   </url>
   
@@ -23,30 +65,9 @@
   </url>
   
   <url>
-    <loc>http://sioce.me/2020/07/28/JavaScript-leaning/</loc>
-    
-    <lastmod>2020-07-28T14:10:16.873Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sioce.me/categories/index-1.html</loc>
-    
-    <lastmod>2020-07-28T09:33:43.791Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://sioce.me/archives/index.html</loc>
     
     <lastmod>2020-07-28T09:32:00.735Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sioce.me/categories/index.html</loc>
-    
-    <lastmod>2020-07-28T09:31:48.748Z</lastmod>
     
   </url>
   
