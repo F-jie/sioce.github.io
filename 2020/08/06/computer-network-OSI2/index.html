@@ -10,17 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="传输层一、 TCP和UDP">
+  <meta name="description" content="传输层">
 <meta property="og:type" content="article">
 <meta property="og:title" content="computer network OSI2">
 <meta property="og:url" content="http://sioce.me/2020/08/06/computer-network-OSI2/index.html">
 <meta property="og:site_name" content="Fujie&#39;s Blog">
-<meta property="og:description" content="传输层一、 TCP和UDP">
+<meta property="og:description" content="传输层">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://static001.geekbang.org/resource/image/16/7b/16dcd6fb8105a1caa75887b5ffa0bd7b.jpg">
 <meta property="og:image" content="https://static001.geekbang.org/resource/image/f7/a4/f7b1d3bc6b6d8e55f0951e82294c8ba4.jpg">
 <meta property="article:published_time" content="2020-08-06T09:27:18.000Z">
-<meta property="article:modified_time" content="2020-08-08T03:45:11.458Z">
+<meta property="article:modified_time" content="2020-08-08T04:07:48.903Z">
 <meta property="article:author" content="Fujie">
 <meta property="article:tag" content="computer network">
 <meta name="twitter:card" content="summary">
@@ -248,9 +248,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><h3 id="一、-TCP和UDP"><a href="#一、-TCP和UDP" class="headerlink" title="一、 TCP和UDP"></a>一、 TCP和UDP</h3><a id="more"></a>
+    <h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><a id="more"></a>
 
-<ol>
+<h3 id="一、-TCP和UDP"><a href="#一、-TCP和UDP" class="headerlink" title="一、 TCP和UDP"></a>一、 TCP和UDP</h3><ol>
 <li>我们都知道TCP使面向连接的、可靠的、基于字节流的，而UDP是无连接的，二者的差异如下：<ul>
 <li>TCP提供可靠交互，TCP传输的数据无差错、不丢失、不重复且有序到达，而UDP继承了IP包的特性，不保证不丢失和有序性；</li>
 <li>TCP是面向字节流的，发送的是没头没尾的字节流，而UDP继承了IP包的特性，基于数据报，逐个发送；</li>
