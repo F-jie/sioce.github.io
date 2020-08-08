@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="第一章 操作系统简介">
+  <meta name="description" content="虚拟化——CPU第一章 操作系统简介">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OS virtualization">
 <meta property="og:url" content="http://sioce.me/2020/07/29/OS-virtualization/index.html">
 <meta property="og:site_name" content="Fujie&#39;s Blog">
-<meta property="og:description" content="第一章 操作系统简介">
+<meta property="og:description" content="虚拟化——CPU第一章 操作系统简介">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-29T13:44:46.000Z">
-<meta property="article:modified_time" content="2020-08-08T03:57:35.879Z">
+<meta property="article:modified_time" content="2020-08-08T13:54:22.499Z">
 <meta property="article:author" content="Fujie">
 <meta property="article:tag" content="OS">
 <meta name="twitter:card" content="summary">
@@ -225,7 +225,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.5k字</span>
+      <span class="post-count">2.9k字</span>
     </span>
   </span>
 
@@ -234,7 +234,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">5分</span>
+      <span class="post-count">9分</span>
     </span>
   </span>
 </div>
@@ -245,7 +245,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h3 id="第一章-操作系统简介"><a href="#第一章-操作系统简介" class="headerlink" title="第一章 操作系统简介"></a>第一章 操作系统简介</h3><a id="more"></a>
+    <h2 id="虚拟化——CPU"><a href="#虚拟化——CPU" class="headerlink" title="虚拟化——CPU"></a>虚拟化——CPU</h2><h3 id="第一章-操作系统简介"><a href="#第一章-操作系统简介" class="headerlink" title="第一章 操作系统简介"></a>第一章 操作系统简介</h3><a id="more"></a>
 
 <ol>
 <li>冯·诺伊曼计算机模型：取指令、解码、运行。</li>
@@ -317,6 +317,234 @@
 <li>重定向的实现原理：再创建子进程之后，关闭标准输入输出，同时打开重定向的文件，最后调用exec。</li>
 <li>UNIX系统的管道，pipe()系统调用可以将一个进程的输出无缝连接到另一个进程的输入上，如<code>grep -o foo file | wc -l</code></li>
 </ol>
+<h3 id="第六章-机制——受限直接执行-LDE"><a href="#第六章-机制——受限直接执行-LDE" class="headerlink" title="第六章 机制——受限直接执行(LDE)"></a>第六章 机制——受限直接执行(LDE)</h3><ol>
+<li>基于<strong>分时共享</strong>，即可实现CPU的虚拟化。但也存在两个问题：<ul>
+<li><strong>性能</strong>，如何降低系统开销；</li>
+<li><strong>控制权</strong>，有效运行进程同时保留对CPU的控制权。</li>
+</ul>
+</li>
+<li><strong>受限直接执行</strong>，即直接再CPU上运行程序，其过程如下：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">步骤</th>
+<th align="center">操作系统</th>
+<th align="center">程序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">在进程列表中创建条目</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">为程序分配内存</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">将程序加载到内存中</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">根据argc/argv设置程序栈</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">清除寄存器</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">执行call main()方法</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">-</td>
+<td align="center">执行main()</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">-</td>
+<td align="center">从main中执行return</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">释放进程的内存</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">从进程列表中清楚内存</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>上述流程存在两个问题：<ul>
+<li><strong>问题1</strong>：操作系统如何确保程序不做我们不希望其做的事情，同时高效运行？</li>
+<li><strong>问题2</strong>：如何进行进程之间的切换；</li>
+</ul>
+</li>
+<li><strong>问题一</strong>，直接执行的优势是速度块，但是进程如何执行受限操作呢？如I/O请求等。如果进程能够随意发起I/O操作，文件系统采用的权限保护策略就会失效。为了解决这一问题，需要使用新的处理器模式：<ul>
+<li><strong>用户模式</strong>，在这种模式下执行的代码会受到限制，但可以使用操作系统提供的<strong>系统调用</strong>执行受限操作。</li>
+<li><strong>内核模式</strong>，操作系统(内核)以这种模式运行，这种模式下可以运行所有受限的指令；</li>
+</ul>
+</li>
+<li><strong>系统调用</strong>，执行系统调用，操作系统必须执行特殊的<strong>陷阱指令</strong>，执行该指令即可进入内核模式，进程所需工作完成后，将调用<code>retrun from trap</code>指令，再次进入用户模式；<ul>
+<li>调用陷阱指令，硬件需要保存调用该指令的进程的寄存器信息，保证从陷阱指令返回时原线程从调用出继续执行；</li>
+<li>陷阱如何知道在内核中运行那些代码——根据内核启动时设置的陷阱表实现：<ul>
+<li>启动内核，进入内核模式；</li>
+<li>设置特定异常需要触发的代码块，并告知特定硬件代码起始位置；</li>
+</ul>
+</li>
+<li>LDE协议完整时间线：</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">操作系统@启动(内核模式)</th>
+<th align="center">硬件</th>
+<th align="center">程序(应用模式)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">初始化陷阱表</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">保存系统调用处理程序的地址</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center"><strong>操作系统@运行(内核模式)</strong></td>
+<td align="center"><strong>硬件</strong></td>
+<td align="center"><strong>程序(应用模式)</strong></td>
+</tr>
+<tr>
+<td align="center">在进程列表上创建条目<br>为程序分配内存<br>将程序加载到内存中<br>根据argv设置程序栈<br>用寄存器和程序计数器填充内核栈<br>从陷阱返回</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">从内核栈恢复寄存器<br>转向用户模式<br>跳到main</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">运行main<br>·····<br>调用系统调用<br>陷入操作系统</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">将寄存器保存到内核栈<br>切换到内核模式<br>跳转到陷阱处理程序</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">处理陷阱<br>完成系统调用的工作<br>从陷阱返回</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">从内核栈恢复寄存器<br>转向内核模式<br>跳到陷阱之后的程序计数器</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">······从main返回<br>陷入(调用exit())</td>
+</tr>
+<tr>
+<td align="center">释放进程内存<br>从进程列表中删除进程</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<ol start="6">
+<li><strong>问题二</strong>，进程占用CPU时，操作系统就无法运行，那么<strong>操作系统如何重获CPU控制权</strong>呢？<ul>
+<li><strong>协作方式</strong>，等待进程调用系统调用时，操作系统重新获取CPU控制权时进行进程间的调度，但这种方式过于理想化；</li>
+<li><strong>非协作方式</strong>：<ul>
+<li>在协作方式中，如果进程不出错同时不调用系统调用，操作系统就无法获取CPU控制权——这时就需要重启计算机；</li>
+<li>为了解决协作方式的上述问题，需要使用<strong>时钟中断</strong>，中断发生，当前进程停止，执行中断处理程序，操作系统重新获得CPU控制权，调度进程的执行；</li>
+</ul>
+</li>
+<li><strong>保存和恢复上下文</strong>，当操作系统获取到CPU控制权后，就需要使用调度程序进行进程间的调度，当需要切换进程时，操作系统就需要执行底层代码，进行<strong>上下文切换</strong>：<ul>
+<li>上下文切换需要保存当前运行程序的通用寄存器、程序计数器、及其内核栈指针；</li>
+<li>需要保存的寄存器信息有两种：一种发生在时钟中断时，运行进程的用户寄存器由硬件隐式保存，使用进程的内核栈；另一种发生在进程切换时，内核寄存器被软件保存，存储在进程的进程结构中，如下表所示：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">操作系统@启动(内核模式)</th>
+<th align="center">硬件</th>
+<th align="center">程序(应用模式)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">初始化陷阱表</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">保存系统调用处理程序的入口地址<br>时钟中断处理程序入口地址</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">启动中断实战</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">启动时钟<br>设置CPU中断时间</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center"><strong>操作系统@运行(内核模式)</strong></td>
+<td align="center"><strong>硬件</strong></td>
+<td align="center"><strong>程序(应用模式)</strong></td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">进程A······</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">时钟中断<br>将寄存器(A)保存到内核栈(A)<br>切换内核模式<br>跳转到陷阱处理程序</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">处理陷阱<br>调用<code>switch()</code>例程<br>  将寄存器(A)保存到进程结构(A)<br>将进程结构(B)恢复到寄存器(B)<br>从陷阱返回(进入B)</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">从内核栈(B)霍夫寄存器(B)<br>切换用户模式<br>跳到B的程序计数器</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">进程B······</td>
+</tr>
+</tbody></table>
 
     
 
@@ -661,15 +889,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">computer network</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">OS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -678,6 +902,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">computer network</a>
               </li>
             
             <div class="clearfix"></div>
