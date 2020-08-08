@@ -18,7 +18,7 @@
 <meta property="og:description" content="物理层一、 网络中的第一层">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-06T08:24:11.000Z">
-<meta property="article:modified_time" content="2020-08-08T03:45:16.505Z">
+<meta property="article:modified_time" content="2020-08-08T03:58:37.002Z">
 <meta property="article:author" content="Fujie">
 <meta property="article:tag" content="computer network">
 <meta name="twitter:card" content="summary">
@@ -130,12 +130,6 @@
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
-      
-      
-      <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
-        href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">
-        <img src="/img/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
       
       
 <nav id="mobile-nav">
@@ -410,27 +404,22 @@
 </li>
 </ol>
 <h3 id="五、-路由协议"><a href="#五、-路由协议" class="headerlink" title="五、 路由协议"></a>五、 路由协议</h3><ol>
-<li><p>路由器会根据路由表正确的转发流量，一个路由表包含多条路由规则，每条规则至少包含三条信息：</p>
-<ul>
-<li><p>目的网络；</p>
+<li>路由器会根据路由表正确的转发流量，一个路由表包含多条路由规则，每条规则至少包含三条信息：<ul>
+<li>目的网络；</li>
+<li>出口设备；</li>
+<li>下一跳网关；</li>
+<li>举例如下：</li>
+<li>静态路由维护难度随网络的复杂度上升，因而需要引入动态路由算法；</li>
+</ul>
 </li>
-<li><p>出口设备；</p>
-</li>
-<li><p>下一跳网关；</p>
-</li>
-<li><p>举例如下：</p>
+</ol>
 <pre><code class="{.line-numbers}"># 这种配置的核心思想是根据IP地址配置路由
 ip route add 10.176.48.0/20 via 10.173.32.1 dev eth0
 
 # 配置多个路由表 根据IP、入口设备、TOS选择相应路由表
 ip rule add from 192.168.1.0/24 table 10</code></pre>
-</li>
-<li><p>静态路由维护难度随网络的复杂度上升，因而需要引入动态路由算法；</p>
-</li>
-</ul>
-</li>
-<li><p>动态路由可以根据路由协议算法生成动态路由表，随网络运行状况而变化，那么如何寻找最短路径呢？</p>
-<ul>
+<ol start="2">
+<li>动态路由可以根据路由协议算法生成动态路由表，随网络运行状况而变化，那么如何寻找最短路径呢？<ul>
 <li><strong>距离矢量路由算法</strong>：它是基于Bellman-Ford算法的，基本思想如下：<ul>
 <li>每个路由器保存一个路由表；</li>
 <li>路由表中的每一行对应网络中的一个路由器；</li>
@@ -452,8 +441,7 @@ ip rule add from 192.168.1.0/24 table 10</code></pre>
 </li>
 </ul>
 </li>
-<li><p>动态路由协议：</p>
-<ul>
+<li>动态路由协议：<ul>
 <li><strong>基于链路状态路由算法的OSPF——开放式最短路径优先</strong>，广泛应用于数据中心，也称<strong>内部网关协议IGP</strong>。<ul>
 <li>在一个组织内部，最短路径往往是最优的；</li>
 <li>当存在多个最短路径时，它们被称为等价路由，可以在这些等价路由上使用负载均衡；</li>

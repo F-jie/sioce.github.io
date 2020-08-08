@@ -18,7 +18,7 @@
 <meta property="og:description" content="分层一、 总分为七层，这里忽略应用层后的表示层和会话层">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-06T08:21:51.000Z">
-<meta property="article:modified_time" content="2020-08-08T03:45:40.002Z">
+<meta property="article:modified_time" content="2020-08-08T03:55:36.586Z">
 <meta property="article:author" content="Fujie">
 <meta property="article:tag" content="computer network">
 <meta name="twitter:card" content="summary">
@@ -130,12 +130,6 @@
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
-      
-      
-      <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
-        href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">
-        <img src="/img/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
       
       
 <nav id="mobile-nav">
@@ -399,14 +393,13 @@
 </li>
 </ol>
 <h2 id="IP地址的分配"><a href="#IP地址的分配" class="headerlink" title="IP地址的分配"></a>IP地址的分配</h2><h3 id="一、-手动配置"><a href="#一、-手动配置" class="headerlink" title="一、 手动配置"></a>一、 手动配置</h3><ol>
-<li><p>使用ifconfig</p>
-<pre><code class="shell"> sudo ifconfig eth1 10.0.0.1/24
- sudo ifconfig eth1 up
- #使用iproute2
- sudo ip addr add 10.0.0.1/24 dev eth1
- sudo ip link set up eth1</code></pre>
-</li>
+<li>使用ifconfig</li>
 </ol>
+<pre><code class="shell">sudo ifconfig eth1 10.0.0.1/24
+sudo ifconfig eth1 up
+#使用iproute2
+sudo ip addr add 10.0.0.1/24 dev eth1
+sudo ip link set up eth1</code></pre>
 <h3 id="二、-动态主机配置协议-DHCP-，主要机制"><a href="#二、-动态主机配置协议-DHCP-，主要机制" class="headerlink" title="二、 动态主机配置协议(DHCP)，主要机制"></a>二、 动态主机配置协议(DHCP)，主要机制</h3><ol>
 <li>新机器使用IP0.0.0.0向目标IP255.255.255.255发送广播，内部使用UDP封装BOOTP；</li>
 <li>DHCP SERVER，收到广播，辨识MAC，向新机器分配IP，此过程成为DHCP Offer，DHCP Server同样使用0.0.0.0作为本机IP，向广播IP255.255.255.255发送包括IP在内的子网掩码、网关、IP租用期等数据。</li>
