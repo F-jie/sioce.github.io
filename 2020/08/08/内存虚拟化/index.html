@@ -10,12 +10,12 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="虚拟化——内存第一章 抽象：地址空间">
+  <meta name="description" content="虚拟化——内存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内存虚拟化">
 <meta property="og:url" content="http://sioce.me/2020/08/08/%E5%86%85%E5%AD%98%E8%99%9A%E6%8B%9F%E5%8C%96/index.html">
 <meta property="og:site_name" content="Fujie&#39;s Blog">
-<meta property="og:description" content="虚拟化——内存第一章 抽象：地址空间">
+<meta property="og:description" content="虚拟化——内存">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://mivezw.bl.files.1drv.com/y4m4uJ47spJx-PXftSHdTjG1jY4IResTZf467lxNaDTOR8y2C90boQGPXEqVgYJuyKnuMbsYN4bsc8Ct6tJDE3_s_8eBLzGN-eh8qBVoxm8vUDPBcyJgqI9D8kJm8GKJEHSBJzNTRr4ld-3OtzpCsWqHwX8TBMjaHpPtwuTEO9NhfK4GYu1O4OSRK6nzCUHHcjlaGuhY-WbYZ-vr3yKfEF0lw?width=297&height=63&cropmode=none">
 <meta property="og:image" content="https://l4vezw.bl.files.1drv.com/y4msIx-QVRStqYk-Lzh1Vc-wRA61wtTn1Rddis3MZxPPP2ZeG0Rv1mwjoUveaXuyBR-Ip3asIGRNl2ogepXtfSot6YIAdL-6vGEW7h50ss4hwwP4_kXHF4aqKieNPxG7hlnsJTVGMpkWYDFTZiXV-yWHI3Jf0Zwrkssmy2K-laEgSpMDdRaVZB--TdEMXHgNmdtkZpB7rrerKM7YevBXInGag?width=286&height=64&cropmode=none">
@@ -25,8 +25,9 @@
 <meta property="og:image" content="https://lytrtg.bl.files.1drv.com/y4mR5wp-4IO2jk89wRId5msAoG94TZf1QmlUhtfLoKpo3ed4DJYEO3Xq8mEaG1Op7hM8zGQuSYm61YRFE4HJAiWISnZGe22RyoEBhsArZ9F-dAlFGXiMGM2Nq4Df1WmF3wrKwV_W_JgZD-8i0CYfnBFG07-Qo2uKr4Ot2aoSqZgsNgXFNx1hNwwL0p3dp3eKpNLH0C7AcTf3SSWQg76URpaFQ?width=318&height=291&cropmode=none">
 <meta property="og:image" content="https://litrtg.bl.files.1drv.com/y4mvF5CXedYPqKcfyPFjDRXWO119WgytwLEXXjQEfIesaMM6jvavqZXiRQ1H9f-rVIyHNJYCG1aJqerRqck9voxZmpS-D1Jz1jiFvBb3UVU0iMUw6-LwG2pVaKMtL_Ot1KaDpu--tnORF85Y3WFQgLoKL_3g_9h1IUjuZwKAe5Uq-DOwxABws_0KD-KTlz7VP-UCR5-SFzMfA0lDRoTVc35eQ?width=291&height=50&cropmode=none">
 <meta property="og:image" content="https://k4trtg.bl.files.1drv.com/y4mGiXAprJ5Wr3hjZly0MrmAncMyS7FQFWse4PZ_1kZ-m5Ob2LRLa1udLJj6XKF6NAKYL4KywTz0e0etIhGWjyEQrleOLi2ate9kxln7vDVq3AccXSAW3oQoUS1GnBmnkgGLGySfY-DlIHFsylgtCSyd7UjLYgoEqhYE089q7e7zl7m3TMGP9HdwpXL7JZoJANKvpHYj-9zfvrCXOH1pjg3LQ?width=728&height=100&cropmode=none">
+<meta property="og:image" content="https://kotrtg.bl.files.1drv.com/y4mOAwHx2ZnSWImyHUjH3sHK6uD92UY5rFLXsJEuTHBQTo05Uk9OlIYsnPftRYP35Uo_Lpt44oAAhwElYVT4TdiiPYCuODrllnKc7SY-iqjCJUzWIXTRe8EMpGiSygKmYILCcPEzhyUzD7SYKZeVtyhtV50rIaC4srmhgiTkgoQ8rDhab5zF3mNgdnPL0fZOvoiGf90sr0mrNhi_7Z6L5JQaA?width=355&height=289&cropmode=none">
 <meta property="article:published_time" content="2020-08-08T13:55:10.000Z">
-<meta property="article:modified_time" content="2020-08-10T11:35:38.456Z">
+<meta property="article:modified_time" content="2020-08-11T07:53:27.471Z">
 <meta property="article:author" content="Fujie">
 <meta property="article:tag" content="OS">
 <meta name="twitter:card" content="summary">
@@ -234,7 +235,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">5.2k字</span>
+      <span class="post-count">5.8k字</span>
     </span>
   </span>
 
@@ -243,7 +244,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">18分</span>
+      <span class="post-count">20分</span>
     </span>
   </span>
 </div>
@@ -254,9 +255,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="虚拟化——内存"><a href="#虚拟化——内存" class="headerlink" title="虚拟化——内存"></a>虚拟化——内存</h2><h3 id="第一章-抽象：地址空间"><a href="#第一章-抽象：地址空间" class="headerlink" title="第一章 抽象：地址空间"></a>第一章 抽象：地址空间</h3><a id="more"></a>
+    <h2 id="虚拟化——内存"><a href="#虚拟化——内存" class="headerlink" title="虚拟化——内存"></a>虚拟化——内存</h2><a id="more"></a>
 
-<ol>
+<h3 id="第一章-抽象：地址空间"><a href="#第一章-抽象：地址空间" class="headerlink" title="第一章 抽象：地址空间"></a>第一章 抽象：地址空间</h3><ol>
 <li>一个简单的分时共享方法：一个进程单独占用全部内存运行一段时间，然后停止它，并将其状态保存到磁盘中，加载其他进程的状态信息，运行一段时间，如此循环。这种方法可行但速度太慢。</li>
 <li>另一个可行的分时共享方法是为每一个进程分配一小部分内存，这时如何<strong>保护</strong>一个进程的信息不被其他进程读取或修改就尤为重要；</li>
 <li>为了实现上述要求，就需要使用物理内存的抽象——<strong>地址空间</strong>；</li>
@@ -549,9 +550,31 @@ else
 <h3 id="第八章-高级页表"><a href="#第八章-高级页表" class="headerlink" title="第八章 高级页表"></a>第八章 高级页表</h3><ol>
 <li>上一章解决了分页导致的两次内存访问问题，本章解决另一个问题——分页引入的页表过大；</li>
 <li>一个简单的解决办法是使用较大的页，但同时会引入内部碎片问题。所以很多操作系统还是使用较小的页；</li>
-<li>混合方法，</li>
+<li>混合方法——结合分页和分段，一个虚拟地址空间中往往存在大量的未使用分页表，但同样需要在页表中对其进行记录，从而造成页表空间的浪费。采用杂合的方法，我们就可以为每个逻辑段提供一个页表，而不是为整个地址空间提供页表。同样假设MMU中包含基址寄存器和界限寄存器，基址寄存器指向保存段页表的物理地址，界限寄存器指示页表的结尾。以下代码展示了杂合模式下地址转换前的操作；<ul>
+<li>混合方法大大节省了内存；</li>
+<li>由于分段的引入，灵活性降低，同时引入外部碎片化等问题；</li>
+</ul>
+</li>
 </ol>
+<pre><code class="C">SN = (VirtualAddress &amp; SEG_MASK) &gt;&gt; SN_SHIFT;
+VPN = (VirtualAddress &amp; VPN_MASK) &gt;&gt; VPN_SHIFT;
+AddressOfPTE = Base(SN) + (VPN * sizeof(PTE));</code></pre>
+<p>图8<img src="https://kotrtg.bl.files.1drv.com/y4mOAwHx2ZnSWImyHUjH3sHK6uD92UY5rFLXsJEuTHBQTo05Uk9OlIYsnPftRYP35Uo_Lpt44oAAhwElYVT4TdiiPYCuODrllnKc7SY-iqjCJUzWIXTRe8EMpGiSygKmYILCcPEzhyUzD7SYKZeVtyhtV50rIaC4srmhgiTkgoQ8rDhab5zF3mNgdnPL0fZOvoiGf90sr0mrNhi_7Z6L5JQaA?width=355&height=289&cropmode=none" alt="图8"></p>
+<center>题注</center>
 
+<ol start="4">
+<li><strong>多级页表</strong>，为了去掉页表中的无效区域，多级页表将线性页表变为类似树的结构，大多数现代操作系统采用；主要原理：<ul>
+<li>首先将页表分为大小为页的单元，如果某个页表页上的全部页表项无效，则不分配该页的页表。</li>
+<li>使用页目录追踪页表的页是否有效，图8展示了两级页表的一个例子；</li>
+<li><strong>优势</strong>，页表占用的空间大大降低，更加灵活、</li>
+<li><strong>成本</strong>，当TLB未命中时，需要从内存加载两次才能获取正确的地址转换信息，这是一种时空折中的方法，</li>
+<li><strong>注意</strong>：多级页表的每一页都应放入一个单独的页，因此有时需要多级页表。</li>
+</ul>
+</li>
+<li><strong>反向页表</strong>，它的每一项代表物理系统的每个页，页的内容包括使用此页的进程以及该进程映射到此页的虚拟页。堆反向页表的查找构建在散列表的基础之上。</li>
+<li>将页表交换到磁盘：为了减轻物理内存的压力，一些系统会选择将部分页表保存到内核虚拟内存中；</li>
+</ol>
+<h3 id="第九章-超越物理内存——机制"><a href="#第九章-超越物理内存——机制" class="headerlink" title="第九章 超越物理内存——机制"></a>第九章 超越物理内存——机制</h3>
     
 
     
@@ -701,6 +724,15 @@ else
 
 <nav id="article-nav">
   
+    <a href="/2020/08/11/%E5%B9%B6%E5%8F%91/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          并发
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/08/08/20200808%E5%B0%8F%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">20200808小记</div>
@@ -730,7 +762,7 @@ else
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟化——内存"><span class="toc-number">1.</span> <span class="toc-text">虚拟化——内存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一章-抽象：地址空间"><span class="toc-number">1.1.</span> <span class="toc-text">第一章 抽象：地址空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二章-内存操作API"><span class="toc-number">1.2.</span> <span class="toc-text">第二章 内存操作API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三章-机制——地址转换"><span class="toc-number">1.3.</span> <span class="toc-text">第三章 机制——地址转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四章-分段"><span class="toc-number">1.4.</span> <span class="toc-text">第四章 分段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五章-空闲空间管理"><span class="toc-number">1.5.</span> <span class="toc-text">第五章 空闲空间管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第六章-分页"><span class="toc-number">1.6.</span> <span class="toc-text">第六章 分页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第七章-分页——快速地址转换"><span class="toc-number">1.7.</span> <span class="toc-text">第七章 分页——快速地址转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第八章-高级页表"><span class="toc-number">1.8.</span> <span class="toc-text">第八章 高级页表</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟化——内存"><span class="toc-number">1.</span> <span class="toc-text">虚拟化——内存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一章-抽象：地址空间"><span class="toc-number">1.1.</span> <span class="toc-text">第一章 抽象：地址空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二章-内存操作API"><span class="toc-number">1.2.</span> <span class="toc-text">第二章 内存操作API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三章-机制——地址转换"><span class="toc-number">1.3.</span> <span class="toc-text">第三章 机制——地址转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四章-分段"><span class="toc-number">1.4.</span> <span class="toc-text">第四章 分段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五章-空闲空间管理"><span class="toc-number">1.5.</span> <span class="toc-text">第五章 空闲空间管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第六章-分页"><span class="toc-number">1.6.</span> <span class="toc-text">第六章 分页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第七章-分页——快速地址转换"><span class="toc-number">1.7.</span> <span class="toc-text">第七章 分页——快速地址转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第八章-高级页表"><span class="toc-number">1.8.</span> <span class="toc-text">第八章 高级页表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第九章-超越物理内存——机制"><span class="toc-number">1.9.</span> <span class="toc-text">第九章 超越物理内存——机制</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -907,11 +939,11 @@ else
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">computer network</a>
+                <a href="javascript:void(0)" class="js-tag color3">OS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OS</a>
+                <a href="javascript:void(0)" class="js-tag color2">computer network</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sioce.me">
-  <title>Archives | Fujie&#39;s Blog</title>
+  <title>并发 | Fujie&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Fujie&#39;s Blog">
-<meta property="og:url" content="http://sioce.me/archives/index.html">
+  <meta name="description" content="并发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="并发">
+<meta property="og:url" content="http://sioce.me/2020/08/11/%E5%B9%B6%E5%8F%91/index.html">
 <meta property="og:site_name" content="Fujie&#39;s Blog">
+<meta property="og:description" content="并发">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mitrtg.bl.files.1drv.com/y4mChaJNKfoBoTpNn0dras80amr3t643fWO4Ude_Vo4kP55nAgNFR-3O33P1Tdox9ia1zFD5GtE2-IWQ8LXSBx49Ig9_LW14O_9meIVjmZD3ZZ-cEpqRnYgL8Oml6m_q4-jUJOP87HiDlVE9ElQDdbGXDMgwMpVlSn4Y59accONskcIaYogDF1Jmk-alN7KyCL183mxg23lfw9PzTgTMMmiwg?width=455&height=333&cropmode=none">
+<meta property="article:published_time" content="2020-08-11T07:29:12.000Z">
+<meta property="article:modified_time" content="2020-08-13T09:30:51.332Z">
 <meta property="article:author" content="Fujie">
+<meta property="article:tag" content="OS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mitrtg.bl.files.1drv.com/y4mChaJNKfoBoTpNn0dras80amr3t643fWO4Ude_Vo4kP55nAgNFR-3O33P1Tdox9ia1zFD5GtE2-IWQ8LXSBx49Ig9_LW14O_9meIVjmZD3ZZ-cEpqRnYgL8Oml6m_q4-jUJOP87HiDlVE9ElQDdbGXDMgwMpVlSn4Y59accONskcIaYogDF1Jmk-alN7KyCL183mxg23lfw9PzTgTMMmiwg?width=455&height=333&cropmode=none">
   
     <link rel="alternative" href="/atom.xml" title="Fujie&#39;s Blog" type="application/atom+xml">
   
@@ -187,95 +194,547 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-并发" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/12/20200812/" class="archive-article-date">
-        <time datetime="2020-08-12T08:41:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/12/20200812/">20200812</a>
-	
+    <h1 class="article-title" itemprop="name">
+      并发
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心情</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/小记//" class="article-tag-list-link color3">小记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/08/11/%E5%B9%B6%E5%8F%91/" class="archive-article-date">
         <time datetime="2020-08-11T07:29:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-11</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">4.6k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">17分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><a id="more"></a>
+
+<h3 id="第一章-简介"><a href="#第一章-简介" class="headerlink" title="第一章 简介"></a>第一章 简介</h3><center>
+<img src="https://mitrtg.bl.files.1drv.com/y4mChaJNKfoBoTpNn0dras80amr3t643fWO4Ude_Vo4kP55nAgNFR-3O33P1Tdox9ia1zFD5GtE2-IWQ8LXSBx49Ig9_LW14O_9meIVjmZD3ZZ-cEpqRnYgL8Oml6m_q4-jUJOP87HiDlVE9ElQDdbGXDMgwMpVlSn4Y59accONskcIaYogDF1Jmk-alN7KyCL183mxg23lfw9PzTgTMMmiwg?width=455&height=333&cropmode=none" width="40%" /><br>
+图1   多线程地址空间
+</center>
+
+<ol>
+<li>线程是为进程提供的抽象，同一进程中的线程共享地址空间。每个线程都有自己的程序计数器和用于计算的寄存器。进行上下文切换时，需要将线程的状态保存到线程控制块(可有多个)，但地址空间保持不变；另外当有多个线程正在运行时，地址空间中会存在多个栈；如图1所示；</li>
+<li><strong>临界区</strong>，临界区是访问共享变量的代码片段，不能由多个线程同时执行。因此引入<strong>互斥</strong>，它使得一个线程在临界区运行时，其他线程被阻止进入；</li>
+</ol>
+<pre><code class="C">mov 0x8049a1c, %eax
+add $0x01, %eax
+mov %eax,  0x8049a1c</code></pre>
+<ol>
+<li><strong>原子性</strong>：指的是一条指令要么执行，要么不执行，不存在中间态。假设上述代码片段处于临界区，为了保证互斥性，我们希望使用一条指令代替上述代码，并保证新指令以原子的方式执行。</li>
+<li>事实上，原子指令并不存在，但是我们可以利用硬件构建<strong>同步原语</strong>，结合同步原语和操作系统即可以同步受控的方式访问临界区。</li>
+</ol>
+<h3 id="第二章-进程的API"><a href="#第二章-进程的API" class="headerlink" title="第二章 进程的API"></a>第二章 进程的API</h3><pre><code class="C">#include &lt;pthread.h&gt;
+
+int pthread_create(pthread_t * thread,
+                   const pthread_attr_t * attr,
+                   void * (*start_routine)(void*),
+                   void * arg);</code></pre>
+<ul>
+<li>上述代码展示了创建线程的接口，注意后两个参数的类型未无类型指针，这样使用允许我们传入返回任何类型的参数；</li>
+</ul>
+<pre><code class="C">int pthread_join(pthread_t thread, void **retval);
+
+// 错误示例，代码在线程内部
+myret_t r;  //allocete space on thread stack
+r,x = 1;
+r.y = 2;
+return (void *) &amp;r;
+// 错误示例，代码在线程内部
+myret_t *r = Malloc(sizeof(myret_t));  //allocete space on process heap
+r,x = 1;
+r.y = 2;
+return (void *) &amp;r;</code></pre>
+<ul>
+<li>上述代码展示了等待线程完成的接口，第二个参数是一个指向void的指针，由于该接口会改变传入参数的值，因此需要传入指针，而非值；</li>
+</ul>
+<pre><code class="C">//API
+int pthread_mutex_lock(pthread_mutex_t *mutex);
+int pthread_mutex_unlock(pthread_mutex_t *mutex);
+
+//example critical section
+pthread_mutex_t lock;
+int rc = pthread_mutex_lock(&amp;lock);
+assert(rc == 0)
+x++;
+pthread_mutex_lock(&amp;lock);
+
+// initialize lock
+int rc = pthread_mutex_init(&amp;lock, NULL);
+assert(rc == 0)\
+
+pthread_mutex_destroy(lock);</code></pre>
+<ul>
+<li>上述代码是一个锁的例子，需要注意两个问题：<ul>
+<li>锁必须正确初始化，保证其按需工作；</li>
+<li>获取和释放锁时进行错误检查。</li>
+</ul>
+</li>
+</ul>
+<pre><code class="C">// API
+int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex);
+int pthread_cond_signal(pthread_cond_t *cond);
+
+// thread wait
+pthread_mutex_t lock = PTHREA_MUTEX_INITIALIZER;
+pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
+pthread_mutex_lock(&amp;lock);
+while(ready == 0) {
+    pthread_cond_wait(&amp;cond, &amp;lock);
+}
+pthread_mutex_unlock(&amp;lock);
+
+// thread cond
+pthread_mutex_lock(&amp;lock);
+ready = 1;
+pthread_cond_signal(&amp;cond);
+pthread_mutex_unlock(&amp;lock);</code></pre>
+<ul>
+<li>当线程之间需要进行交互时，就需要使用条件变量。条件变量必须怕配合与其相关的锁使用，调用上述接口中的函数时，必须持有锁；<ul>
+<li><code>pthread_cond_wait()</code>使线程进入休眠状态。相对于<code>pthread_cond_signal()</code>函数，他要额外传入一个锁，这是因为在等待期间，该线程必须释放锁，从而使得其他线程能够获得锁并继续运行。</li>
+</ul>
+</li>
+</ul>
+<h3 id="第三章-锁"><a href="#第三章-锁" class="headerlink" title="第三章 锁"></a>第三章 锁</h3><ul>
+<li>锁使得临界区代码的执行好比执行一条原子指令；</li>
+<li>任何临界区都使用一个粗粒度大锁，称为<strong>粗粒度锁策略</strong>；使用多个锁保护不同的数据和结构，称为<strong>细粒度锁策略</strong>；</li>
+<li>评价锁的性能：<ul>
+<li><strong>互斥性</strong>，即锁能否完成最基本的任务；</li>
+<li><strong>公平性</strong>，是否每一个线程都有公平的机会抢到锁；</li>
+<li><strong>性能</strong>，即使用锁增加的时间开销；</li>
+</ul>
+</li>
+<li>锁的实现方案之<strong>控制中断</strong>，即在临界区关闭中断。<ul>
+<li>优点：简单；</li>
+<li>缺点：<ul>
+<li>过分信任线程；</li>
+<li>不支持多处理器，每个处理器都有自己的中断，关闭自己的中断并不能阻止其他处理器上的线程访问临界区；</li>
+<li>中断丢失，使得操作系统无法处理其他即时操作，如输入输出；</li>
+<li>效率低；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Thread1</th>
+<th align="center">Thread2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">call lock()<br>while(flag == 1)<br>interrupt:switch to Thread2</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">call lock()<br>while(flag == 1)<br>flag == 1<br>interrupt:switch to Thread2</td>
+</tr>
+<tr>
+<td align="center">flag == 1</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ul>
+<li>锁的实现方案之<strong>test-and-set指令&lt;基于软件&gt;</strong>，也叫做<strong>原子交换</strong>。该方案设置一个标志位，通过检查标志位是否位1，决定线程能否进入临界区。<ul>
+<li>上图显示了该方案的一种状态，起始时<code>flag = 0</code>，很显然，两个线程都获得了进入临界区的权限；</li>
+<li>另外，这一方案的性能较差，它采用<strong>自旋等待技术</strong>，在等待其他线程释放锁的过程中会十分浪费时间；</li>
+</ul>
+</li>
+</ul>
+<pre><code class="C">int TestAndSet(int *old_ptr, int new) {
+    int old = *old_ptr;
+    *old_ptr = new;
+    return old;
+}</code></pre>
+<ul>
+<li>锁的实现方案之<strong>test-and-set指令&lt;基于硬件&gt;</strong>，上述代码是测试并设置指令的伪代码。使用<code>TestAndSet()</code>函数即可实现简单的自旋锁。那么自旋锁的性能如何呢：<ul>
+<li>满足锁的基本要求；</li>
+<li>缺乏公平性保证；</li>
+<li>在单核的性能较差，多核性能较好；</li>
+</ul>
+</li>
+</ul>
+<pre><code class="C">int CompareAndExchange(int *ptr, int expected, int new) {
+    int actual = *ptr;
+    if(actual == expected) *ptr = new;
+    return actual;
+}</code></pre>
+<ul>
+<li>锁的实现方案之<strong>compare-and-exchange指令</strong>，上述代码是比较并交换指令的伪代码。基于此实现的自旋锁等价于test-and-set指令。这一指令在无等待同步时作用更大；</li>
+</ul>
+<pre><code class="C">int LoadLinked(int *ptr) {
+    return *ptr;
+}
+
+int StoreConditional(int *ptr, int value) {
+    if(no one has updated *ptr since the LoadLinked to this address) {
+        *ptr = value;
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+// lock code
+void lock(lock_t *lock) {
+    while(1) {
+        while(LoadLinked(&amp;lock-&gt;flag) == 1) ;
+        if(StoreConditional(&amp;lock-&gt;flag, 1) == 1)return;
+    }
+}
+
+void unlock(lock_t *lock) {
+    lock-&gt;flag = 0;
+}</code></pre>
+<ul>
+<li>锁的实现方案之<strong>链接的加载于条件式存储指令</strong>，其C伪代码如上所示，虽然两个线程可以都进入到StroeConditional，但只有首先进入的能获得锁；</li>
+</ul>
+<pre><code class="C">int FetchAndAdd(int *ptr) {
+    int old = *ptr;
+    *ptr = old + 1;
+    return old;
+}
+
+// lock code 
+typedef struct lock_t {
+    int ticket;
+    int turn;
+} lock_t;
+void lock_init(lock_t *lock) {
+    lock-&gt;ticket = 0;
+    lock-&gt;turn = 0;
+}
+
+void lock(lock_t *lock) {
+    int myturn = FetchAndAdd(&amp;lock-&gt;ticket);
+    while(lock-&gt;turn != myturn) ;
+}
+
+void unlock(lock_t *lock) {
+    FetchAndAdd(&amp;lock-&gt;turn);
+}</code></pre>
+<ul>
+<li>锁的实现之<strong>fetch-and-add指令</strong>，其伪代码如上所示。当一个线程需要访问临界区时，就会获得一个ticket，当一个线程退出临界区时，就会将turn加1，当ticket和涂然诺相等时，对应的线程就可以进入临界区。<ul>
+<li>这种算法能保证所有的线程都能抢到锁；</li>
+</ul>
+</li>
+<li><strong>自旋问题</strong>，在一个处理器上运行多线程程序，未获取锁的线程要不断自旋以等待锁的释放，因而会浪费很多时间片，这就需要操作系统的支持：<ul>
+<li><strong>自旋时，放弃CPU</strong>，假设存在操作系统原语yield，条用它即可使线程由运行态变为就绪态。这种算法缓解一些效率问题。但当线程过多时，问题好事很明显；</li>
+<li><strong>队列：休眠代替自旋</strong>，<code>park()/unpark()</code>分别负责使线程休眠或唤醒线程的任务<ul>
+<li>提供<code>park()</code>函数，当线程无法获得锁时，把自己加入队列并调用此函数进入休眠；</li>
+<li>提供<code>unpark(ttid)</code>函数，唤醒ttid标记的线程；</li>
+<li>另外，为了避免<strong>唤醒等待竞争</strong>，需要引入<code>setpark()</code>函数。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第四章-基于锁的并发数据结构"><a href="#第四章-基于锁的并发数据结构" class="headerlink" title="第四章 基于锁的并发数据结构"></a>第四章 基于锁的并发数据结构</h3><ul>
+<li><strong>并发计数器</strong>：<ul>
+<li><strong>不可扩展</strong>——创建计数器时，定义一个锁，每次访问临界区代码都获取锁，从而实现并发的计数器。但这种技术器在多线程运行时性能会大打折扣；</li>
+<li><strong>可扩展</strong>——<strong>懒惰计数器</strong>，懒惰计数器设置多个局部计数器和一个全局计数器，其中每个CPU核心一个局部计数器。另外和需要设置锁，每个计数器一个锁。当一个线程需要计数时，便增加局部计数器。使用计数器对应的锁同步的。当局部计数器的值等于阈值时，更新全局计数器时，获取全局锁，将局部计数器的值转移给全局计数器，并将局部计数器置零。局部计数器的阈值影响懒惰计数器的性能；</li>
+</ul>
+</li>
+<li><strong>并发链表</strong>：<ul>
+<li><strong>基础款</strong>，创建链表时，定义一个锁，每次向链表插入或者查询都获得锁，工作完成后释放锁。</li>
+<li><strong>扩展链表</strong>，其中一种技术叫做<strong>过手锁</strong>，他给每个节点分配一个锁，代替基础款中整个链表一个锁，遍历链表时首先抢占下一个节点的锁并释放当前节点的锁。但这种方案的效率仍值得研究。</li>
+</ul>
+</li>
+</ul>
+<pre><code class="C">void Queue_Init(queue_t *q) {
+    node_t *tmp = malloc(sizeof(node_t)); // fake node
+    tmp-&gt;next = NULL;
+    q-&gt;head = q-&gt;tail = tmp;
+    pthread_mutex_init(&amp;q-&gt;headLock, NULL);
+    pthread_mutex_init(&amp;q-&gt;tailLock, NULL);
+}</code></pre>
+<ul>
+<li><strong>并发队列</strong>，上述创建并发数据结构的方法时创建一把大锁。但创建并发队列时，我们选择给队头和队尾各一个锁。当需要入队或出队时，获取锁。工作完成后释放锁。Michael和Scott在实现队列时，添加了一个加假节点将队头和对队尾分开，如上述代码所示：</li>
+</ul>
+<h3 id="第五章-条件变量"><a href="#第五章-条件变量" class="headerlink" title="第五章 条件变量"></a>第五章 条件变量</h3><ul>
+<li>当线程之间具有依赖关系时，就需要使用条件变量。比如父线程等待子线程结束。当然也可以通过检查标志位让父线程自旋，知道满足条件。但这中自旋是有代价的，有时候甚至是错误的。</li>
+<li>条件变量显式队列，当条件不满足时，线程把自己加入队列，等待该条件。条件改变时，便可唤醒一个或多个线程。条件变量的两种操作：<ul>
+<li><code>wait()</code>，此调用需要传入互斥量，因为他需要在此处释放锁，让调用进程休眠。是的其他线程可以继续工作，当线程被唤醒时，重新获得锁。</li>
+<li><code>signal()</code>，它只需要传入条件变量</li>
+<li><strong>发出信号时总是持有锁</strong>；</li>
+</ul>
+</li>
+</ul>
+<pre><code class="C">cond_t cond;
+mutex_t mutex;
+int count = 0;
+
+void *producer(void *arg) {
+    int i;
+    int loops = (int) arg;
+    for(int i = 0; i &lt; &gt;) {
+        Pthread_mutex_lock(&amp;mutex);
+        if(count == 1) Pthread_cond_wait(&amp;cond, &amp;mutex);
+        put(i);
+        Pthread_cond_signal(&amp;cond);
+        Pthread_mutex_unlock(&amp;mutex);
+    }
+}
+
+void *consumer(void *arg) {
+    int i;
+    int loops = (int) arg;
+    for(int i = 0; i &lt; &gt;) {
+        Pthread_mutex_lock(&amp;mutex);
+        if(count == 0) Pthread_cond_wait(&amp;cond, &amp;mutex);
+        int tmp = get(i);
+        Pthread_cond_signal(&amp;cond);
+        Pthread_mutex_unlock(&amp;mutex);
+        printf(&quot;%d\n&quot;, tmp);
+    }
+}</code></pre>
+<ul>
+<li><p><strong>生产者/消费者问题</strong>，也叫有界缓冲问题。上述代码展示了生产者/消费者的一个例子。</p>
+<ul>
+<li><strong>Mesa语义</strong>——发出信号将线程唤醒后立即执行；</li>
+<li><strong>Hoare语义</strong>——发出信号后唤醒进程并立即执行；</li>
+<li>当只有一个生产者和一个消费者时，上述代码能够正常运行，但一旦出现多个消费者，上述代码就会出现问题。</li>
+<li>解决这个问题，只需要将上述代码中的if换为while。但此时还存在另外一个问题，假设两个消费者都进入睡眠，此时生产者将数据放入缓冲区，唤醒消费者并进入休眠。再次假设唤醒的是消费者c1，消费者拿出数据，此时唤醒谁呢？消费者c2还是生产者，假设唤醒了c2，c2发现缓冲区为空，继续睡眠，此时三个线程都进入了睡眠状态。</li>
+<li>解决上述问题需要使信号具有指向性——使用多个信号量即可解决上述问题。</li>
+</ul>
+</li>
+<li><p><strong>覆盖条件</strong>，上述第二个问题可以使用此条件进行解决，即使用<code>pthread_cond_broadcast()</code>唤醒所有休眠的线程，但这样做会增加成本。</p>
+</li>
+</ul>
+<h3 id="第六章-信号量"><a href="#第六章-信号量" class="headerlink" title="第六章 信号量"></a>第六章 信号量</h3><pre><code class="C">#include &lt;semaphore.h&gt;
+sem_t s;
+
+/*
+@param1  信号量对象
+@param2  信号量是否在多进程共享
+@param3  信号量初始值
+*/
+sem_init(&amp;s, 0, 1);
+sem_wait() // 递减信号量，信号量小于零挂起
+sem_post() // 递增信号量，并唤醒睡眠线程之一</code></pre>
+<ul>
+<li><strong>信号量</strong>，同步有关所有工作的唯一原语。它是一个有整数数值的对象，使用<code>sem_wait()/sem_post()</code>进行操作，调用函数对信号量进行操作前，必须初始化。</li>
+<li>信号量需要多线程调用，显然位于临界区；</li>
+</ul>
+<pre><code class="C">sem_t s;
+sem_init(&amp;s, 0, 1); //初始值为1</code></pre>
+<ul>
+<li><strong>二值信号量用作锁</strong>，假设线程A、B运行，当A调用wait函数时，信号量减一不为负，进入临界区，此时中断线程B调用wait，信号量减一小于0，进入睡眠。中断再次发生A运行post，信号量加一等于0，唤醒B，A执行结束，B进入临界区，执行结束。</li>
+</ul>
+<pre><code class="C">sem_t s;
+void child(){
+  sem_post(&amp;s);
+}
+
+int main() {
+    sem_init(&amp;s, 0, 0); //初始值为0
+    pthread_t c;
+    pthread_create(c, NULL, child, NULL);
+    sem_wait(&amp;s);
+    return 0;
+}</code></pre>
+<ul>
+<li><strong>信号量用作条件变量中断</strong>，上述代码即为使用信号量作为条件变量的例子，使主线程等待子线程结束。</li>
+</ul>
+<pre><code class="C">sem_t empty;
+sem_t full;
+sem_t mutex;
+
+void p(void *args){
+    int i;
+    for(i = 0; i &lt; loops; ++i) {
+      sem_wait(&amp;empty);  // p1
+      sem_wait(&amp;mutex); //p2
+      put(i);
+      sem_post(&amp;mutex);  //p3
+      sem_post(&amp;full);  //p4
+    }
+}
+
+void c(void *args) {
+  int i;
+  for(i = 0; i &lt; loops; ++i) {
+    sem_wait(&amp;full);
+    sem_wait(&amp;mutex);
+    put(i);
+    sem_post(&amp;mutex);
+    sem_post(&amp;empty);
+  }
+}
+
+int main(int argc, char *argv) {
+  sem_init(&amp;empty, 0, MAX);
+  sem_init(&amp;full, 0, 0);
+  sem_init(&amp;mutex, 0, 1);
+}
+</code></pre>
+<ul>
+<li><p><strong>使用信号量实现生产者消费者问题</strong>，代码如上。调p1和p2以及p3和p4的位置，将造成死锁。</p>
+</li>
+<li><p><strong>读者-写者锁</strong>，针对链表的查询与插入操作，一个时间点只能有一个线程进行插入，但可以存在多个读操作。因而就引入了读者-写者锁，这个操作允许多个读者访问临界区，但只允许一个写者访问临界区，同时没有读者访问临界区。这个方案的缺点使缺乏公平性。读者很容易饿死写者。</p>
+</li>
+<li><p><strong>哲学家就餐问题</strong>，假设每个哲学家都先拿左手边餐叉，再拿右手边。某个时刻，每个哲学家都拿到左手边餐叉，等待拿右手边，就会进入死锁。为了解决这一问题，可以让某个哲学家先拿右边的，其余的先拿左边的，如此破除以来，避免死锁。</p>
+</li>
+<li><p>如何<strong>实现信号量</strong>：使用一个条件变量、一个锁和一个状态变量很容实现信号量，反之，则十分困难。</p>
+</li>
+</ul>
+<h3 id="第七章-常见并发问题"><a href="#第七章-常见并发问题" class="headerlink" title="第七章 常见并发问题"></a>第七章 常见并发问题</h3><p><strong>现代应用程序的缺陷</strong><br>应用名称 | 用途 | 非死锁 | 死锁<br>:-:      | :-:  |  :-:   | :-:<br>MySQL   | 数据库 | 14    | 9<br>Apache | Web服务器 | 13  | 4<br>Mozilla | Web浏览器 | 41 | 16<br>OpenOffice | 办公 | 6    | 2<br>合计   |           | 74  | 31</p>
+<h4 id="非死锁缺陷"><a href="#非死锁缺陷" class="headerlink" title="非死锁缺陷"></a>非死锁缺陷</h4><ol>
+<li><strong>违反原子性缺陷</strong>，我们假设代码使原子的，但实际执行过程中却没有强制实现原子性；解决这一问题只需要给临界区代码加锁即可；</li>
+<li><strong>违反顺序缺陷</strong>，两个内存访问的期望顺序被打破了，比如一个线程创建新线程，另一个线程使用新线程。就会出现这种问题，解决它只需要引入条件变量</li>
+</ol>
+<h4 id="死锁缺陷"><a href="#死锁缺陷" class="headerlink" title="死锁缺陷"></a>死锁缺陷</h4><ol>
+<li>产生死锁的原因：<ul>
+<li>大型代码库组件之间存在复杂<strong>依赖</strong>；</li>
+<li><strong>封装</strong>，采用模块化使得软件开发更加容易，然而模块化和锁并不是很契合；</li>
+</ul>
+</li>
+<li>产生死锁的条件，四种条件缺一不可：<ul>
+<li><strong>互斥</strong>：线程对需要的资源进行互斥访问；</li>
+<li><strong>持有并等待</strong>，线程持有资源，并在等待其他资源；</li>
+<li><strong>非抢占</strong>，线程获得的资源不能被抢占；</li>
+<li><strong>循环等待</strong>，线程之间存在一个环路，每个线程都等待相邻线程持有的资源；</li>
+</ul>
+</li>
+<li>预防死锁：<ul>
+<li><strong>避免循环等待</strong>，最直接的算法就是获取锁时提供一个<strong>全序</strong>，按照顺序申请，即可避免产生死锁。然而复杂系统锁的数量庞大，此时就需要使用<strong>偏序</strong>安排锁的获取从而避免死锁。</li>
+<li><strong>持有并等待</strong>，增加一个全局锁一定程度解决这一问题。但这种方案不适用于封装，有可能降低并发性。</li>
+<li><strong>非抢占</strong>，为了避免持有锁的同时尝试获取另一个锁，可使用<code>try_lock()</code>函数实现无死锁的枷锁方式；使用这一函数依然会面临封装难的问题。</li>
+<li><strong>互斥</strong>，如何避免互斥呢？利用强大的硬件指令设计无等待的数据结构。</li>
+<li><strong>通过调度避免死锁</strong>，为此，我们需要了解全局信息，包括不同线程对锁的需求状况。</li>
+</ul>
+</li>
+</ol>
+<h3 id="第八章-基于事件的并发"><a href="#第八章-基于事件的并发" class="headerlink" title="第八章 基于事件的并发"></a>第八章 基于事件的并发</h3><ul>
+<li>基于事件的并发往往出现在基于GUI的应用以及网络服务器上，之所以研究这一问题，原因如下：<ul>
+<li>多线程应用中，处理并发很有难度；</li>
+<li>开发者无法控制线程的调度；</li>
+</ul>
+</li>
+</ul>
+<pre><code class="C">while(1) {
+  events = getEvents();
+  for(e in events)
+    processEvent(e);
+}</code></pre>
+<ul>
+<li><strong>基本想法</strong>，典型的基于事件的服务器是基于事件循环进行的，事件循环的代码如上。事件处理程序是系统中发生的唯一活动。通过调度可以显式决定接下来处理哪个事件；</li>
+<li><strong>重要的API</strong>，<code>select()或者poll()</code>，检查是否存在即将到来的需要关注的I/O。它检查I/O描述符集合(多个)，检查每个集合中前ndfs个描述符，并使用给定描述符子集替换准备就绪的描述符集合。它的返回值为就绪描述符的总数。<ul>
+<li>通过检查描述符是否可以读取可以确定服务器是否存在新到达需要处理的数据包；</li>
+<li>通过检查描述符是否可以写入可以让服务器知道何时回复</li>
+<li>这些API为我们提供了构建非阻塞事件循环的方法；</li>
+</ul>
+</li>
+<li><strong>异步I/O</strong>，这些接口使应用程序可以发出I/O请求，并在I/O请求完成前立即将控制权返回给调用者，另外的接口能让应用程序判读I/O是否完成。</li>
+<li><strong>事件管理</strong>，当处理程序发出异步I/O请求时，必须打包程序的状态，以便下一个事件处理程序在I/O最终完成时使用。这个工作也叫做<strong>手工栈管理</strong>。</li>
+</ul>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/biubiubiu.gif">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/biubiubiu.gif">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/11/%E5%B9%B6%E5%8F%91/">并发</a>
-	
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Fujie
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://sioce.me/2020/08/11/并发/" title="并发" target="_blank">http://sioce.me/2020/08/11/并发/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -287,7 +746,7 @@
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -300,453 +759,127 @@
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://sioce.me/2020/08/11/%E5%B9%B6%E5%8F%91/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/08/%E5%86%85%E5%AD%98%E8%99%9A%E6%8B%9F%E5%8C%96/" class="archive-article-date">
-        <time datetime="2020-08-08T13:55:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-08</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2020/08/12/20200812/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          20200812
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/08/%E5%86%85%E5%AD%98%E8%99%9A%E6%8B%9F%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">内存虚拟化</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/08/%E5%86%85%E5%AD%98%E8%99%9A%E6%8B%9F%E5%8C%96/">内存虚拟化</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术笔记//" class="article-tag-list-link color5">技术笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#并发"><span class="toc-number">1.</span> <span class="toc-text">并发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一章-简介"><span class="toc-number">1.1.</span> <span class="toc-text">第一章 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二章-进程的API"><span class="toc-number">1.2.</span> <span class="toc-text">第二章 进程的API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三章-锁"><span class="toc-number">1.3.</span> <span class="toc-text">第三章 锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四章-基于锁的并发数据结构"><span class="toc-number">1.4.</span> <span class="toc-text">第四章 基于锁的并发数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五章-条件变量"><span class="toc-number">1.5.</span> <span class="toc-text">第五章 条件变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第六章-信号量"><span class="toc-number">1.6.</span> <span class="toc-text">第六章 信号量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第七章-常见并发问题"><span class="toc-number">1.7.</span> <span class="toc-text">第七章 常见并发问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#非死锁缺陷"><span class="toc-number">1.7.1.</span> <span class="toc-text">非死锁缺陷</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#死锁缺陷"><span class="toc-number">1.7.2.</span> <span class="toc-text">死锁缺陷</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第八章-基于事件的并发"><span class="toc-number">1.8.</span> <span class="toc-text">第八章 基于事件的并发</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/08/20200808%E5%B0%8F%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2020-08-08T03:16:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-08</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/08/20200808%E5%B0%8F%E8%AE%B0/">20200808小记</a>
-	
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心情</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/小记//" class="article-tag-list-link color3">小记</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/06/computer-network-OSI2/" class="archive-article-date">
-        <time datetime="2020-08-06T09:27:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/06/computer-network-OSI2/">computer network OSI2</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">computer network</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术笔记//" class="article-tag-list-link color5">技术笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/06/computer-network-OSI1/" class="archive-article-date">
-        <time datetime="2020-08-06T08:24:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/06/computer-network-OSI1/">computer network OSI1</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">computer network</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术笔记//" class="article-tag-list-link color5">技术笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/06/computer-network-review/" class="archive-article-date">
-        <time datetime="2020-08-06T08:21:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/06/computer-network-review/">computer network review</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">computer network</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术笔记//" class="article-tag-list-link color5">技术笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/06/20200804%E5%B0%8F%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2020-08-06T08:03:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/06/20200804%E5%B0%8F%E8%AE%B0/">20200804小记</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心情</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/小记//" class="article-tag-list-link color3">小记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/06/database/" class="archive-article-date">
-        <time datetime="2020-08-06T07:33:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/06/database/">database</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">database</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术笔记//" class="article-tag-list-link color5">技术笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/07/29/OS-virtualization/" class="archive-article-date">
-        <time datetime="2020-07-29T13:44:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-29</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/07/29/OS-virtualization/">OS virtualization</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术笔记//" class="article-tag-list-link color5">技术笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -787,8 +920,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
