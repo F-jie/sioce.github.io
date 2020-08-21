@@ -17,11 +17,16 @@
 <meta property="og:site_name" content="Fujie&#39;s Blog">
 <meta property="og:description" content="数据库基础知识">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lyvq2q.bl.files.1drv.com/y4miHS7P8QcaRpvextd0xEkeA7LtNvT0QidGYBeBZUH_f4hj_65DL_KVaXF1-L2ROfXg_Zo0AsyAXeqfPjBH_4QFqS1v9M1gZDryX8Q40iSa9vazZvbUUE6kAMCn-g1Z4KCJp05fs0ULr_d9TVfRp-McOpKeo40zMMrmsnxznQqI7Lzzm1oEORx59XrCxvNeRuePA_3tqNraBgz59Fw7UhEgA?width=1920&height=1440&cropmode=none">
+<meta property="og:image" content="https://livq2q.bl.files.1drv.com/y4mQLbCQYH7Y0CaRtCMm1-ltiQ2p6s8o19AVd36CWOz-ME1094JMacdn2OqNuqSuZHWIG188Jbrd5fzHc9V5sYAKjULA_NmS2puo0N28EMPfT1VAZIQ-Xy1iFffaoMBoJ24MvAF3uXQ17AJdymFtZaGunHmMyTetE_qTQmF9CUk4_KWQAazWJ0BuoiUtpA1E6scnUwnVdV5MpDMo5jPpHPLMw?width=1142&height=856&cropmode=none">
+<meta property="og:image" content="https://k4vq2q.bl.files.1drv.com/y4mdp5cyZzcYHtFg1gy9sPrWZrhKEoLtcnJIfcSQAZWN9s2pVPw8pVL7AprpHZCCZMPQ-Atc8Fapi94mH2C7aDkV9aRvfCaM4jbEi9axowTjini6ZBN13nc5zhppj9SZ7K3VT6o_QGZLAhkHWEdWoarwbW8aw1_lAzT9dU5ztUR4VrckRXEwt54AYUEhBVsycJk1zw5qrgYfg7jIODY1lqGpQ?width=1142&height=737&cropmode=none">
+<meta property="og:image" content="https://kovq2q.bl.files.1drv.com/y4mQmXjscCp2T7JGn1uKm8GkYmy7un2J5T5Xnpxl7MnMCZ0MU4P7ODQpnZHDFeMFlHlUbUNZLb2Gb9eCnuy4hPDEe5y6uLwlgEgd1cTJf6JVK9dBCg9Yx21tiS5ivs7uoERndxMXsNsBxaWtLlt1fOhqzx1d6exokJZJkc14rE69jvmo8ebOvSpgnP6iUNazQI2vU10tV5UyLxqj062GFtVCA?width=1142&height=856&cropmode=none">
 <meta property="article:published_time" content="2020-08-06T07:33:28.000Z">
-<meta property="article:modified_time" content="2020-08-08T03:46:13.295Z">
+<meta property="article:modified_time" content="2020-08-17T12:01:30.155Z">
 <meta property="article:author" content="Fujie">
 <meta property="article:tag" content="database">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lyvq2q.bl.files.1drv.com/y4miHS7P8QcaRpvextd0xEkeA7LtNvT0QidGYBeBZUH_f4hj_65DL_KVaXF1-L2ROfXg_Zo0AsyAXeqfPjBH_4QFqS1v9M1gZDryX8Q40iSa9vazZvbUUE6kAMCn-g1Z4KCJp05fs0ULr_d9TVfRp-McOpKeo40zMMrmsnxznQqI7Lzzm1oEORx59XrCxvNeRuePA_3tqNraBgz59Fw7UhEgA?width=1920&height=1440&cropmode=none">
   
     <link rel="alternative" href="/atom.xml" title="Fujie&#39;s Blog" type="application/atom+xml">
   
@@ -225,7 +230,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">7字</span>
+      <span class="post-count">3.2k字</span>
     </span>
   </span>
 
@@ -234,7 +239,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">11分</span>
     </span>
   </span>
 </div>
@@ -246,6 +251,212 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h2 id="数据库基础知识"><a href="#数据库基础知识" class="headerlink" title="数据库基础知识"></a>数据库基础知识</h2><a id="more"></a>
+
+<h3 id="基础架构"><a href="#基础架构" class="headerlink" title="基础架构"></a>基础架构</h3><center>
+<img src="https://lyvq2q.bl.files.1drv.com/y4miHS7P8QcaRpvextd0xEkeA7LtNvT0QidGYBeBZUH_f4hj_65DL_KVaXF1-L2ROfXg_Zo0AsyAXeqfPjBH_4QFqS1v9M1gZDryX8Q40iSa9vazZvbUUE6kAMCn-g1Z4KCJp05fs0ULr_d9TVfRp-McOpKeo40zMMrmsnxznQqI7Lzzm1oEORx59XrCxvNeRuePA_3tqNraBgz59Fw7UhEgA?width=1920&height=1440&cropmode=none" width="40%" /><br>
+图1   mySQL逻辑架构
+</center>
+
+<ul>
+<li>总体上，mySQL分为Server和存储引擎两部分：<ol>
+<li><strong>Server</strong>：涵盖MySQL的大多核心服务功能及所有内置函数，所有跨存储引擎操纵在这一层执行；</li>
+<li><strong>存储引擎</strong>，负责数据的存储与提取，其架构是插件式的，支持多个存储引擎，常用的是InnoDB。</li>
+</ol>
+</li>
+</ul>
+<h4 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h4><ul>
+<li><strong>连接器</strong>：它负责服务端和客户端之间连接的构建、维持与管理，以及权限的分配；<ol>
+<li>连接使用的是TCP，用户密码验证成功，连接器根据权限表给相应用户分配权限；</li>
+<li>连接长时间无操作，将会被断开，由参数<code>wait_timeout</code>进行控制。<ul>
+<li><strong>长连接</strong>：连接成功，持续操作，一置使用一个连接，<em>建议使用此连接，但会占用较大内存。</em>；</li>
+<li><strong>短连接</strong>，连接成功，短暂操作，再次操作需建立新连接；</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>查询缓存</strong>：<ol>
+<li>MySQL收到查询语句，首先查找缓存，缓存中保存语句和语句结果的key-value对，命中则直接返回缓存结果；否则将继续操作并将结果转化为key-value对存入缓存中。</li>
+<li><strong>查询缓存利大于弊</strong>，任何表的更新都将导致缓存中对应表内容的清空，查询缓存就会失效，命中率低下。<em>另外MySQL8.0已删除此功能</em>。</li>
+</ol>
+</li>
+<li><strong>分析器</strong>，缓存未命中，则需要执行语句：<ol>
+<li><strong>词法分析</strong>，它对输入字符串进行分词，识别分词对应的含义；</li>
+<li><strong>语法分析</strong>，判断语法是否符合MySQL语法；</li>
+</ol>
+</li>
+<li><strong>优化器</strong>，当表内存在多个索引时，决定使用哪个索引；或者语句存在多表关联时，决定各个表的连接顺序。一条语句可能存在多个执行方案，优化器将选择效率最高的方案；</li>
+<li><strong>执行器</strong>：<ol>
+<li>首先判断用户是否拥有对表的执行权限；</li>
+<li>根据表的引擎定义，使用引擎提供的接口。对于无索引的表，循环循环判断表的每一行；对于有索引的表，则循环判断满足条件的每一行。</li>
+</ol>
+</li>
+</ul>
+<h3 id="日志系统"><a href="#日志系统" class="headerlink" title="日志系统"></a>日志系统</h3><ul>
+<li>MySQL可以恢复半个月内任意一秒的状态；</li>
+<li>输入一个更新语句，首先会清空对应表的缓存，接下来才是分析、优化和执行。</li>
+</ul>
+<h4 id="redo-log模块"><a href="#redo-log模块" class="headerlink" title="redo log模块"></a>redo log模块</h4><ul>
+<li>这一日志模块为存储引擎层持有；</li>
+<li>为了降低每次更新都写磁盘的IO成本，MySQL使用了<strong>WAL, Write-Ahead Logging</strong>技术，即先写日志，再写磁盘。</li>
+</ul>
+<center>
+<img src="https://livq2q.bl.files.1drv.com/y4mQLbCQYH7Y0CaRtCMm1-ltiQ2p6s8o19AVd36CWOz-ME1094JMacdn2OqNuqSuZHWIG188Jbrd5fzHc9V5sYAKjULA_NmS2puo0N28EMPfT1VAZIQ-Xy1iFffaoMBoJ24MvAF3uXQ17AJdymFtZaGunHmMyTetE_qTQmF9CUk4_KWQAazWJ0BuoiUtpA1E6scnUwnVdV5MpDMo5jPpHPLMw?width=1142&height=856&cropmode=none" width="40%" /><br>
+图2   redo log示意图
+</center>
+
+<ul>
+<li>InnoDB的redo log是固定大小的，比如可以配置一组四个大小为1GB的文件，从头开始写，写到末尾就返回开头循环写。<ol>
+<li>上图中<code>write pos</code>是当前记录的位置，边写边后移；<code>checkpoint</code>是要擦除的位置。</li>
+<li>当write pos追上checkpoint时，就需要停下来，将一些记录写入磁盘，并推进checkpoint。</li>
+</ol>
+</li>
+<li>基于redo log，InnoDB就可以保证数据库发生异常重启时，之前提交的记录不会丢失。这种能力叫做<strong>crash-safe</strong>；</li>
+</ul>
+<h4 id="binlog"><a href="#binlog" class="headerlink" title="binlog"></a>binlog</h4><ul>
+<li>这一日志模块为Server层持有，且此日志智能用于归档；</li>
+<li>之所以存在这一日志模块，是因为MySQL自带的引擎MyISAM没有crash-safe能力。</li>
+<li>与redo log的差异：<ol>
+<li>redo log是InnoDB引擎特有的，binlog是MySQL Server实现的，所有引擎均可使用；</li>
+<li>redo log是物理日志，记录在某个数据页做的修改；binlog是逻辑日志，记录语句的原始逻辑；</li>
+<li>redo log是循环写的；binlog是追加写的，即写到一定大小会自动切换到下一个，并不会覆盖以前的内容；</li>
+</ol>
+</li>
+<li>SQL更新语句的执行：<ol>
+<li>执行器向引擎取某一行，引擎根据树搜索该行。如果该行存在于内存中，则直接返回给执行器；否则，先从磁盘中读入内存，在执行；</li>
+<li>执行器对取到数据进行操作，完成后调用引擎接口写入新数据。</li>
+<li>引擎将新数据存入内存，并在redo log中记录更新操作，redo log进入<strong>prepare状态</strong>。</li>
+<li>引擎通知执行器操作完成，可以随时提交事务；</li>
+<li>执行器生成该操作的binlog，并写入磁盘；</li>
+<li>执行器调用引擎提交事务接口，更改redo log<strong>状态为commit</strong>，更新完成；</li>
+</ol>
+</li>
+<li>redo log的两个状态——<strong>两阶段提交</strong>：<ol>
+<li>将数据库恢复到某个时刻T：<ul>
+<li>找到距T最近的备份，将其恢复到临时库；</li>
+<li>从备份时间点开始，将备份的binlog去除，重放到时刻T；</li>
+</ul>
+</li>
+<li>为什么两阶段提交？假设ID=2的行中字段C的值为0，现在将其值更新为1。但写完第一个日志，发生了crash，此时第二个日志未更新：<ul>
+<li><strong>先写redo log再写binlog</strong>，由于redo log的crash-safe能力，即使系统崩溃，恢复后字段C的值仍为1，但binlog未记录上述更新操作，导致字段C的值无法恢复；</li>
+<li><strong>先写binlog后写redo-log</strong>，此时恢复数据，redo log未写入，字段C的值仍为0，但binlog记录了更新操作，就会更新字段C的值为1，与原库值不同。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="事务隔离"><a href="#事务隔离" class="headerlink" title="事务隔离"></a>事务隔离</h3><ul>
+<li>事务的目标是保证一组操作要么完全完成，要么全部失败。MySQL中事务的支持是在引擎层实现的。并非所有的引擎都支持事务。</li>
+<li>事务的特点：<strong>ACID(Atomicity, Consistency, Isolation, Durability)</strong>;</li>
+</ul>
+<center>
+<img src="https://k4vq2q.bl.files.1drv.com/y4mdp5cyZzcYHtFg1gy9sPrWZrhKEoLtcnJIfcSQAZWN9s2pVPw8pVL7AprpHZCCZMPQ-Atc8Fapi94mH2C7aDkV9aRvfCaM4jbEi9axowTjini6ZBN13nc5zhppj9SZ7K3VT6o_QGZLAhkHWEdWoarwbW8aw1_lAzT9dU5ztUR4VrckRXEwt54AYUEhBVsycJk1zw5qrgYfg7jIODY1lqGpQ?width=1142&height=737&cropmode=none" width="40%" /><br>
+图3   回滚操作示意图
+</center>
+
+<ul>
+<li>事务之<strong>隔离</strong>：<ol>
+<li>当数据库上同时执行多个事务时，就可能出现脏读、不可重复读、幻读等问题，隔离就是为解决这些问题而诞生的。</li>
+<li>隔离带来的性能损失与隔离级别成正比。分为以下几个级别：<ul>
+<li><strong>读未提交</strong>，一个事务未提交，它做的变更能被其他事务看到；</li>
+<li><strong>读提交</strong>，一个事务提交后，他做的变更才能被其他事务看到；</li>
+<li><strong>可重复读</strong>，一个事务执行看到的数据，与其启动时看到的数据一致。这种模式下未提交变更其他事务是不可见的；</li>
+<li><strong>串行化</strong>，对同一行数据的读写需要申请锁。一旦锁被占用，他就要等待。</li>
+</ul>
+</li>
+<li>不同级别隔离的实现原理——<strong>视图</strong>：数据库内会创建视图，访问时的结果以视图为准。<ul>
+<li>“可重复读”隔离级别下，事务启动时创建试图，且整个事务存在期间都使用这个视图。</li>
+<li>“读提交”隔离级别下，视图在每个SQL语句执行前创建；</li>
+<li>“读未提交”隔离级别不存在视图的概念；</li>
+</ul>
+</li>
+<li>事务隔离的实现：<ul>
+<li>MySQL更新每条记录的同时会就一条回滚操作，通过回滚操作都可得到前一个状态的值；</li>
+<li>如图3，途中视图A、B、C中记录的值分别为1、2、4；数据库内一条记录存在多个版本叫做<strong>数据库的多版本并发控制</strong>；</li>
+<li>当没有视图需要回滚日志时，回滚日志会被删除；</li>
+</ul>
+</li>
+<li>事务的启动方式：<ul>
+<li>显式启动：使用<code>begin/start transaction</code>，配套的提交语句为<code>commit</code>，回滚语句为<code>rollback</code>。</li>
+<li><code>set autocommit=0</code>，这个命令会关闭线程自动提交，也就是说事务会一直存在，直到主动执行<code>commit</code>或者<code>rollback</code>。</li>
+<li>设置<code>set autocommit=1</code>时，每个事务的开始都得执行<code>begin</code>，为了省去begin语句的开销可以使用<code>commit work and chain</code>，表示提交事务并自动开启下一个事务；</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul>
+<li>索引的出现是为了提高数据查询的效率。</li>
+<li>实现索引的三种方式：<ol>
+<li><strong>哈希表</strong>，输入键值，通过哈希函数将器转换到保存值数组的固定位置，<strong>适用于等值查询场景</strong>。</li>
+<li><strong>有序数组</strong>，它在等值查询和范围查询等场景的表现都很优秀，但是它的插入成本太高，只适用于静态存储场景。</li>
+<li><strong>搜索树</strong>，在二叉搜索树中的查询复杂度为$O(log(N))$，为了维持其搜索复杂度，需要保证其为平衡二叉树。也存在多叉树，每个节点的儿子从左到右递增。二叉搜索树的效率时最高的，但考虑到索引有时需要存储到磁盘上，数据库并未使用二叉树。</li>
+<li>为了使查询尽可能少的访问数据块，就需要使用N叉树，N叉树以其优秀的读写性能和其对磁盘读写模式的契合，广泛应用于数据库索引中；</li>
+</ol>
+</li>
+<li>MySQL中索引是在存储引擎实现的。</li>
+</ul>
+<pre><code class="mysql">mysql&gt; create table T(
+  id int primary key,
+  k int not null,
+  name archar(16),
+  index (k)
+) engine=InnoDB;</code></pre>
+<ul>
+<li>InnoDB的索引模型：<ol>
+<li>InnoDB使用B+树索引模型，其中表根据主键顺序以索引的形式存放，即为<strong>索引组织表</strong>。</li>
+<li>上述代码创建了一个带有两个索引的表T，假设其中存在五条记录，每条记录(ID, k)为(100，1)、(200，2)、(300， 3)、(400，4)、(500，5)，其索引如图4所示。</li>
+<li>从图4可以看出，索引类型分别为<strong>主键索引</strong>和<strong>非主键索引</strong>。<ul>
+<li>主键索引，叶子节点存放整行数据。采用主键查询，只需要搜索主键的B+索引树；</li>
+<li>非主键索引，叶子节点存储的是主键的值。采用非主键查询，需要先查询非主键对应的B+索引树，在查询主键对应的B+所引树，此过程称为<strong>回表</strong>。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<center>
+<img src="https://kovq2q.bl.files.1drv.com/y4mQmXjscCp2T7JGn1uKm8GkYmy7un2J5T5Xnpxl7MnMCZ0MU4P7ODQpnZHDFeMFlHlUbUNZLb2Gb9eCnuy4hPDEe5y6uLwlgEgd1cTJf6JVK9dBCg9Yx21tiS5ivs7uoERndxMXsNsBxaWtLlt1fOhqzx1d6exokJZJkc14rE69jvmo8ebOvSpgnP6iUNazQI2vU10tV5UyLxqj062GFtVCA?width=1142&height=856&cropmode=none" width="40%" /><br>
+图4   索引示意图
+</center>
+
+<ul>
+<li><strong>索引维护</strong>：<ol>
+<li>在图4的索引中插入ID为700的新行，则可直接插入到R5之后。若插入ID为400的新行，就需要逻辑上挪动后面的数据。另外，倘若R5所在的数据页已满，就需要申请新的数据页并挪动数据，性能会严重下降。这叫做<strong>页分裂</strong>。</li>
+<li>存在页分裂就存在<strong>页合并</strong>，页分裂会降低空降利用率，页合并则反之。</li>
+<li>使用自增主键时插入不涉及挪动其他字段。但并不适用于所有场景。</li>
+<li>主键的长度越小，普通索引的叶子节点就越小。</li>
+</ol>
+</li>
+<li>对图4对应的索引执行<code>select * from T where k between 3 and 5</code>，需要指定五次树的查询操作，三次查找k索引树和两次回表操作。如何优化索引，避免回表操作呢》</li>
+<li><strong>覆盖索引</strong>，如果执行<code>select ID from T where k between 3 and 5</code>，这时就可以只查询k的B+索引树；</li>
+<li><strong>最左前缀原则</strong>，数据库中不可能为每一种查询都设计一个索引，但一让些不频繁的请求走全表扫描效率不高。此时使用最左前缀原则可以很好解决这个问题。这里有一个关键问题，<strong>建立联合索引时，如何安排索引内的字段</strong><ol>
+<li>通过调整顺寻，可以少维护一个索引，那么此顺序就需要优先考虑采用；</li>
+<li>尽量降低空间需求；</li>
+</ol>
+</li>
+<li><strong>索引下推</strong>。</li>
+</ul>
+<h3 id="全局锁和表锁"><a href="#全局锁和表锁" class="headerlink" title="全局锁和表锁"></a>全局锁和表锁</h3><ul>
+<li>MySQL的锁大致可以分为三类：<strong>全局锁、表级锁和行锁</strong></li>
+</ul>
+<h4 id="全局锁"><a href="#全局锁" class="headerlink" title="全局锁"></a>全局锁</h4><ul>
+<li>使用命令<code>flush table with read lock(FTWRL)</code>，可以使整个库处于只读状态，任何线程的更新库操作都将被阻塞。</li>
+<li>全局锁的经典使用场景是<strong>全库逻辑备份</strong>。使用FTWRL命令的缺点是业务不能使用。此时备份数据库将产生错误的结果。<ul>
+<li>为了避免FTWRL带来的问题，可以使用事务进行备份，但遗憾的是并非所有的引擎都支持事务。</li>
+<li>另外一个全局只读的命令是<code>set global readonly=true</code>，但不建议在做备份时使用：<ol>
+<li>readonly值会被用来做其他逻辑，修改global变量影响范围太大；</li>
+<li>FTWRL指令在客户端发生异常断开时会自动释放锁，以便继续进行数据库更新。使用readonly发生异常将导致数据库长时间不能更新。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="表级锁"><a href="#表级锁" class="headerlink" title="表级锁"></a>表级锁</h4><ul>
+<li>MySQL中表级别的锁有两种：<strong>表锁和元数据锁</strong>。</li>
+<li><strong>表锁</strong>：<ol>
+<li>语法：<code>unlock/lock tables ... read/write</code>，客户端异常断开时，锁会自动释放。该语句不仅能限制其他线程读写，也会限制自身的操作。</li>
+</ol>
+</li>
+</ul>
 
     
 
@@ -434,7 +645,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库基础知识"><span class="toc-number">1.</span> <span class="toc-text">数据库基础知识</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库基础知识"><span class="toc-number">1.</span> <span class="toc-text">数据库基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础架构"><span class="toc-number">1.1.</span> <span class="toc-text">基础架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Server"><span class="toc-number">1.1.1.</span> <span class="toc-text">Server</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#日志系统"><span class="toc-number">1.2.</span> <span class="toc-text">日志系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#redo-log模块"><span class="toc-number">1.2.1.</span> <span class="toc-text">redo log模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#binlog"><span class="toc-number">1.2.2.</span> <span class="toc-text">binlog</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事务隔离"><span class="toc-number">1.3.</span> <span class="toc-text">事务隔离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#索引"><span class="toc-number">1.4.</span> <span class="toc-text">索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全局锁和表锁"><span class="toc-number">1.5.</span> <span class="toc-text">全局锁和表锁</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#全局锁"><span class="toc-number">1.5.1.</span> <span class="toc-text">全局锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#表级锁"><span class="toc-number">1.5.2.</span> <span class="toc-text">表级锁</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -607,10 +818,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
@@ -619,7 +826,23 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">古文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>

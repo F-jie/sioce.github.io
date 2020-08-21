@@ -4,6 +4,231 @@
   
     
     <entry>
+      <title>虚函数</title>
+      <link href="/2020/08/21/%E8%99%9A%E5%87%BD%E6%95%B0/"/>
+      <url>/2020/08/21/%E8%99%9A%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>组合与继承</title>
+      <link href="/2020/08/21/%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/"/>
+      <url>/2020/08/21/%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/</url>
+      
+        <content type="html"><![CDATA[<h2 id="类之间的三种关系"><a href="#类之间的三种关系" class="headerlink" title="类之间的三种关系"></a>类之间的三种关系</h2><a id="more"></a><ul><li><strong>复合(Composition)</strong></li><li><strong>委托(Delegation)</strong></li><li><strong>继承</strong></li></ul><h3 id="复合"><a href="#复合" class="headerlink" title="复合"></a>复合</h3><pre><code class="C++">// 例程1tmplate &lt;class T&gt;class queue {    ···protected:    deque&lt;T&gt; c;public:    bool empty() const {return c.empty();}    ···};//构造 内部的Component构造亦可以使用非默认Container::Container(...): Component() {...};//析构Container::~Container(...) {... ~Component() };</code></pre><center><img src="" width="40%" /><br>图1  复合示意图</center><ul><li>例程1展示了一个复合的例子，其中<code>queue</code>类包含了<code>deque</code>，这种操作在设计模式称为<strong>适配器</strong>;</li><li>复合关系下的构造和析构：<ol><li><strong>构造由内而外</strong>，Container构造函数首先调用Component的默认构造函数，然后才执行自己的构造函数；</li><li><strong>析构由外而内</strong>，即限制性自己的构造函数，再调用Component的析构函数。</li></ol></li><li>复合关系下，queue和deque的生命同时出现；</li></ul><h3 id="委托-Composition-by-reference"><a href="#委托-Composition-by-reference" class="headerlink" title="委托(Composition by reference)"></a>委托(Composition by reference)</h3><pre><code class="C++">//例程2class StringRep { // Bodyfriend class String;    StringRep(const char* s);    ~StringRep();    int count;    char* rep;};class String { //Handlepublic:    String();    String(const char* s);    ~String();    ···private:    StringRep* rep; //pimpl(Pointer to Implementation)}</code></pre><center><img src="" width="40%" /><br>图2  委托示意图</center><ul><li>图二中是一个共享模型，其中n计算当前由多少个对象共享自身，当a试图改变R时，不能直接更改，需要进行拷贝之后再更改，防止影响引用a、b。</li></ul><h2 id="继承-Inheritance"><a href="#继承-Inheritance" class="headerlink" title="继承(Inheritance)"></a>继承(Inheritance)</h2><pre><code class="C++">//例程3struct _List_node_base{    _List_node_base* _M_next;    _List_node_base* _M_prev;}template&lt;typename _Tp&gt;struct _List_node: publiv _List_node_base{    _TP _M_data;}</code></pre><ul><li>继承需要结合虚函数使用方可发挥最大功效；</li><li>基类的析构函数必须为虚函数</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>访问权限控制</title>
+      <link href="/2020/08/21/%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/"/>
+      <url>/2020/08/21/%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="关键字public-private-protected"><a href="#关键字public-private-protected" class="headerlink" title="关键字public/private/protected"></a>关键字public/private/protected</h2><a id="more"></a><h3 id="修饰类成员"><a href="#修饰类成员" class="headerlink" title="修饰类成员"></a>修饰类成员</h3><ul><li>C++类中的成员(函数/变量)拥有三种访问权限：<ol><li><strong>public</strong>，用该关键字修饰的成员表示<strong>公有成员</strong>，该成员不仅可以在类内可以被访问，在类外也是可以被访问的，是类对外提供的可访问接口；</li><li><strong>private</strong>，用该关键字修饰的成员表示<strong>私有成员</strong>，该成员仅在类内可以被访问，在类体外是隐藏状态；</li><li><strong>protected</strong>，用该关键字修饰的成员表示<strong>保护成员</strong>，保护成员在类体外同样是隐藏状态，但是对于该类的派生类来说，相当于公有成员，在派生类中可以被访问。</li></ol></li></ul><h3 id="修饰继承"><a href="#修饰继承" class="headerlink" title="修饰继承"></a>修饰继承</h3><ul><li>一个类的派生类，不仅包含了基类的所有成员，还增加了自己的新成员。从基类中继承的成员的访问权限就相对较为复杂，具体取决于继承方式：<ol><li><strong>public</strong>，基类成员在派生类中的访问权限保持不变，也就是说，基类中的成员访问权限，在派生类中仍然保持原来的访问权限；</li><li><strong>private</strong>，基类所有成员在派生类中的访问权限都会变为私有(private)权限；</li><li><strong>protected</strong>，基类的公有成员和保护成员在派生类中的访问权限都会变为保护(protected)权限，私有成员在派生类中的访问权限仍然是私有(private)权限。</li></ol></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>static关键字</title>
+      <link href="/2020/08/20/static%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+      <url>/2020/08/20/static%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+      
+        <content type="html"><![CDATA[<h2 id="static关键字的使用分类"><a href="#static关键字的使用分类" class="headerlink" title="static关键字的使用分类"></a>static关键字的使用分类</h2><a id="more"></a><ul><li>静态成员变量（面向对象）</li><li>静态成员函数（面向对象）</li><li>静态全局变量（面向过程）</li><li>静态局部变量（面向过程）</li><li>静态函数（面向过程）</li></ul><h3 id="静态成员变量"><a href="#静态成员变量" class="headerlink" title="静态成员变量"></a>静态成员变量</h3><ul><li>类中，使用static修饰的成员变量，他的特点如下：<ol><li>它为类的所有实例对象拥有，只有一份；</li><li>静态成员变量不占用类实例化对象的内存，类未实例化其静态变量即存在，可以对之进行操作。</li><li>静态成员变量存储在全局数据区，其内存在初始化时分配且初始化必须在类体外进行。初始化时，如果不赋值则默认为0，静态数据区的变量一般都有默认值，而动态数据区(堆、栈)的默认值都是垃圾值。</li><li>静态成员初始化与一般成员初始化不同。初始化时可以不加<code>static</code>，但必须要有数据类型。被<code>private</code>、<code>protected</code>、<code>public</code>修饰的 <code>static</code>成员变量都可以用这种方式初始化。静态数据成员初始化的格式为：＜数据类型＞＜类名＞::＜静态数据成员名＞=＜值＞</li><li>类的静态成员变量访问形式:<ul><li>＜类对象名＞.＜静态数据成员名＞;</li><li>＜类类型名＞::＜静态数据成员名＞;</li></ul></li><li>静态数据成员和普通数据成员一样遵从<code>public</code>,<code>protected</code>,<code>private</code>访问规则；</li><li>sizeof 运算符不会计算 静态成员变量。</li></ol></li><li>优点：<ol><li>不会与存在于全局空间中标识符冲突；</li><li>隐藏信息，可以使用<code>private</code>保护，而全局不能；</li></ol></li></ul><h3 id="静态成员函数"><a href="#静态成员函数" class="headerlink" title="静态成员函数"></a>静态成员函数</h3><ul><li>与普通函数相比，静态成员函数属于类本身，而不作用于对象，因此它不具有this指针；</li><li>无法访问属于类对象的非静态成员变量和非静态成员函数，只能调用其余的静态成员函数和静态成员变量；</li><li>特点：<ol><li>静态成员之间可以相互访问，即静态成员函数（仅）可以访问静态成员变量、静态成员函数；</li><li>非静态成员函数可以任意地访问静态成员函数和静态数据成员；</li><li>由于没有this指针的额外开销，静态成员函数与类的全局函数相比速度上会稍快；</li><li>调用静态成员函数，两种方式：<ul><li>通过成员访问操作符(.)和(-&gt;)；</li><li>直接通过类来调用静态成员函数。＜类名＞::＜静态成员函数名＞</li></ul></li></ol></li></ul><h3 id="静态全局变量"><a href="#静态全局变量" class="headerlink" title="静态全局变量"></a>静态全局变量</h3><ul><li>在全局变量前，加上关键字static，该变量就被定义成为一个静态全局变量。</li><li>特点：<ol><li>该变量在全局数据区分配内存；</li><li>未经初始化的静态全局变量会被程序自动初始化为0；</li><li>静态全局变量在声明它的整个文件都是可见的，而在文件之外是不可见的；</li><li>静态变量都在全局数据区分配内存，包括后面将要提到的静态局部变量。</li></ol></li><li>定义静态全局变量还有以下优点：<ol><li>静态全局变量不能被其它文件所用；</li><li>其它文件中可以定义相同名字的变量，不会发生冲突；</li></ol></li></ul><h3 id="静态局部变量"><a href="#静态局部变量" class="headerlink" title="静态局部变量"></a>静态局部变量</h3><ul><li>在局部变量前，加上关键字static，该变量就被定义成为一个静态局部变量。</li><li>静态局部变量保存在全局数据区，而不是保存在栈中，每次的值保持到下一次调用，直到下次赋新值。</li><li>静态局部变量有以下特点：<ol><li>静态局部变量在程序执行到该对象的声明处时被首次初始化，即以后的函数调用不再进行初始化；</li><li>静态局部变量一般在声明处初始化，如果没有显式初始化，会被程序自动初始化为0；</li><li>静态局部变量始终驻留在全局数据区，直到程序运行结束。但其作用域为局部作用域，当定义它的函数或语句块结束时，其作用域随之结束；</li></ol></li></ul><h3 id="静态函数"><a href="#静态函数" class="headerlink" title="静态函数"></a>静态函数</h3><ul><li>静态函数与普通函数不同，它只能在声明它的文件当中可见，不能被其它文件使用。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>内存管理</title>
+      <link href="/2020/08/20/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+      <url>/2020/08/20/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="堆-amp-栈"><a href="#堆-amp-栈" class="headerlink" title="堆&amp;栈"></a>堆&amp;栈</h2><a id="more"></a><ul><li><strong>堆</strong>，由操作系统提供的一块全局内存空间，程序可动态分配从其中取若干区块存放数据；</li><li><strong>栈</strong>，存在于某作用域的一块内存空间，比如调用函数即形成一个栈存放其所接收的参数以及返回地址；<ol><li>离开作用域，站内变量生命周期即结束。</li><li>作用域中<code>static</code>声明的变量在作用域结束后依然存在；</li></ol></li></ul><h2 id="手动分配内存"><a href="#手动分配内存" class="headerlink" title="手动分配内存"></a>手动分配内存</h2><pre><code class="C++">// 例程1Complex* pc = new Complex(1, 3); //p1//代码p1的剖析——编译器分解后的代码void* mem = operator new( sizeof(Complex) ) //申请空间 底层调用mallocpc = static_cast&lt;Complex*&gt;(mem); //类型转换pc-&gt;Complex::Complex(1, 3);  //调用构造函数</code></pre><ul><li>例程1展示<code>new</code>的底层操作；</li></ul><pre><code class="C++">// 例程2String* ps = new String(&quot;Hello&quot;);···delete ps;//代码p1的剖析——编译器分解后的代码String::~String(ps); //删除动态分配空间operator delete(ps); //底层调用free</code></pre><ul><li>例程2展示<code>delete</code>的底层操作；</li></ul><h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><pre><code class="C++">// 例程3class data {public:    func();private:    int *a;    int *b;}String* p = new data[3];         //p1···                              //p2delete[] p; // 调用三次析构函数  //p3</code></pre><center><img src="../../themes/mem-mana.png" width="40%" /><br>图1  data对象占用内存</center><center><img src="../../themes/mem_mana2.png" width="40%" /><br>图2  data数组占用空间</center><ul><li>在VC中创建一个data对象将分配图1所示内存：</li><li>在VC中创建一个data数组将分配图2所示内存：</li><li>例程3中，代码p1-p3必须组合出现。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>三大函数</title>
+      <link href="/2020/08/19/%E4%B8%89%E5%A4%A7%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
+      <url>/2020/08/19/%E4%B8%89%E5%A4%A7%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<pre><code class="C++">// 例程1class String {public:    inline String(const char* catr = 0); // 构造函数    String(const String&amp; str); // 拷贝构造函数    String&amp; operator = (const String&amp; str)； // 拷贝复制函数    ~String()； // 析构函数private:    char* m_data;}</code></pre><h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><pre><code class="C++">// 例程2inline String::String(const char* cstr = 0) {    if(cstr) {        m_data = new char[strlen(cstr) + 1];        strcpy(m_data, cstr);    }    else {        m_data = new char[1];        *m_data = &#39;\0&#39;    }}inline String::~String() {    delete[] m_data;}</code></pre><ul><li>成员函数中动态分配内存，必须在析构函数中主动释放；</li></ul><h2 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h2><center><img src="../../themes/ctor.gif" width="80%" /><br>图1  默认拷贝构造函数</center><pre><code class="C++">// 例程3inline String::String(const String&amp; str) {    m_data = new char[strlen(str.m_data) + 1];    strcpy(m_data, str.m_data); //深拷贝}</code></pre><ul><li><strong>拷贝构造函数</strong>是一种特殊的构造函数，它在创建对象时，是使用同一类中之前创建的对象来初始化新创建的对象。<ol><li>通过使用另一个同类型的对象来初始化新创建的对象。</li><li>复制对象把它作为参数传递给函数。</li><li>复制对象，并从函数返回这个对象。</li></ol></li><li>如果在类中没有定义拷贝构造函数，编译器会自行定义一个。如果类带有指针变量，并有动态内存分配，则它必须自定义拷贝构造函数。<ol><li>默认拷贝构造函数的行为是仅拷贝成员变量的值；</li></ol></li></ul><h2 id="拷贝复制函数"><a href="#拷贝复制函数" class="headerlink" title="拷贝复制函数"></a>拷贝复制函数</h2><pre><code class="C++">// 例程4inline String&amp; String::operator = (const String&amp; str) {    if(this == &amp;str) return *this; //检测自我复制，此处不可或缺    delete[] m_data; //删除自己占用内存；    m_data= new char(strlen(str) + 1) //申请内存存放复制内容    strcpy(m_data, str.m_data);    return *this;}</code></pre><ul><li>拷贝复制函数：<ol><li>检查是否为自我复制；</li><li>删除自身占据的空间；</li><li>申请新空间；</li><li>将内容复制到申请到的空间中；</li></ol></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>操作符重载&amp;空对象</title>
+      <link href="/2020/08/19/%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD-%E7%A9%BA%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/08/19/%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD-%E7%A9%BA%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="操作符重载"><a href="#操作符重载" class="headerlink" title="操作符重载"></a>操作符重载</h2><a id="more"></a><h3 id="成员函数"><a href="#成员函数" class="headerlink" title="成员函数"></a>成员函数</h3><pre><code class="C++">// 例程1inline complex&amp; __doapl(complex* ths, const complex&amp; r) {    this-&gt;re += r.re;    this-&gt;im += r.im;    return *this;}inline complex&amp;complex::operator += (const complex&amp; r) {    return __doapl(this, r);  //注意this不能写入成员函数参数，但可以在成员函数内使用}// 下述代码要求操作符重载函数的返回值必须为complexc1 += c2 += c3;</code></pre><ul><li>所有的成员函数都带有一个隐藏的参数——<strong>this</strong>，请不要主动写出来，如例程1所示；</li><li>例程1中<code>__doapl()</code>函数返回值为值，而函数限定的返回值为引用，函数依然可以正常工作，由此可知——<strong>传递者无需知道接收者的接收形式</strong>；</li></ul><h3 id="非成员函数"><a href="#非成员函数" class="headerlink" title="非成员函数"></a>非成员函数</h3><pre><code class="C++">// 例程2inline complex operator + (const complex&amp; x, const complex&amp; y) {    return complex（real(x) + real(y), imag(x) + imag(y));}inline complex operator + (const complex&amp; x,double y);inline complex operator + (double x, const complex&amp; y);// 操作符+重载函数的多态inline complex operator + (const complex&amp; x) {  //注意这里可以返回值可以是引用    return x; }</code></pre><ul><li>注意例程2中的返回值<code>inline complex operator</code>不能是引用，因为函数体中返回的内容只是一个<strong>临时对象</strong>，他的生命周期随着语句的完成而结束；</li></ul><h3 id="成员函数-vs-非成员函数"><a href="#成员函数-vs-非成员函数" class="headerlink" title="成员函数 vs 非成员函数"></a>成员函数 vs 非成员函数</h3><pre><code class="C++">// 例程3inline complex conj(const complex&amp; x) {    return complex(real(x), -imag(x));}#include &lt;iostream.h&gt;ostream&amp; operator &lt;&lt; (ostream&amp; os, const complex&amp; x) {    return os &lt;&lt; &#39;(&#39; &lt;&lt; real(x) &lt;&lt; &#39;,&#39; &lt;&lt; imag(x) &lt;&lt; &#39;)&#39;;}// &#39;&lt;&lt;&#39;操作符作用于cout，cout相当于重载函数的形参oscout &lt;&lt; conj(c1);</code></pre><ul><li>具体选择使用那种函数，需要根据需求设计。<ol><li>赋值 = 、下标[ ]、调用( )、和成员访问箭头 -&gt;必须是成员函数；</li><li>复合赋值运算符应该是成员，但是并非必须；</li><li>改变对象状态的运算符或者与给定类型密切相关的运算符，如 递增、递减和解引用运算符应该是成员；</li><li>具有对称性的运算符可能转换任一端的运算对象，例如算数、相等性、关系和位运算符等，因此通常应该是普通的非成员函数。</li></ol></li><li>重载运算符为成员函数后,当调用该运算符时,左操作数必须是该类的实例。</li><li>如例程3所示，输出操作符<code>&lt;&lt;</code>的重载必须设计为非成员函数。<ul><li>如果将<code>&lt;&lt;</code>重载为成员函数，则用法为<code>obj_class &lt;&lt; cout</code>，不符合常规。</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>面试题目</title>
+      <link href="/2020/08/17/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/"/>
+      <url>/2020/08/17/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="C-多态"><a href="#C-多态" class="headerlink" title="C++多态"></a>C++多态</h2><ul><li>多态是面向对象的特征，基本定义为‘一个接口，多种状态’，分为两种：<ol><li><strong>静态多态</strong>：编译阶段即将函数实现和函数调用相关联，即地址早绑定。</li><li><strong>动态多态</strong>：运行阶段将函数实现和函数调用相关联，即地址晚绑定。</li></ol></li><li>多态的作用是<strong>接口重用</strong>：<ol><li>静态多态，将同一个接口进行不同的实现，根据传入参数的不同调用不同的实现；</li><li>动态多态，不论传递哪个类的对象，函数都能通过同一个接口调用各自对象实现的方法；</li></ol></li><li>多态的实现：<ol><li>静态多态通过函数的重载和模板编程实现；</li><li>动态多态常见用法是声明基类的指针，并将其指向子类的对象，调用相应的虚函数，可以根据指向子类的不同调用不同的方法。</li></ol></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>古文观赏</title>
+      <link href="/2020/08/14/%E5%8F%A4%E6%96%87%E8%A7%82%E8%B5%8F/"/>
+      <url>/2020/08/14/%E5%8F%A4%E6%96%87%E8%A7%82%E8%B5%8F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="项脊轩志"><a href="#项脊轩志" class="headerlink" title="项脊轩志"></a>项脊轩志</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 兴趣 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 古文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>超越物理内存</title>
       <link href="/2020/08/14/%E8%B6%85%E8%B6%8A%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98/"/>
       <url>/2020/08/14/%E8%B6%85%E8%B6%8A%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98/</url>
@@ -258,7 +483,7 @@
       <link href="/2020/08/06/database/"/>
       <url>/2020/08/06/database/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据库基础知识"><a href="#数据库基础知识" class="headerlink" title="数据库基础知识"></a>数据库基础知识</h2><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据库基础知识"><a href="#数据库基础知识" class="headerlink" title="数据库基础知识"></a>数据库基础知识</h2><a id="more"></a><h3 id="基础架构"><a href="#基础架构" class="headerlink" title="基础架构"></a>基础架构</h3><center><img src="https://lyvq2q.bl.files.1drv.com/y4miHS7P8QcaRpvextd0xEkeA7LtNvT0QidGYBeBZUH_f4hj_65DL_KVaXF1-L2ROfXg_Zo0AsyAXeqfPjBH_4QFqS1v9M1gZDryX8Q40iSa9vazZvbUUE6kAMCn-g1Z4KCJp05fs0ULr_d9TVfRp-McOpKeo40zMMrmsnxznQqI7Lzzm1oEORx59XrCxvNeRuePA_3tqNraBgz59Fw7UhEgA?width=1920&height=1440&cropmode=none" width="40%" /><br>图1   mySQL逻辑架构</center><ul><li>总体上，mySQL分为Server和存储引擎两部分：<ol><li><strong>Server</strong>：涵盖MySQL的大多核心服务功能及所有内置函数，所有跨存储引擎操纵在这一层执行；</li><li><strong>存储引擎</strong>，负责数据的存储与提取，其架构是插件式的，支持多个存储引擎，常用的是InnoDB。</li></ol></li></ul><h4 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h4><ul><li><strong>连接器</strong>：它负责服务端和客户端之间连接的构建、维持与管理，以及权限的分配；<ol><li>连接使用的是TCP，用户密码验证成功，连接器根据权限表给相应用户分配权限；</li><li>连接长时间无操作，将会被断开，由参数<code>wait_timeout</code>进行控制。<ul><li><strong>长连接</strong>：连接成功，持续操作，一置使用一个连接，<em>建议使用此连接，但会占用较大内存。</em>；</li><li><strong>短连接</strong>，连接成功，短暂操作，再次操作需建立新连接；</li></ul></li></ol></li><li><strong>查询缓存</strong>：<ol><li>MySQL收到查询语句，首先查找缓存，缓存中保存语句和语句结果的key-value对，命中则直接返回缓存结果；否则将继续操作并将结果转化为key-value对存入缓存中。</li><li><strong>查询缓存利大于弊</strong>，任何表的更新都将导致缓存中对应表内容的清空，查询缓存就会失效，命中率低下。<em>另外MySQL8.0已删除此功能</em>。</li></ol></li><li><strong>分析器</strong>，缓存未命中，则需要执行语句：<ol><li><strong>词法分析</strong>，它对输入字符串进行分词，识别分词对应的含义；</li><li><strong>语法分析</strong>，判断语法是否符合MySQL语法；</li></ol></li><li><strong>优化器</strong>，当表内存在多个索引时，决定使用哪个索引；或者语句存在多表关联时，决定各个表的连接顺序。一条语句可能存在多个执行方案，优化器将选择效率最高的方案；</li><li><strong>执行器</strong>：<ol><li>首先判断用户是否拥有对表的执行权限；</li><li>根据表的引擎定义，使用引擎提供的接口。对于无索引的表，循环循环判断表的每一行；对于有索引的表，则循环判断满足条件的每一行。</li></ol></li></ul><h3 id="日志系统"><a href="#日志系统" class="headerlink" title="日志系统"></a>日志系统</h3><ul><li>MySQL可以恢复半个月内任意一秒的状态；</li><li>输入一个更新语句，首先会清空对应表的缓存，接下来才是分析、优化和执行。</li></ul><h4 id="redo-log模块"><a href="#redo-log模块" class="headerlink" title="redo log模块"></a>redo log模块</h4><ul><li>这一日志模块为存储引擎层持有；</li><li>为了降低每次更新都写磁盘的IO成本，MySQL使用了<strong>WAL, Write-Ahead Logging</strong>技术，即先写日志，再写磁盘。</li></ul><center><img src="https://livq2q.bl.files.1drv.com/y4mQLbCQYH7Y0CaRtCMm1-ltiQ2p6s8o19AVd36CWOz-ME1094JMacdn2OqNuqSuZHWIG188Jbrd5fzHc9V5sYAKjULA_NmS2puo0N28EMPfT1VAZIQ-Xy1iFffaoMBoJ24MvAF3uXQ17AJdymFtZaGunHmMyTetE_qTQmF9CUk4_KWQAazWJ0BuoiUtpA1E6scnUwnVdV5MpDMo5jPpHPLMw?width=1142&height=856&cropmode=none" width="40%" /><br>图2   redo log示意图</center><ul><li>InnoDB的redo log是固定大小的，比如可以配置一组四个大小为1GB的文件，从头开始写，写到末尾就返回开头循环写。<ol><li>上图中<code>write pos</code>是当前记录的位置，边写边后移；<code>checkpoint</code>是要擦除的位置。</li><li>当write pos追上checkpoint时，就需要停下来，将一些记录写入磁盘，并推进checkpoint。</li></ol></li><li>基于redo log，InnoDB就可以保证数据库发生异常重启时，之前提交的记录不会丢失。这种能力叫做<strong>crash-safe</strong>；</li></ul><h4 id="binlog"><a href="#binlog" class="headerlink" title="binlog"></a>binlog</h4><ul><li>这一日志模块为Server层持有，且此日志智能用于归档；</li><li>之所以存在这一日志模块，是因为MySQL自带的引擎MyISAM没有crash-safe能力。</li><li>与redo log的差异：<ol><li>redo log是InnoDB引擎特有的，binlog是MySQL Server实现的，所有引擎均可使用；</li><li>redo log是物理日志，记录在某个数据页做的修改；binlog是逻辑日志，记录语句的原始逻辑；</li><li>redo log是循环写的；binlog是追加写的，即写到一定大小会自动切换到下一个，并不会覆盖以前的内容；</li></ol></li><li>SQL更新语句的执行：<ol><li>执行器向引擎取某一行，引擎根据树搜索该行。如果该行存在于内存中，则直接返回给执行器；否则，先从磁盘中读入内存，在执行；</li><li>执行器对取到数据进行操作，完成后调用引擎接口写入新数据。</li><li>引擎将新数据存入内存，并在redo log中记录更新操作，redo log进入<strong>prepare状态</strong>。</li><li>引擎通知执行器操作完成，可以随时提交事务；</li><li>执行器生成该操作的binlog，并写入磁盘；</li><li>执行器调用引擎提交事务接口，更改redo log<strong>状态为commit</strong>，更新完成；</li></ol></li><li>redo log的两个状态——<strong>两阶段提交</strong>：<ol><li>将数据库恢复到某个时刻T：<ul><li>找到距T最近的备份，将其恢复到临时库；</li><li>从备份时间点开始，将备份的binlog去除，重放到时刻T；</li></ul></li><li>为什么两阶段提交？假设ID=2的行中字段C的值为0，现在将其值更新为1。但写完第一个日志，发生了crash，此时第二个日志未更新：<ul><li><strong>先写redo log再写binlog</strong>，由于redo log的crash-safe能力，即使系统崩溃，恢复后字段C的值仍为1，但binlog未记录上述更新操作，导致字段C的值无法恢复；</li><li><strong>先写binlog后写redo-log</strong>，此时恢复数据，redo log未写入，字段C的值仍为0，但binlog记录了更新操作，就会更新字段C的值为1，与原库值不同。</li></ul></li></ol></li></ul><h3 id="事务隔离"><a href="#事务隔离" class="headerlink" title="事务隔离"></a>事务隔离</h3><ul><li>事务的目标是保证一组操作要么完全完成，要么全部失败。MySQL中事务的支持是在引擎层实现的。并非所有的引擎都支持事务。</li><li>事务的特点：<strong>ACID(Atomicity, Consistency, Isolation, Durability)</strong>;</li></ul><center><img src="https://k4vq2q.bl.files.1drv.com/y4mdp5cyZzcYHtFg1gy9sPrWZrhKEoLtcnJIfcSQAZWN9s2pVPw8pVL7AprpHZCCZMPQ-Atc8Fapi94mH2C7aDkV9aRvfCaM4jbEi9axowTjini6ZBN13nc5zhppj9SZ7K3VT6o_QGZLAhkHWEdWoarwbW8aw1_lAzT9dU5ztUR4VrckRXEwt54AYUEhBVsycJk1zw5qrgYfg7jIODY1lqGpQ?width=1142&height=737&cropmode=none" width="40%" /><br>图3   回滚操作示意图</center><ul><li>事务之<strong>隔离</strong>：<ol><li>当数据库上同时执行多个事务时，就可能出现脏读、不可重复读、幻读等问题，隔离就是为解决这些问题而诞生的。</li><li>隔离带来的性能损失与隔离级别成正比。分为以下几个级别：<ul><li><strong>读未提交</strong>，一个事务未提交，它做的变更能被其他事务看到；</li><li><strong>读提交</strong>，一个事务提交后，他做的变更才能被其他事务看到；</li><li><strong>可重复读</strong>，一个事务执行看到的数据，与其启动时看到的数据一致。这种模式下未提交变更其他事务是不可见的；</li><li><strong>串行化</strong>，对同一行数据的读写需要申请锁。一旦锁被占用，他就要等待。</li></ul></li><li>不同级别隔离的实现原理——<strong>视图</strong>：数据库内会创建视图，访问时的结果以视图为准。<ul><li>“可重复读”隔离级别下，事务启动时创建试图，且整个事务存在期间都使用这个视图。</li><li>“读提交”隔离级别下，视图在每个SQL语句执行前创建；</li><li>“读未提交”隔离级别不存在视图的概念；</li></ul></li><li>事务隔离的实现：<ul><li>MySQL更新每条记录的同时会就一条回滚操作，通过回滚操作都可得到前一个状态的值；</li><li>如图3，途中视图A、B、C中记录的值分别为1、2、4；数据库内一条记录存在多个版本叫做<strong>数据库的多版本并发控制</strong>；</li><li>当没有视图需要回滚日志时，回滚日志会被删除；</li></ul></li><li>事务的启动方式：<ul><li>显式启动：使用<code>begin/start transaction</code>，配套的提交语句为<code>commit</code>，回滚语句为<code>rollback</code>。</li><li><code>set autocommit=0</code>，这个命令会关闭线程自动提交，也就是说事务会一直存在，直到主动执行<code>commit</code>或者<code>rollback</code>。</li><li>设置<code>set autocommit=1</code>时，每个事务的开始都得执行<code>begin</code>，为了省去begin语句的开销可以使用<code>commit work and chain</code>，表示提交事务并自动开启下一个事务；</li></ul></li></ol></li></ul><h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul><li>索引的出现是为了提高数据查询的效率。</li><li>实现索引的三种方式：<ol><li><strong>哈希表</strong>，输入键值，通过哈希函数将器转换到保存值数组的固定位置，<strong>适用于等值查询场景</strong>。</li><li><strong>有序数组</strong>，它在等值查询和范围查询等场景的表现都很优秀，但是它的插入成本太高，只适用于静态存储场景。</li><li><strong>搜索树</strong>，在二叉搜索树中的查询复杂度为$O(log(N))$，为了维持其搜索复杂度，需要保证其为平衡二叉树。也存在多叉树，每个节点的儿子从左到右递增。二叉搜索树的效率时最高的，但考虑到索引有时需要存储到磁盘上，数据库并未使用二叉树。</li><li>为了使查询尽可能少的访问数据块，就需要使用N叉树，N叉树以其优秀的读写性能和其对磁盘读写模式的契合，广泛应用于数据库索引中；</li></ol></li><li>MySQL中索引是在存储引擎实现的。</li></ul><pre><code class="mysql">mysql&gt; create table T(  id int primary key,  k int not null,  name archar(16),  index (k)) engine=InnoDB;</code></pre><ul><li>InnoDB的索引模型：<ol><li>InnoDB使用B+树索引模型，其中表根据主键顺序以索引的形式存放，即为<strong>索引组织表</strong>。</li><li>上述代码创建了一个带有两个索引的表T，假设其中存在五条记录，每条记录(ID, k)为(100，1)、(200，2)、(300， 3)、(400，4)、(500，5)，其索引如图4所示。</li><li>从图4可以看出，索引类型分别为<strong>主键索引</strong>和<strong>非主键索引</strong>。<ul><li>主键索引，叶子节点存放整行数据。采用主键查询，只需要搜索主键的B+索引树；</li><li>非主键索引，叶子节点存储的是主键的值。采用非主键查询，需要先查询非主键对应的B+索引树，在查询主键对应的B+所引树，此过程称为<strong>回表</strong>。</li></ul></li></ol></li></ul><center><img src="https://kovq2q.bl.files.1drv.com/y4mQmXjscCp2T7JGn1uKm8GkYmy7un2J5T5Xnpxl7MnMCZ0MU4P7ODQpnZHDFeMFlHlUbUNZLb2Gb9eCnuy4hPDEe5y6uLwlgEgd1cTJf6JVK9dBCg9Yx21tiS5ivs7uoERndxMXsNsBxaWtLlt1fOhqzx1d6exokJZJkc14rE69jvmo8ebOvSpgnP6iUNazQI2vU10tV5UyLxqj062GFtVCA?width=1142&height=856&cropmode=none" width="40%" /><br>图4   索引示意图</center><ul><li><strong>索引维护</strong>：<ol><li>在图4的索引中插入ID为700的新行，则可直接插入到R5之后。若插入ID为400的新行，就需要逻辑上挪动后面的数据。另外，倘若R5所在的数据页已满，就需要申请新的数据页并挪动数据，性能会严重下降。这叫做<strong>页分裂</strong>。</li><li>存在页分裂就存在<strong>页合并</strong>，页分裂会降低空降利用率，页合并则反之。</li><li>使用自增主键时插入不涉及挪动其他字段。但并不适用于所有场景。</li><li>主键的长度越小，普通索引的叶子节点就越小。</li></ol></li><li>对图4对应的索引执行<code>select * from T where k between 3 and 5</code>，需要指定五次树的查询操作，三次查找k索引树和两次回表操作。如何优化索引，避免回表操作呢》</li><li><strong>覆盖索引</strong>，如果执行<code>select ID from T where k between 3 and 5</code>，这时就可以只查询k的B+索引树；</li><li><strong>最左前缀原则</strong>，数据库中不可能为每一种查询都设计一个索引，但一让些不频繁的请求走全表扫描效率不高。此时使用最左前缀原则可以很好解决这个问题。这里有一个关键问题，<strong>建立联合索引时，如何安排索引内的字段</strong><ol><li>通过调整顺寻，可以少维护一个索引，那么此顺序就需要优先考虑采用；</li><li>尽量降低空间需求；</li></ol></li><li><strong>索引下推</strong>。</li></ul><h3 id="全局锁和表锁"><a href="#全局锁和表锁" class="headerlink" title="全局锁和表锁"></a>全局锁和表锁</h3><ul><li>MySQL的锁大致可以分为三类：<strong>全局锁、表级锁和行锁</strong></li></ul><h4 id="全局锁"><a href="#全局锁" class="headerlink" title="全局锁"></a>全局锁</h4><ul><li>使用命令<code>flush table with read lock(FTWRL)</code>，可以使整个库处于只读状态，任何线程的更新库操作都将被阻塞。</li><li>全局锁的经典使用场景是<strong>全库逻辑备份</strong>。使用FTWRL命令的缺点是业务不能使用。此时备份数据库将产生错误的结果。<ul><li>为了避免FTWRL带来的问题，可以使用事务进行备份，但遗憾的是并非所有的引擎都支持事务。</li><li>另外一个全局只读的命令是<code>set global readonly=true</code>，但不建议在做备份时使用：<ol><li>readonly值会被用来做其他逻辑，修改global变量影响范围太大；</li><li>FTWRL指令在客户端发生异常断开时会自动释放锁，以便继续进行数据库更新。使用readonly发生异常将导致数据库长时间不能更新。</li></ol></li></ul></li></ul><h4 id="表级锁"><a href="#表级锁" class="headerlink" title="表级锁"></a>表级锁</h4><ul><li>MySQL中表级别的锁有两种：<strong>表锁和元数据锁</strong>。</li><li><strong>表锁</strong>：<ol><li>语法：<code>unlock/lock tables ... read/write</code>，客户端异常断开时，锁会自动释放。该语句不仅能限制其他线程读写，也会限制自身的操作。</li></ol></li></ul>]]></content>
       
       
       <categories>
