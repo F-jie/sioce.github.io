@@ -10,16 +10,20 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="继承搭配虚函数">
+<meta property="og:type" content="article">
 <meta property="og:title" content="虚函数">
 <meta property="og:url" content="http://sioce.me/2020/08/21/%E8%99%9A%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Fujie&#39;s Blog">
+<meta property="og:description" content="继承搭配虚函数">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://qbacua.bl.files.1drv.com/y4m8fGFIljEUSw17ZwLrsLMM8Xp8p5cZ5U29L3FNzQO8jKhelxmSlaFhHPdwxnkJPNibCXDphPIFl7RZt4t3pmcMfLg8dMKaI-CUPddcSz1Rv2f8exsJFnJaoQNrLLKZUTUuvYa-GhPWupTZCZxMw5oeYGhMB3dkTDOH4ibXzG4lal3dzn7dWEC0-Ljwigvmjqgs8Kq3ZqoQO5rLlq7NatgGw?width=314&height=326&cropmode=none">
 <meta property="article:published_time" content="2020-08-21T07:43:29.000Z">
-<meta property="article:modified_time" content="2020-08-21T07:44:07.868Z">
+<meta property="article:modified_time" content="2020-08-24T07:39:58.694Z">
 <meta property="article:author" content="Fujie">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qbacua.bl.files.1drv.com/y4m8fGFIljEUSw17ZwLrsLMM8Xp8p5cZ5U29L3FNzQO8jKhelxmSlaFhHPdwxnkJPNibCXDphPIFl7RZt4t3pmcMfLg8dMKaI-CUPddcSz1Rv2f8exsJFnJaoQNrLLKZUTUuvYa-GhPWupTZCZxMw5oeYGhMB3dkTDOH4ibXzG4lal3dzn7dWEC0-Ljwigvmjqgs8Kq3ZqoQO5rLlq7NatgGw?width=314&height=326&cropmode=none">
   
     <link rel="alternative" href="/atom.xml" title="Fujie&#39;s Blog" type="application/atom+xml">
   
@@ -223,7 +227,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">0字</span>
+      <span class="post-count">911字</span>
     </span>
   </span>
 
@@ -232,7 +236,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -243,7 +247,101 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <h2 id="继承搭配虚函数"><a href="#继承搭配虚函数" class="headerlink" title="继承搭配虚函数"></a>继承搭配虚函数</h2><a id="more"></a>
+
+<h3 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h3><ul>
+<li><strong>多态polymorphism</strong>：面向对象的一大特点，<strong>虚函数</strong>是实现多态的机制：<ol>
+<li><strong>理念</strong>：通过基类访问派生类定义的函数；</li>
+<li>多态使得程序再运行时决定调用的函数(<em>动态联编</em>)，而非编译时静态确定；</li>
+<li>经典应用场景：使用基类的引用或指针指向子类的对象，进而调用子类覆写的虚函数；</li>
+</ol>
+</li>
+<li>成员函数分类：<ol>
+<li><strong>非虚函数</strong>，不希望派生类重新定义；</li>
+<li><strong>虚函数</strong>，使用<code>virtual</code>声明，希望派生类重新定义，可以不覆写；</li>
+<li><strong>纯虚函数</strong>，定义<code>virtual void func() = 0</code>，要求派生类必须重新定义；</li>
+</ol>
+</li>
+</ul>
+<pre><code class="C++">//例程1
+class C{
+public:
+    void func1();
+    void func2();
+    int data;
+}
+
+class C{
+public:
+    void func3();
+    virtual void func4();
+    int var;
+}</code></pre>
+<center>
+<img src="https://qbacua.bl.files.1drv.com/y4m8fGFIljEUSw17ZwLrsLMM8Xp8p5cZ5U29L3FNzQO8jKhelxmSlaFhHPdwxnkJPNibCXDphPIFl7RZt4t3pmcMfLg8dMKaI-CUPddcSz1Rv2f8exsJFnJaoQNrLLKZUTUuvYa-GhPWupTZCZxMw5oeYGhMB3dkTDOH4ibXzG4lal3dzn7dWEC0-Ljwigvmjqgs8Kq3ZqoQO5rLlq7NatgGw?width=314&height=326&cropmode=none" width="40%" /><br>
+图1  例程1内存布局
+</center>
+
+<ul>
+<li><p>例程1再内存中的布局如图1所示：</p>
+<ol>
+<li>成员函数(普通函数、虚函数)为类的所有对象共有，另外虚函数表也是共有的；</li>
+<li>成员变量为类的每个对象私有，另外虚函数表指针也是私有的；</li>
+<li>实现虚函数的关键：<strong>虚函数表指针vptr</strong>，它指向存储再全局数据区的<em>虚函数表</em>，表中存放函数的指针</li>
+<li>指针类型决定普通函数的调用，虚函数指针决定虚函数的调用；</li>
+</ol>
+</li>
+<li><p><strong>纯虚函数</strong>：</p>
+<ol>
+<li>理论上，由将基类实例化是不合理的；</li>
+<li>基类中声明的纯虚函数被子类覆写后就成为虚函数；</li>
+<li>纯虚函数为基类定义的<strong>接口</strong>，用于规范子类的行为；</li>
+<li>含有纯虚函数的类称为<strong>抽象类</strong>，不能实例化；</li>
+<li>若派生类未覆写基类的纯虚函数，则该派生类仍为抽象类；</li>
+</ol>
+</li>
+<li><p>构造函数和析构函数：</p>
+<ol>
+<li>构造函数不能为虚函数；</li>
+<li>析构函数可以是虚函数，且<em>推荐声明为虚函数。</em></li>
+<li>另外：内联函数和静态成员函数均不能是虚函数；</li>
+</ol>
+</li>
+<li><p>C++提供两种多态性：</p>
+<ol>
+<li><strong>编译时多态性(静态多态)</strong>，通过重载虚函数实现——先期联编；</li>
+<li><strong>运行时多态性(动态多态)</strong>，通过虚函数实现——滞后联编；</li>
+</ol>
+</li>
+<li><p>C++的隐藏：</p>
+<ol>
+<li>派生类的函数和基类函数重名，但参数不同。此时无论是否有<code>virtual</code>关键字，基类函数被隐藏；</li>
+<li>如果基类函数与派生类函数不仅同名，而且参数也相同，但基类函数没有<code>virtual</code>关键字声明，基类函数将被隐藏。</li>
+<li><strong>注意</strong>：重载是在同一个类中发生的。</li>
+</ol>
+</li>
+</ul>
+<pre><code class="C++">//例程1
+class Shape{
+public:
+    virtual void draw() const  = 0; //pure virtual
+    virtual void error(const std::string&amp; msg); //impure virtual
+    int objectID() const; //non-virtual
+}</code></pre>
+<ul>
+<li>数据可以被继承，这从内存方面很好理解。另外函数也可以继承，理解函数的继承需要从调用权切入。</li>
+<li>分类：<ol>
+<li>非虚函数，</li>
+<li>虚函数：希望派生类重新定义，而且基类中存在虚函数的默认定义；</li>
+<li>纯虚函数：子类一定要重新定义(可以有定义)。</li>
+</ol>
+</li>
+<li>虚函数只能借助于指针或者引用来达到多态的效果。</li>
+<li>含有纯虚拟函数的类称为抽象类，它不能生成对象。</li>
+<li>多态（polymorphism）是面向对象编程语言的一大特点，而虚函数是实现多态的机制。其核心理念就是通过基类访问派生类定义的函数。</li>
+<li>当使用类的指针调用成员函数时，普通函数由指针类型决定，而虚函数由指针指向的实际类型决定；</li>
+</ul>
+
     
 
     
@@ -393,6 +491,15 @@
 
 <nav id="article-nav">
   
+    <a href="/2020/08/22/django%E7%AE%80%E4%BB%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          django简介
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/08/21/%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">组合与继承</div>
@@ -422,7 +529,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#继承搭配虚函数"><span class="toc-number">1.</span> <span class="toc-text">继承搭配虚函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#虚函数"><span class="toc-number">1.1.</span> <span class="toc-text">虚函数</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -620,6 +727,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
             
             <div class="clearfix"></div>

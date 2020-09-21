@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sioce.me/"/>
-  <updated>2020-08-21T07:44:07.868Z</updated>
+  <updated>2020-09-21T03:01:45.630Z</updated>
   <id>http://sioce.me/</id>
   
   <author>
@@ -17,13 +17,329 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>target</title>
+    <link href="http://sioce.me/2020/09/21/target/"/>
+    <id>http://sioce.me/2020/09/21/target/</id>
+    <published>2020-09-21T02:54:28.000Z</published>
+    <updated>2020-09-21T03:01:45.630Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="定个小目标"><a href="#定个小目标" class="headerlink" title="定个小目标"></a>定个小目标</h2><a id="more"></a><p>一年之约</p><ul><li><input disabled="" type="checkbox"> 攒两万块钱</li><li><input disabled="" type="checkbox"> 发一篇文章</li><li><input disabled="" type="checkbox"> 明年国庆青海自驾</li><li><input disabled="" type="checkbox"> 学习摄影</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;定个小目标&quot;&gt;&lt;a href=&quot;#定个小目标&quot; class=&quot;headerlink&quot; title=&quot;定个小目标&quot;&gt;&lt;/a&gt;定个小目标&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="小记" scheme="http://sioce.me/categories/%E5%B0%8F%E8%AE%B0/"/>
+    
+    
+      <category term="心情" scheme="http://sioce.me/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python高级语法</title>
+    <link href="http://sioce.me/2020/08/28/Python%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95/"/>
+    <id>http://sioce.me/2020/08/28/Python%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95/</id>
+    <published>2020-08-28T06:29:12.000Z</published>
+    <updated>2020-08-28T06:38:30.880Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="变量赋值"><a href="#变量赋值" class="headerlink" title="变量赋值"></a>变量赋值</h2><ul><li>可变数据类型<ol><li>列表-list</li><li>字典-dict</li></ol></li><li>不可变数据类型<ol><li>整形</li><li>浮点型</li><li>布尔型</li><li>字符串型</li><li>元组</li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;变量赋值&quot;&gt;&lt;a href=&quot;#变量赋值&quot; class=&quot;headerlink&quot; title=&quot;变量赋值&quot;&gt;&lt;/a&gt;变量赋值&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;可变数据类型&lt;ol&gt;
+&lt;li&gt;列表-list&lt;/li&gt;
+&lt;li&gt;字典-dict&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Python" scheme="http://sioce.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>new&amp;delete关键字</title>
+    <link href="http://sioce.me/2020/08/27/new-delete%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    <id>http://sioce.me/2020/08/27/new-delete%E5%85%B3%E9%94%AE%E5%AD%97/</id>
+    <published>2020-08-27T05:55:40.000Z</published>
+    <updated>2020-08-28T01:37:47.661Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="重载为全局函数"><a href="#重载为全局函数" class="headerlink" title="重载为全局函数"></a>重载为全局函数</h2><ul><li>小心操作，影响范围大；</li><li><strong>::operator new(size_t size)</strong>、<strong>::operator[] new(size_t size)</strong>，必须传入size_t类型参数；</li><li><strong>::operator delete(void* ptr)</strong>、<strong>::operator[] delete(void* ptr)</strong>，必须传入指针类型参数；</li></ul><h2 id="重载为成员函数"><a href="#重载为成员函数" class="headerlink" title="重载为成员函数"></a>重载为成员函数</h2><ul><li>如果类重载了new、delete，仍然可以强制使用全局的new和delete，语法为：<code>Foo* ptr = ::new Foo</code>;</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;重载为全局函数&quot;&gt;&lt;a href=&quot;#重载为全局函数&quot; class=&quot;headerlink&quot; title=&quot;重载为全局函数&quot;&gt;&lt;/a&gt;重载为全局函数&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;小心操作，影响范围大；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;::operator new(
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C++" scheme="http://sioce.me/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>const关键字</title>
+    <link href="http://sioce.me/2020/08/27/const%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    <id>http://sioce.me/2020/08/27/const%E5%85%B3%E9%94%AE%E5%AD%97/</id>
+    <published>2020-08-27T05:55:26.000Z</published>
+    <updated>2020-08-27T06:27:23.549Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code class="C++">//例程1class A {    int real() const {return re;}};</code></pre><ul><li>例程1展示了<code>const</code>的一种用法，表示成员函数不打算修改类的成员变量，一般只能再成员函数中这样使用，而不再全局函数中使用；</li></ul><table><thead><tr><th align="center">~</th><th align="center">const修饰对象</th><th align="center">non-const对象</th></tr></thead><tbody><tr><td align="center">cosnt mem-func</td><td align="center">可调用</td><td align="center">可调用</td></tr><tr><td align="center">non-const mem-func</td><td align="center">不可调用</td><td align="center">可调用</td></tr></tbody></table><ul><li>non-const成员函数可以调用const成员函数，反之则不行；</li><li>当成员函数的const版本和non-const版本同时存在时，const对象只会调用const成员函数，non-const对象只会调用non-const成员函数。</li><li>cosnt修饰返回值，要求返回值为引用类型，表示函数不会修改该返回值。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code class=&quot;C++&quot;&gt;//例程1
+class A {
+    int real() const {return re;}
+};&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;例程1展示了&lt;code&gt;const&lt;/code&gt;的一种用法，表示成员函数不打算修改类
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C++" scheme="http://sioce.me/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>虚指针&amp;虚函数表</title>
+    <link href="http://sioce.me/2020/08/27/%E8%99%9A%E6%8C%87%E9%92%88-%E8%99%9A%E8%A1%A8/"/>
+    <id>http://sioce.me/2020/08/27/%E8%99%9A%E6%8C%87%E9%92%88-%E8%99%9A%E8%A1%A8/</id>
+    <published>2020-08-27T02:44:21.000Z</published>
+    <updated>2020-08-27T05:55:11.569Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="虚指针-amp-虚函数"><a href="#虚指针-amp-虚函数" class="headerlink" title="虚指针&amp;虚函数"></a>虚指针&amp;虚函数</h2><pre><code class="C++">// 例程1class A {public:    virtual void vfunc1();    virtual void vfunc2();    void func1();    void func2();private:    int m_data1, m_data2;}class B : public A {public:    virtual void vfunc1();    void func2();private:    int m_data3;}class C : public B{public:    virtual void vfunc1();    void func2();private:    int m_data1, m_data4;}</code></pre><center><img src="https://przmzw.bl.files.1drv.com/y4mghqmiLIR05qC1QhB-gFL_XFr4BgCZXlpaO2JSyJ0c-tVRARfOoqPjZNyH-TV_Bzj0KA-jl1Yn30VzfxSl8qQkI-O-RMY0anR5w2xqM2g6KT2Jy7J4ZKQBDc_hx2BUVDVQWhGTx9OyTozsFJj2sp-DVftpKcNP7H84erWYNNKah29QrnyOY2CTTK8A5PfKpAXdXdImwLDoNIIPz1uUjQx9g?width=750&height=451&cropmode=none" width="60%" /><br>图1  例程1内存布局</center><ul><li>如上图所示，通过指针p访问虚函数的方法为：<code>(*(p-&gt;vptr)[n])(p) or (* p-&gt;vptr[n])(p)</code></li></ul><h2 id="动态绑定"><a href="#动态绑定" class="headerlink" title="动态绑定"></a>动态绑定</h2><ul><li>动态绑定的三个条件：指针、向上转型、虚函数；</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;虚指针-amp-虚函数&quot;&gt;&lt;a href=&quot;#虚指针-amp-虚函数&quot; class=&quot;headerlink&quot; title=&quot;虚指针&amp;amp;虚函数&quot;&gt;&lt;/a&gt;虚指针&amp;amp;虚函数&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;C++&quot;&gt;// 例程1
+class A
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C++" scheme="http://sioce.me/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>引用</title>
+    <link href="http://sioce.me/2020/08/26/%E5%BC%95%E7%94%A8/"/>
+    <id>http://sioce.me/2020/08/26/%E5%BC%95%E7%94%A8/</id>
+    <published>2020-08-26T08:02:39.000Z</published>
+    <updated>2020-08-27T02:42:18.154Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>引用的实质就是指针；</li><li>定义引用必须设置初值，且不可再作为初值外的其他值的别名；</li></ul><center><img src="https://phzmzw.bl.files.1drv.com/y4mH8YInh5P7KL5DKsoJkQc3mQlSzvTT1lJjFHZ2hIoS4CW5GGO7iVerPtrkL1vd1hKiOKILZuTnyb9JoEcrYPq3MsHNf0FRBllka2atiEKctTW8tOieVqKHNZesubyZ1mVd4rNkzt9PbANcEiYrnu21Cpwf_eSxJJmeW5lF1ajeNR3ZjJ3uJdVdbGTB4HHNHuweQT11sC7zSt9QbCz6gXYcA?width=726&height=518&cropmode=none" width="60%" /><br>图1  例程1内存布局</center><ul><li><strong>const</strong>关键字是签名的一部分；</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;引用的实质就是指针；&lt;/li&gt;
+&lt;li&gt;定义引用必须设置初值，且不可再作为初值外的其他值的别名；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;center&gt;
+&lt;img src=&quot;https://phzmzw.bl.files.1drv.com/y4mH8YInh5P7KL5DKso
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C++" scheme="http://sioce.me/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STL</title>
+    <link href="http://sioce.me/2020/08/26/STL/"/>
+    <id>http://sioce.me/2020/08/26/STL/</id>
+    <published>2020-08-26T07:14:04.000Z</published>
+    <updated>2020-08-28T06:18:57.917Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="https://pbzmzw.bl.files.1drv.com/y4mGv90-Tg9QH5PM9B8Kd_pkQtLePsgZBUV1Y4PcTBcUd3-CH0ic7jqAYD0KFVkudfyynB0pcnuPxvmiWlrN6s-3XZdwkA_vaDsnP-ddtR3CEsXB4P7gjjf88fI910vXA17Ijj86ES9lTvN9M6vLNZJ21Qhw5BIJuj0YHMg-r4aRvpprZ6SfIfMHSy8-m67j7198pflY4qVnShz4AZRHNEDDQ?width=353&height=298&cropmode=none" width="60%" /><br>图1  STL</center><ul><li>标准库包含四部分内容：<ol><li>容器；</li><li>分配器；</li><li>算法；</li><li>迭代器；</li><li>适配器；</li><li>仿函数；</li></ol></li><li>模板编程将算法和数据进行一定程度的分离；</li><li>标准库使用的是前闭后开区间，如<code>begin()</code>指向容器第一个元素，<code>end()</code>指向容器最后一个元素的下一个；</li></ul><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><h3 id="结构分类"><a href="#结构分类" class="headerlink" title="结构分类"></a>结构分类</h3><ul><li>序列容器：<ol><li>array，元素数量固定；</li><li>vector，后端增长；</li><li>deque，两端增长，分段连续；</li><li>list，双向<em>环状</em>链表；</li><li>forward-list，单向链表</li></ol></li><li>关联容器——<strong>key-val</strong>：<ol><li>set/multiset，红黑树。set元素不能重复，后者可以；</li><li>map/multimap，红黑树。map元素不能重复，后者可以；</li></ol></li><li>不定序容器：<ol><li>Unordered set/multiset，哈希表；</li><li>Unordered map/multimap，哈希表；</li></ol></li><li>stack&amp;queue的底层都是deque，且不支持迭代器；</li></ul><h2 id="分配器"><a href="#分配器" class="headerlink" title="分配器"></a>分配器</h2><pre><code class="C++">#include &lt;ext/array_allocator.h&gt;#include &lt;ext/mt_allocator.h&gt;  //multi-thread#include &lt;ext/debug_allocator.h&gt;#include &lt;ext/pool_allocator.h&gt;#include &lt;ext/bitmap_allocator.h&gt;#include &lt;ext/malloc_allocator.h&gt;#include &lt;ext/new_allocator.h&gt;</code></pre><ul><li>GNU中的分配器如例程1所示，GNU中的分配器一般搭配容器使用，也可以单独使用，但没有必要；</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;center&gt;
+&lt;img src=&quot;https://pbzmzw.bl.files.1drv.com/y4mGv90-Tg9QH5PM9B8Kd_pkQtLePsgZBUV1Y4PcTBcUd3-CH0ic7jqAYD0KFVkudfyynB0pcnuPxvmiWlrN6s-3
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C++" scheme="http://sioce.me/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模板</title>
+    <link href="http://sioce.me/2020/08/24/%E6%A8%A1%E6%9D%BF/"/>
+    <id>http://sioce.me/2020/08/24/%E6%A8%A1%E6%9D%BF/</id>
+    <published>2020-08-24T14:13:07.000Z</published>
+    <updated>2020-08-26T07:58:28.523Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="类模板"><a href="#类模板" class="headerlink" title="类模板"></a>类模板</h2><ul><li>实例化时需要使用尖括号指定模板类型；</li></ul><h2 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h2><ul><li>使用的时候不必指明类型，编译器自动进行实参推导；</li></ul><h2 id="成员模板"><a href="#成员模板" class="headerlink" title="成员模板"></a>成员模板</h2><center><img src="https://phyb3a.bl.files.1drv.com/y4m1qj-Ep49TLSHHa-L0qdX_G9eU8ZydrnJ9koPDmRQUnOD-fQUW3xUzThJaVNipoFIVFaPHCncgj3fuK9CnP2x9TqbBq1Qz09Aclh3pMLR-iTCT2FvEpmjoKZ7IhqSMCQU3pkHsZQuu3fD2UyDo3xhuZ5Z5_CRvYrghX9OYrVKb_FXdM1faaVSMKqoapHrRUlBQpQJbllUxoY9IG_f1PqpVw?width=603&height=481&cropmode=none" width="60%" /><br>图1  成员模板代码</center><pre><code class="C++">// 例程1class Base1 {};class Derived1: public Base1 {};class Base2 {};class Derived2: public Base2 {};pair&lt;Derived1, Derived2&gt; p1; //p1pair&lt;Base1, Base2&gt; p2(p1);   //p2</code></pre><ul><li>图1中的黄色部分即为成员模板，例程1即为一种成员模板的使用方式，注意U1、U2和T1、T2的关联关系。</li><li>例程2给出了标准库中成员模板的一个例子，通过使用成员模板模拟类型为父类的指针，指向子类对象的用法；</li></ul><pre><code class="C++">// 例程2template&lt;typename _Tp&gt;class shared_ptr:public __shared_ptr&lt;_Tp&gt;{...    template&lt;typename _Tp1&gt;    explicit shared_ptr(_Tp1* __p)     : __shared_ptr&lt;_Tp&gt;(__p) {}...};Base* ptr = new Derived1; //up-castshared_ptr&lt;Base1&gt; sptr(new Derived1); //模拟up-cast</code></pre><h2 id="模板特化-specialization"><a href="#模板特化-specialization" class="headerlink" title="模板特化-specialization"></a>模板特化-specialization</h2><pre><code class="C++">// 例程3template&lt;class Key&gt; //p1struct hash {};     //p2template&lt;&gt;     //p3struct hash&lt;char&gt; {    size_t operator() (char x) const {return x};};</code></pre><center><img src="https://qbyb3a.bl.files.1drv.com/y4mQiczdfJ--l7GhgOfVgCZsyvUHQd8tzSzoat3IH8TOq76lv-ReKbO7CtP5GjCrHQ8Sv0gS2-lfbqHkxqURmkN6eR2H2UrbwgsltYl2Y3EoSRhKyu9r9yW35sxIWnNjTp-A_aG47Y-T9BnFivhKV6GtePId-eqOU7OCg2Kx82BvnS1Aq-A7LXtbenqIOZEBXC6ZKxFPUIDkyp_YXvFYgRWqw?width=603&height=314&cropmode=none" width="60%" /><br>图2  specialization-个数</center><center><img src="https://pxyb3a.bl.files.1drv.com/y4mbPHvGaMZGWYQX9ULqtq290I6t0E3PFyo1pN6_gTZkczGc8YRjtTmn0kqzicOaxtQTu7Cqi4dcGYHTFJwHXGsPZgZCb_8yBQW71DzJ7KvDbREErr3t-RCfIt5RRhZIZZceNoXErmoJYOoWJy_x_ghn8mP9VT_uGySWhiNf889IgiAwA24X3mi542WUq9Eugccbybc4JiiJBE-KKCoTNlOsw?width=326&height=320&cropmode=none" width="60%" /><br>图3  specialization-范围</center><ul><li>例程3展示了模板特化的例子，当传入的类型为<code>char</code>时，编译器会首先调用特化的代码，即p3后的代码，其他类型方会执行p1、p2行；</li><li>模板的特化分为两类：<ol><li><strong>全特化</strong>；</li><li><strong>偏特化</strong>：也叫做局部特化，<em>偏</em>可以从两个方面理解：个数上和范围上；<ul><li>个数上，如图二所示，将<code>typename T</code>绑定为布尔值。</li><li>范围上，如图三所示，当使用指针时，就会使用图3下面代码，否则使用上面代码；</li></ul></li></ol></li></ul><h2 id="模板模板参数"><a href="#模板模板参数" class="headerlink" title="模板模板参数"></a>模板模板参数</h2><center><img src="https://8hyb3a.bl.files.1drv.com/y4mvbgVjrqAMI7SRs7ekfeDXO-uM1NxhbWHy7dfiRGLJWY_qFQubRA7Xs_7aF65VzvlavNKvwNMsGpbwQOeyJCF4o3hrat3S7-mzJ9dpwyj6bTZd-xRHClOni6D_RfHvjQ3dgCR95_bOZxLtEJdfgGLu6oYwdEQzC2O9BSqTdpwkAOy3nr15v0vmO4IZrtUrrEJ9tOdtSbwG_h-vMoQY7b_2A?width=634&height=498&cropmode=none" width="60%" /><br>图4 模板模板参数</center><ul><li>上图黄色部分即为模板模板参数的一个示例；</li><li><code>template&lt;class T&gt;</code>和<code>template&lt;typename T&gt;</code>只有在这种情况下，尖括号内使用template和class是一样的效果，其他地方不适用这条规则；<ol><li>图4中深色部分的第一行代码的用法是错误的，虽然它符合我们使用的习惯，但容器是存在第二、甚至第三模板参数的，这个时候需要我们手动指定这些参数。如图4中间代码所示。</li></ol></li></ul><h2 id="数量不定模板参数-C-11"><a href="#数量不定模板参数-C-11" class="headerlink" title="数量不定模板参数(C++11)"></a>数量不定模板参数(C++11)</h2><pre><code class="C++">//例程4void print() {}template&lt;typename T, typename... Types&gt;void print(const T&amp; firstArg, const type&amp;... args) { //p1  cout &lt;&lt; firstArg &lt;&lt; endl;  sizeof...(args); //计算args中的参数量  print(args...);}print(7.5, &quot;hello&quot;, bitset&lt;16&gt;(377), 42); //p2</code></pre><ul><li>执行例程4中的p2行，将循环调用p1行定义的函数，当42打印完成后，传入参数的数量为0，此时调用p1行的代码将报错，故而另外定义了一个没有参数的<code>print</code>函数。</li><li><code>...</code>被称为包<strong>pack</strong>：<ol><li>将他用做模板参数，则称为模板参数包；</li><li>用作函数参数类型，就称为函数参数类型包；</li><li>用作函数参数，就称为函数参数包；</li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;类模板&quot;&gt;&lt;a href=&quot;#类模板&quot; class=&quot;headerlink&quot; title=&quot;类模板&quot;&gt;&lt;/a&gt;类模板&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;实例化时需要使用尖括号指定模板类型；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;函数模板&quot;&gt;&lt;a href=&quot;#函数模板&quot; 
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C++" scheme="http://sioce.me/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于智能指针</title>
+    <link href="http://sioce.me/2020/08/24/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/"/>
+    <id>http://sioce.me/2020/08/24/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/</id>
+    <published>2020-08-24T12:55:16.000Z</published>
+    <updated>2020-08-24T14:12:36.277Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="pointer-like-classes，智能指针"><a href="#pointer-like-classes，智能指针" class="headerlink" title="pointer-like classes，智能指针"></a>pointer-like classes，智能指针</h2><pre><code class="C++">//例程1template&lt;class T&gt;class shared_ptr{public:    T&amp; operator() const {return *px;}    T* operator-&gt;() const {return px;}    shared_ptr(T* p) : px(p) {}private:    T* px;    long* pn;}struct Foo{    ····    void method(void) {···}}shared_ptr&lt;Foo&gt; sp(new Foo); //p1sp-&gt;method();                //p2</code></pre><ul><li>类对象的使用和指针的使用相似，但做的工作更多；</li><li>注意例程1中p1和p2行，<code>-&gt;</code>符号作用一次后还可以继续起作用；</li></ul><h2 id="pointer-like-classes，迭代器"><a href="#pointer-like-classes，迭代器" class="headerlink" title="pointer-like classes，迭代器"></a>pointer-like classes，迭代器</h2><center><img src="https://pxacua.bl.files.1drv.com/y4mLqj5JZfSCiPdQZOcjTCYUpqk0omGglFbWGDsuTKas_JhIxTURGc-9Jo5GrH6y4dzGd9UGj-DhgQL3SEEf5q66FoqLdRigYI3-zEsc0fLelmKmIbsb4FDSrFFfRh80BIMzi6bzHVhrVzg1Ej5MK1e_JQlI3S4cF0sVUBU-tOytl7_iOYSut3XmsY5gQvg4aOdKRj8PCjMwHG4_W5nznZBkQ?width=967&height=489&cropmode=none" width="60%" /><br>图1  迭代器代码</center><center><img src="https://8hacua.bl.files.1drv.com/y4mj1MmsqFapoWaSOTWj6ACymrt6fbs6lxRlu6FHjVbcAEQguKNNE8pZErt7GTpeWqmXzGaxj6ic8x26JQJApsDL_3bZgN80bOtno0IbzXWSpU_RlHAVF9XLTm2aPuDrFK_O-7-YIcTj5F1_VUBbn5Fg4bPKAy3dODClRtMGKjgbFmBn-iF-jOMcbRX5YxqV_jPXT0stX87Yfol2QgJCTvY4A?width=828&height=273&cropmode=none" width="60%" /><br>图2  迭代器示意图</center><ul><li>迭代器不仅需要重载<code>*、-&gt;</code>操作符</li><li>好需要重载自增、自减操作符；</li><li>对迭代器解参考，就相当于取对应的<code>data</code>;</li></ul><h2 id="pointer-like-function，仿函数"><a href="#pointer-like-function，仿函数" class="headerlink" title="pointer-like function，仿函数"></a>pointer-like function，仿函数</h2><center><img src="https://8racua.bl.files.1drv.com/y4mwxdg9rNzup9WC8-8omPXXKsQjnjzXm_fOUcNBJ-RBW4tFnOw1l-APdsckqn7o2S6rwpnyu6V0trflWWNEtvhPI2RSE4RKA4YxY3F1Mc_w63Esok1I1FIdJjb6n90tAsRjt82JiDDjLMexdoHxj3TtPap13rpKuVSr5tFuzBdtHDFoGpJBR4ovFBcN2gEiN8yEEDxfOG_HdLwr6rxUoMmiA?width=977&height=491&cropmode=none" width="60%" /><br>图2  仿函数代码</center><pre><code class="C++">//例程2select1st&lt;pair&gt;()();</code></pre><ul><li><code>()</code>函数调用操作符，接受小括号操作符的东西叫做函数或者仿函数；</li><li>例程2中代码使用两个小括号，第一个是构造对象，第二个是调用<code>()</code>操作符重载函数；</li><li>标准库中的仿函数都会继承奇特的基类，图2并没有写出来（灰色部分）；</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;pointer-like-classes，智能指针&quot;&gt;&lt;a href=&quot;#pointer-like-classes，智能指针&quot; class=&quot;headerlink&quot; title=&quot;pointer-like classes，智能指针&quot;&gt;&lt;/a&gt;pointer-lik
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C++" scheme="http://sioce.me/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转换函数</title>
+    <link href="http://sioce.me/2020/08/24/%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/"/>
+    <id>http://sioce.me/2020/08/24/%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/</id>
+    <published>2020-08-24T08:44:47.000Z</published>
+    <updated>2020-08-24T14:12:39.218Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>将一种类型转换为其他类型，或者将其他类型转化为本类型；</li></ul><pre><code class="C++">// 例程1class Fraction{public:    Fraction(int num, int den=1) //这是一种特殊的构造函数，non-explicit-one-argument构造函数        : M_numerator(num), m_denominator(den) {}    operator double() const { // 无需指定参数与返回类型，编译器自动设置返回类型为double        return (double) (m_numerator / m_denominator);    }    Fraction operator+(const Fraction&amp; f) {        return Fraction(....);    }private:    int m_numerator;    int m_denominator;}Fraction f(3, 5); //p1double d = 4 + f; //p2Fraction f(3, 5); //p3Fraction d2 = f + 4; //p4</code></pre><h2 id="转出去"><a href="#转出去" class="headerlink" title="转出去"></a>转出去</h2><ul><li>假设注释掉例程1中的<code>Fraction operator+</code>函数，执行p1、p2行将调用<code>operator double()</code>将f转为0.6；</li></ul><h2 id="转进来"><a href="#转进来" class="headerlink" title="转进来"></a>转进来</h2><h3 id="non-explicit-one-argument构造函数"><a href="#non-explicit-one-argument构造函数" class="headerlink" title="non-explicit-one-argument构造函数"></a>non-explicit-one-argument构造函数</h3><ul><li>假设注释掉例程1中的<code>operator double()</code>函数，执行p3、p4行，<code>+</code>号作用于对象f，编译器查找类Fraction是否重载操作符<code>+</code>，存在则调用，但它的参数为Fraction，这时就会调用non-explicit-one-argument构造函数将4转化为Fraction对象进行计算；</li><li>如果运行例程1的完整代码，将产生错误。</li><li>使用<code>explict</code>修饰Fraction的构造函数，编译器就不会将该函数作为转换函数，执行p3、p4行将报错。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;将一种类型转换为其他类型，或者将其他类型转化为本类型；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;C++&quot;&gt;// 例程1
+class Fraction
+{
+public:
+    Fraction(int num, int den=1) //这是
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C++" scheme="http://sioce.me/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>django简介</title>
+    <link href="http://sioce.me/2020/08/22/django%E7%AE%80%E4%BB%8B/"/>
+    <id>http://sioce.me/2020/08/22/django%E7%AE%80%E4%BB%8B/</id>
+    <published>2020-08-22T13:45:42.000Z</published>
+    <updated>2020-08-26T15:00:47.118Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Django基础"><a href="#Django基础" class="headerlink" title="Django基础"></a>Django基础</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul><li>python语言web框，下列框架都遵循<strong>MVC</strong>设计模式，因此本文主要介绍Django。<ol><li>web.py;</li><li><strong>Django</strong>(MTV框架);</li><li>Flask;</li><li>Tornado;</li><li>AIOHTTP;</li><li>FastAPI;</li></ol></li></ul><center><img src="https://pracua.bl.files.1drv.com/y4mtD0YhXfafTW6WrJGW1W06QTu6XCd6sjbnM-kQdxzHxeB3ssW-GAAC5I1omEAx2KpeUcgBfBzC5Uw3S-ZD_68W5AiXvqXM0uCOp2X8ZL0_hId-wuu2zHa_0KlrsO3RMxiYDOHbTxxlO2hv9qQb2u2BvyK8FQ6ecVXibXA7FCZ7qLoKdMAv7nyjaKHuSVdZIozlxe3HuQtdT4dUTPU9fn26Q?width=660&height=474&cropmode=none" width="40%" high="40%"/><br>图1  Django MTV架构</center><ul><li><p>Django采用MTV框架（如图1），另外还遵循<strong>代码复用DRY</strong>原则；</p></li><li><p>Django的组件：</p><ol><li><strong>ORM-对象甚映射</strong>，映射类来构建数据模型；</li><li>URL支持正则表达式；</li><li>模板可以继承；</li><li>内置用户认证，提供用户认证和权限功能；</li><li>admin管理系统；</li><li>内置表单模型、cache缓存系统、国际化系统等；</li></ol></li><li><p>Django安装(2020-9)</p><ol><li>目前建议使用<em>Django2.2.13</em>，最新版为3.0.</li><li>如果维护已存在Django代码，建议使用已有代码采用的Django版本。如果需要升级请进行兼容性测试；</li><li>安装指令：<code>pip install --upgrade django==2.2.13</code></li></ol></li><li><p>使用Django：</p><ol><li>创建Django项目：<code>django-admin startprojet project_name</code></li><li>创建Django应用程序：<code>python manage.py startapp index</code></li><li>启动应用程序：<code>python manage.py runserver ip:port</code></li><li>退出程序：<code>CONTROL+C</code></li></ol></li></ul><h3 id="Django目录结构"><a href="#Django目录结构" class="headerlink" title="Django目录结构"></a>Django目录结构</h3><center><img src="https://pbacua.bl.files.1drv.com/y4mqoYRMjdbPgMLpg9E7NIsGsZqu6viE97lZEMMAth4wMzQpJZI1m_4hrYe7PdLgt1ZiaugHcTiKufb_kryRKdPUsqeMdAcdTcxQ9QmXdvSJ68fAbjjtnc0zJIl5GUs4aQWYBzvBIOBv7NnzNC0dLIH7ue6E_mSAnRPonBbY85URPCOK2i-rHGzF-CEuVNRsoOCnRfcgcFbgQNPlF_SRN_1xw?width=344&height=332&cropmode=none" width="40%" high="40%"/><br>图1  Django 目录结构</center><ul><li>Django使用的入口文件：<code>manage.py</code></li><li>Django的配置文件：<code>settings.py</code>，配置文件的内容：<ol><li>项目路径；</li><li>密钥；</li><li>域名访问权限；</li><li>App列表；</li><li>静态资源，如CSS、JaveScript、图片等；</li><li>模板文件；</li><li>数据库配置；</li><li>缓存；</li><li>中间件；</li></ol></li><li>Django URL调度器：<code>url.py</code>，URL调度器流程：<ol><li>传入HttoRequest对象，Django中间件设置urlconf属性；</li><li>加载URLconf模块，寻找可用urlpatterns，支持正则匹配；</li><li>匹配成功，Django调用相关视图，传入如下参数：<ol><li>一个HttpRequest实例；</li><li>一个或多个位置参数；</li></ol></li><li>匹配失败，抛出异常，可定制；</li></ol></li></ul><pre><code class="Py"># 例程1path(&#39;&lt;int:year&gt;&#39;, views.year),  #只接收整数，否则将返回404，页面不存在{  path(&#39;&lt;int:year&gt;/&lt;str:name&gt;&#39;, views.name) #site/year/name  def name(request, **kwargs):    return HttpResponse(kwargs[&#39;name&#39;])}# 例程2re_path(&#39;(?P&lt;year&gt;[0-9]{4}).html&#39;, views.myyear, name=&#39;urlyear&#39;)# 例程3from . import convertersregister_converter(converters.IntConverter, &#39;myint&#39;)path(&#39;&lt;myint:year&gt;&#39;, views.year)class IntConverter:    regex = &#39;[0-9]+&#39;    def to_python(self, value):        return int(value)    def to_url(self, value):        return str(value)</code></pre><ul><li>Django URL变量支持：<ol><li>带变量的URL，支持五种<code>str/int/slug/uuid/path</code>，如例程1所示；</li><li>正则表达式处理，使用例程2中的代码将返回index文件夹中Templates文件夹内的yearview.html；</li><li>自定义函数，如例程3所示，首先注册自定义的转换，在converters.py中定义IntConverter类。</li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Django基础&quot;&gt;&lt;a href=&quot;#Django基础&quot; class=&quot;headerlink&quot; title=&quot;Django基础&quot;&gt;&lt;/a&gt;Django基础&lt;/h2&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; titl
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Django" scheme="http://sioce.me/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
     <title>虚函数</title>
     <link href="http://sioce.me/2020/08/21/%E8%99%9A%E5%87%BD%E6%95%B0/"/>
     <id>http://sioce.me/2020/08/21/%E8%99%9A%E5%87%BD%E6%95%B0/</id>
     <published>2020-08-21T07:43:29.000Z</published>
-    <updated>2020-08-21T07:44:07.868Z</updated>
+    <updated>2020-08-24T07:39:58.694Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="继承搭配虚函数"><a href="#继承搭配虚函数" class="headerlink" title="继承搭配虚函数"></a>继承搭配虚函数</h2><a id="more"></a><h3 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h3><ul><li><strong>多态polymorphism</strong>：面向对象的一大特点，<strong>虚函数</strong>是实现多态的机制：<ol><li><strong>理念</strong>：通过基类访问派生类定义的函数；</li><li>多态使得程序再运行时决定调用的函数(<em>动态联编</em>)，而非编译时静态确定；</li><li>经典应用场景：使用基类的引用或指针指向子类的对象，进而调用子类覆写的虚函数；</li></ol></li><li>成员函数分类：<ol><li><strong>非虚函数</strong>，不希望派生类重新定义；</li><li><strong>虚函数</strong>，使用<code>virtual</code>声明，希望派生类重新定义，可以不覆写；</li><li><strong>纯虚函数</strong>，定义<code>virtual void func() = 0</code>，要求派生类必须重新定义；</li></ol></li></ul><pre><code class="C++">//例程1class C{public:    void func1();    void func2();    int data;}class C{public:    void func3();    virtual void func4();    int var;}</code></pre><center><img src="https://qbacua.bl.files.1drv.com/y4m8fGFIljEUSw17ZwLrsLMM8Xp8p5cZ5U29L3FNzQO8jKhelxmSlaFhHPdwxnkJPNibCXDphPIFl7RZt4t3pmcMfLg8dMKaI-CUPddcSz1Rv2f8exsJFnJaoQNrLLKZUTUuvYa-GhPWupTZCZxMw5oeYGhMB3dkTDOH4ibXzG4lal3dzn7dWEC0-Ljwigvmjqgs8Kq3ZqoQO5rLlq7NatgGw?width=314&height=326&cropmode=none" width="40%" /><br>图1  例程1内存布局</center><ul><li><p>例程1再内存中的布局如图1所示：</p><ol><li>成员函数(普通函数、虚函数)为类的所有对象共有，另外虚函数表也是共有的；</li><li>成员变量为类的每个对象私有，另外虚函数表指针也是私有的；</li><li>实现虚函数的关键：<strong>虚函数表指针vptr</strong>，它指向存储再全局数据区的<em>虚函数表</em>，表中存放函数的指针</li><li>指针类型决定普通函数的调用，虚函数指针决定虚函数的调用；</li></ol></li><li><p><strong>纯虚函数</strong>：</p><ol><li>理论上，由将基类实例化是不合理的；</li><li>基类中声明的纯虚函数被子类覆写后就成为虚函数；</li><li>纯虚函数为基类定义的<strong>接口</strong>，用于规范子类的行为；</li><li>含有纯虚函数的类称为<strong>抽象类</strong>，不能实例化；</li><li>若派生类未覆写基类的纯虚函数，则该派生类仍为抽象类；</li></ol></li><li><p>构造函数和析构函数：</p><ol><li>构造函数不能为虚函数；</li><li>析构函数可以是虚函数，且<em>推荐声明为虚函数。</em></li><li>另外：内联函数和静态成员函数均不能是虚函数；</li></ol></li><li><p>C++提供两种多态性：</p><ol><li><strong>编译时多态性(静态多态)</strong>，通过重载虚函数实现——先期联编；</li><li><strong>运行时多态性(动态多态)</strong>，通过虚函数实现——滞后联编；</li></ol></li><li><p>C++的隐藏：</p><ol><li>派生类的函数和基类函数重名，但参数不同。此时无论是否有<code>virtual</code>关键字，基类函数被隐藏；</li><li>如果基类函数与派生类函数不仅同名，而且参数也相同，但基类函数没有<code>virtual</code>关键字声明，基类函数将被隐藏。</li><li><strong>注意</strong>：重载是在同一个类中发生的。</li></ol></li></ul><pre><code class="C++">//例程1class Shape{public:    virtual void draw() const  = 0; //pure virtual    virtual void error(const std::string&amp; msg); //impure virtual    int objectID() const; //non-virtual}</code></pre><ul><li>数据可以被继承，这从内存方面很好理解。另外函数也可以继承，理解函数的继承需要从调用权切入。</li><li>分类：<ol><li>非虚函数，</li><li>虚函数：希望派生类重新定义，而且基类中存在虚函数的默认定义；</li><li>纯虚函数：子类一定要重新定义(可以有定义)。</li></ol></li><li>虚函数只能借助于指针或者引用来达到多态的效果。</li><li>含有纯虚拟函数的类称为抽象类，它不能生成对象。</li><li>多态（polymorphism）是面向对象编程语言的一大特点，而虚函数是实现多态的机制。其核心理念就是通过基类访问派生类定义的函数。</li><li>当使用类的指针调用成员函数时，普通函数由指针类型决定，而虚函数由指针指向的实际类型决定；</li></ul>]]></content>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;继承搭配虚函数&quot;&gt;&lt;a href=&quot;#继承搭配虚函数&quot; class=&quot;headerlink&quot; title=&quot;继承搭配虚函数&quot;&gt;&lt;/a&gt;继承搭配虚函数&lt;/h2&gt;
     
     </summary>
     
@@ -231,259 +547,6 @@ public:
     
     
       <category term="古文" scheme="http://sioce.me/tags/%E5%8F%A4%E6%96%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>超越物理内存</title>
-    <link href="http://sioce.me/2020/08/14/%E8%B6%85%E8%B6%8A%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98/"/>
-    <id>http://sioce.me/2020/08/14/%E8%B6%85%E8%B6%8A%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98/</id>
-    <published>2020-08-14T03:20:53.000Z</published>
-    <updated>2020-08-14T09:20:40.753Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="超越物理内存"><a href="#超越物理内存" class="headerlink" title="超越物理内存"></a>超越物理内存</h2><a id="more"></a><h3 id="第一章-机制"><a href="#第一章-机制" class="headerlink" title="第一章 机制"></a>第一章 机制</h3><ul><li>关于内存虚拟化的讨论都有一个假设，内存可以完全进程的地址空间。</li><li><strong>交换空间</strong>，在硬盘中开辟一个空间，将内存中的页交换到其中，并在需要的时候交换回来。</li><li><strong>存在位</strong>：假设存在一个硬盘管理的TLB系统。<ol><li>当硬件在PTE中查找时，它会根据存在未判断页是否在物理内存中。访问不在物理内存中的页，通常称为页错误。此时就会触发操作系统执行<strong>页错误处理程序</strong>。</li><li>页错误的处理：<ol><li>操作系统根据页表中PTE的某些位判断存储硬盘的地址，并向硬盘请求读取对应内容；</li><li>I/O操作完成，操作系统更新页表，如存在位、PTE的PFN字段。</li></ol></li></ol></li><li><strong>页交换策略</strong>，当内存中的空间不足以存储从硬盘中交换回来的页时，就需要使用此策略将内存中的部分页交换到磁盘中。</li><li>交换发生的时间点：<ol><li>操作系统并不会等到物理内存完全被占用才触发交换，而是设置<strong>高低水位线</strong>；</li><li>当内存中的页不在此区间时，触发交换守护进程，移入或者移除对应的页。</li></ol></li></ul><h3 id="第二章-策略"><a href="#第二章-策略" class="headerlink" title="第二章 策略"></a>第二章 策略</h3><ul><li><strong>缓存管理</strong>，引入交换空间后，物理内存只包含系统所有页的一个子集，因而可以将物理内存视为一个缓存。<ul><li>为缓存选择替换策略的目标时尽可能多额提高缓存命中率。</li><li>缓存命中率的衡量指标：<strong>平均内存访问时间AMAT</strong>，<code>AMAT = (Phit*Tm)+(Pmiss*Td)</code>。</li></ul></li><li><strong>替换策略</strong><ol><li><strong>最优替换策略</strong>，即替换内存中最远将来才会访问的页。但这只是一个基准，现实中无法实现。</li><li><strong>FIFO</strong>，将进入系统的页放入队列中，发生替换时，首先移除队头的页。FIFO策略明显不如最优替换策略，</li><li><strong>随机</strong>，它在内存满的时候，随机选择一个页提出。随机策略的性能完全取决于运气；</li><li><strong>LRU</strong>，上述策略均不智能，这种替换策略考虑<strong>历史信息频率</strong>和<strong>访问的近期性</strong>，通过观察程序及其行为决定踢出那些页。LRU的表现几乎相当于最优替换策略；</li><li>LRU的实现：<ol><li>为了利用历史信息，每次页访问都需要更新相应的数据结构，这一过程对性能影响较大。</li><li>近似LRU，为了实现这一算法，增加一个硬件控制的<strong>使用位</strong>，当页被引用时，硬件将其置1，这个使用位需要操作系统进行清零。<ul><li><strong>时钟算法</strong>，这是一种近似的LRU，系统中存储一个保存页的循环列表，时钟指针指向列表的其中一个节点。进行页替换是，检测指针指向节点的使用位，为1则置零，移向下一个节点，知道找到使用位为0的节点。</li><li>时钟算法将页移入磁盘需要考虑该页是否被修改，也即该页是否为<strong>脏页</strong>，如果不是脏页，则踢出没有成本，反之则不行。因此硬件增加一个<strong>修改位</strong>支持这一问题。</li></ul></li></ol></li></ol></li></ul><h3 id="第三章-VAX-VMS虚拟内存系统"><a href="#第三章-VAX-VMS虚拟内存系统" class="headerlink" title="第三章 VAX/VMS虚拟内存系统"></a>第三章 VAX/VMS虚拟内存系统</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;超越物理内存&quot;&gt;&lt;a href=&quot;#超越物理内存&quot; class=&quot;headerlink&quot; title=&quot;超越物理内存&quot;&gt;&lt;/a&gt;超越物理内存&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="OS" scheme="http://sioce.me/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>进程调度</title>
-    <link href="http://sioce.me/2020/08/13/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/"/>
-    <id>http://sioce.me/2020/08/13/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/</id>
-    <published>2020-08-13T12:50:40.000Z</published>
-    <updated>2020-08-14T03:19:15.596Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h2><a id="more"></a><h3 id="第一章-简介"><a href="#第一章-简介" class="headerlink" title="第一章 简介"></a>第一章 简介</h3><ul><li>为了简化描述，这里先做一些假设(后续章节会陆续放宽假设)：<ol><li>每个工作运行相同时间；</li><li>所有工作同时到达；</li><li>一旦开始，将保持运行至结束；</li><li>所有工作只占用CPU；</li><li>每个工作运行时间已知；</li></ol></li><li>调度度量指标：<ul><li><strong>周转时间</strong>，定义为任务完成时间减去任务进入操作系统时间；</li><li><strong>公平</strong>；</li><li><strong>响应时间</strong>，任务到达系统到首次运行的时间；</li></ul></li><li>最基本的调度——<strong>先进先出</strong>，此时我们放宽假设1，当进程A(100)、B(10)、C(10)同时到达系统时，假设运行顺序为A、B、C，则平均周淑安时间为110s；当运行顺序为BCA时，平均周转时间为50s。这就叫做<strong>护航效应</strong></li><li>调度之<strong>最短任务优先(SJF)</strong>，考虑假设2，SJF的确是最优算法。但当我们放松假设2时，依然存在护航问题。</li><li>调度之<strong>最短完成时间优先(STCF)</strong>，又称为<strong>抢占式最短作业优先(PSJF)</strong>，它结合时钟中断和上下文切换实现。</li><li>调度之<strong>轮转(RR)</strong>，这是一种响应时间敏感的调度程序。轮转在一个时间片(长度为时钟周期的整数倍)内运行一个程序，然后切换到运行队列中的下一个任务，如此循环。切片的负面影响就是上下文切换带来的性能消耗，另一个就是周转时间大大增长。</li></ul><h3 id="第二章-多级反馈队列MLFQ"><a href="#第二章-多级反馈队列MLFQ" class="headerlink" title="第二章 多级反馈队列MLFQ"></a>第二章 多级反馈队列MLFQ</h3><ul><li>多级反馈队列，兼容于分时共享系统，它需要解决两方面的问题：<ol><li>优化周转时间；</li><li>降低响应时间；</li></ol></li><li>MLFQ中有多个队列，一个任务只能存在于有一个队列中，每个队列有不同的优先级。</li><li>MLFQ基本规则：<ol><li>高优先级队列内的任务优先执行</li><li>同一个队列内的任务轮转执行</li><li>工作进入系统，设置最高优先级；</li><li>工作用完一个时间片，降低优先级；</li><li>工作在其时间片内释放CPU，优先级不变；</li><li>经过一段时间S，将系统中的所有工作加入最高优先级队列；</li></ol></li><li>MLFQ通过学习确定每个任务的优先级，比如当一个程序不断放弃CPU等待键盘时，可以认为这是一个交互任务，设置高优先级。另一个工作长时间占用CPU，MLFQ降低其优先级。</li><li>根据上述前五条规则可以实现一个基本的MLFQ，长工作之间公平分享CPU，短工作的响应时间页非常迅速。但是缺点使当系统中有较多的交互型工作时，长工作将被饿死。</li><li>为了解决饿死问题，现在引入规则6，这里需要小心设置S的值；</li><li>上述规则五容易被代码愚弄，比如运行时间片的90%，然后主动放弃CPU，此时即使是一个长工作，也能长久呆在最高优先级队列中。因此将重写规则4和5如下：<ul><li><strong>新规则4&amp;5</strong>：一旦工作完成了其在某一层的时间配额，就降低其优先级。(这个规则的前提是系统记录进程在每一层消耗的总时间，而非每次调度都重新计时)</li></ul></li><li>MLFQ调度还面临以下问题：<ol><li>配置队列数量；</li><li>提升优先级时间间隔；</li><li>解决办法：<strong>①</strong>、支持不同队列可变时间片长度，如高优先级时间片短。<strong>②</strong>、Solaris提供一组表决定进程在其生命周期中如何调整优先级。</li></ol></li></ul><h3 id="第三章-比例份额"><a href="#第三章-比例份额" class="headerlink" title="第三章 比例份额"></a>第三章 比例份额</h3><ul><li><strong>比例份额</strong>又称<strong>公平份额</strong>调度程序的目标是确保每个工作获得一定比例的CPU时间，而非优化周转时间和响应时间；</li><li>比例份额用彩票标识份额，分局随机性，满足每个任务占用CPU的时间。比如A持有100张彩票中的前75个，B持有后二五个，则A占用CPU75%的时间。</li><li>彩票机制：<ol><li><strong>彩票货币</strong>，比如A持有5张彩票，它分给自己的两个子任务各100张彩票，则运行子任务的时候系统会将子任务的彩票转化为全局量；</li><li><strong>彩票转让</strong>；</li><li><strong>彩票通胀</strong>，当进程之间相互信任时，当一个进程需要更多的CPU时，他就可以增加自己的彩票数量。</li></ol></li><li>实现：使用一个随机数生成器并利用链表记录每个任务和其对应的彩票数。每次随机生成一个数，从链表头开始遍历并递加每个节点的彩票数，知道该值等于生成的随机值，选中对应的工作。</li><li><strong>如何分配彩票</strong>，为了确定每个任务的比例，提出了<strong>步长调度算法</strong>，它是一个确定性的公平分配算法。</li></ul><h3 id="第四章-多处理器调度"><a href="#第四章-多处理器调度" class="headerlink" title="第四章 多处理器调度"></a>第四章 多处理器调度</h3><ul><li>现代CPU采用多核设计，多核带来的问题有：<ol><li>如何使一个应用程序在多个CPU上运行，也许需要使用多线程；</li><li>如何调度多个处理器；</li></ol></li></ul><center><img src="https://jytrtg.bl.files.1drv.com/y4mfu_l1bjth6aazuOy6WroL1Sg2mGFTDnimZ0N8-EsIiFU5mMfD2YqiHhUQysnjoTw4AqA1tA8vCo1AvzT7Ttor_1kYkc2zqV1ixyDINkfCa4cM3lDqtXCISbt85CLJLox-ajx5awOHk6tmviGOywJFLXgwRVFZkZnEw4UsrzRBDqWkByWrDC5TJQ_MICl-DgwpzXjtXmteK0pIrT41mZ5BA?width=314&height=320&cropmode=none" width="40%" /><br>图1  多CPU系统</center><ul><li><strong>多处理器架构：&lt;硬件缓存&amp;数据共享&gt;</strong><ol><li>单CPU系统中存在<strong>多级硬件缓存</strong>，缓存使得CPU能够更快的执行程序，比如CPU判断一个数据会被高频使用，就将它放入缓存中。缓存根据时间局部性和空间局部性判断将那些内容存入缓存。</li><li>多CPU数据共享例子。假设CPU1上运行某程序，该程序读取内存中的数据并修改其值，而修改后的值位于缓存中暂时还未写入到内存。此时发生中断，CPU2上的程序也读取内存上对应的值。此时就出现了问题。这个问题称为<strong>缓存一致性问题</strong>，解决这一问题可以通过硬件监控内存访问，即每个缓存都监听链接所有缓存和内存的总线，CPU发现本身缓存中数据的更新，就会移除或更新本地缓存。</li></ol></li><li><strong>缓存亲和性</strong>，即CPU运行程序时会将程序的许多状态放到其缓存中，下次程序在相同的CPU上运行，速度就会更快，如果在不同的CPU上运行，速度就会下降。故CPU调度应充分考虑缓存亲和性。</li><li>多处理器调度：<ol><li><strong>单队列多处理器调度</strong>：<ul><li>它直接使用单处理器的调度规则，较简单；</li><li>缺点也很明显：<ul><li>缺乏可扩展性，为了保证程序正常运行，需要使用锁保证原子性，多个CPU在竞争锁资源的过程中开销过大；</li><li>未顾及缓存亲和性，单个进程不停的在多个CPU上执行。</li></ul></li></ul></li><li><strong>多队列多处理器调度</strong>：每个CPU一个队列，每个队列使用不同的调度规则。<ul><li>多队列调度存在<strong>负载不均衡</strong>问题，需要使用<strong>迁移</strong>来解决。据欸的那个何时发起迁移的技术叫做<strong>工作窃取</strong>，源队列不断窥探其他队列的工作是否比自己的多，如果是，就将目标队列的任务窃取到源队列。如何设置窥探频率依然是个黑魔法问题。</li></ul></li></ol></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;进程调度&quot;&gt;&lt;a href=&quot;#进程调度&quot; class=&quot;headerlink&quot; title=&quot;进程调度&quot;&gt;&lt;/a&gt;进程调度&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="OS" scheme="http://sioce.me/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>20200812</title>
-    <link href="http://sioce.me/2020/08/12/20200812/"/>
-    <id>http://sioce.me/2020/08/12/20200812/</id>
-    <published>2020-08-12T08:41:50.000Z</published>
-    <updated>2020-08-12T08:42:59.126Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="戒"><a href="#戒" class="headerlink" title="戒"></a>戒</h2><a id="more"></a><p>无尽的忍耐···</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;戒&quot;&gt;&lt;a href=&quot;#戒&quot; class=&quot;headerlink&quot; title=&quot;戒&quot;&gt;&lt;/a&gt;戒&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="小记" scheme="http://sioce.me/categories/%E5%B0%8F%E8%AE%B0/"/>
-    
-    
-      <category term="心情" scheme="http://sioce.me/tags/%E5%BF%83%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>并发</title>
-    <link href="http://sioce.me/2020/08/11/%E5%B9%B6%E5%8F%91/"/>
-    <id>http://sioce.me/2020/08/11/%E5%B9%B6%E5%8F%91/</id>
-    <published>2020-08-11T07:29:12.000Z</published>
-    <updated>2020-08-13T09:30:51.332Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><a id="more"></a><h3 id="第一章-简介"><a href="#第一章-简介" class="headerlink" title="第一章 简介"></a>第一章 简介</h3><center><img src="https://mitrtg.bl.files.1drv.com/y4mChaJNKfoBoTpNn0dras80amr3t643fWO4Ude_Vo4kP55nAgNFR-3O33P1Tdox9ia1zFD5GtE2-IWQ8LXSBx49Ig9_LW14O_9meIVjmZD3ZZ-cEpqRnYgL8Oml6m_q4-jUJOP87HiDlVE9ElQDdbGXDMgwMpVlSn4Y59accONskcIaYogDF1Jmk-alN7KyCL183mxg23lfw9PzTgTMMmiwg?width=455&height=333&cropmode=none" width="40%" /><br>图1   多线程地址空间</center><ol><li>线程是为进程提供的抽象，同一进程中的线程共享地址空间。每个线程都有自己的程序计数器和用于计算的寄存器。进行上下文切换时，需要将线程的状态保存到线程控制块(可有多个)，但地址空间保持不变；另外当有多个线程正在运行时，地址空间中会存在多个栈；如图1所示；</li><li><strong>临界区</strong>，临界区是访问共享变量的代码片段，不能由多个线程同时执行。因此引入<strong>互斥</strong>，它使得一个线程在临界区运行时，其他线程被阻止进入；</li></ol><pre><code class="C">mov 0x8049a1c, %eaxadd $0x01, %eaxmov %eax,  0x8049a1c</code></pre><ol><li><strong>原子性</strong>：指的是一条指令要么执行，要么不执行，不存在中间态。假设上述代码片段处于临界区，为了保证互斥性，我们希望使用一条指令代替上述代码，并保证新指令以原子的方式执行。</li><li>事实上，原子指令并不存在，但是我们可以利用硬件构建<strong>同步原语</strong>，结合同步原语和操作系统即可以同步受控的方式访问临界区。</li></ol><h3 id="第二章-进程的API"><a href="#第二章-进程的API" class="headerlink" title="第二章 进程的API"></a>第二章 进程的API</h3><pre><code class="C">#include &lt;pthread.h&gt;int pthread_create(pthread_t * thread,                   const pthread_attr_t * attr,                   void * (*start_routine)(void*),                   void * arg);</code></pre><ul><li>上述代码展示了创建线程的接口，注意后两个参数的类型未无类型指针，这样使用允许我们传入返回任何类型的参数；</li></ul><pre><code class="C">int pthread_join(pthread_t thread, void **retval);// 错误示例，代码在线程内部myret_t r;  //allocete space on thread stackr,x = 1;r.y = 2;return (void *) &amp;r;// 错误示例，代码在线程内部myret_t *r = Malloc(sizeof(myret_t));  //allocete space on process heapr,x = 1;r.y = 2;return (void *) &amp;r;</code></pre><ul><li>上述代码展示了等待线程完成的接口，第二个参数是一个指向void的指针，由于该接口会改变传入参数的值，因此需要传入指针，而非值；</li></ul><pre><code class="C">//APIint pthread_mutex_lock(pthread_mutex_t *mutex);int pthread_mutex_unlock(pthread_mutex_t *mutex);//example critical sectionpthread_mutex_t lock;int rc = pthread_mutex_lock(&amp;lock);assert(rc == 0)x++;pthread_mutex_lock(&amp;lock);// initialize lockint rc = pthread_mutex_init(&amp;lock, NULL);assert(rc == 0)\pthread_mutex_destroy(lock);</code></pre><ul><li>上述代码是一个锁的例子，需要注意两个问题：<ul><li>锁必须正确初始化，保证其按需工作；</li><li>获取和释放锁时进行错误检查。</li></ul></li></ul><pre><code class="C">// APIint pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex);int pthread_cond_signal(pthread_cond_t *cond);// thread waitpthread_mutex_t lock = PTHREA_MUTEX_INITIALIZER;pthread_cond_t cond = PTHREAD_COND_INITIALIZER;pthread_mutex_lock(&amp;lock);while(ready == 0) {    pthread_cond_wait(&amp;cond, &amp;lock);}pthread_mutex_unlock(&amp;lock);// thread condpthread_mutex_lock(&amp;lock);ready = 1;pthread_cond_signal(&amp;cond);pthread_mutex_unlock(&amp;lock);</code></pre><ul><li>当线程之间需要进行交互时，就需要使用条件变量。条件变量必须怕配合与其相关的锁使用，调用上述接口中的函数时，必须持有锁；<ul><li><code>pthread_cond_wait()</code>使线程进入休眠状态。相对于<code>pthread_cond_signal()</code>函数，他要额外传入一个锁，这是因为在等待期间，该线程必须释放锁，从而使得其他线程能够获得锁并继续运行。</li></ul></li></ul><h3 id="第三章-锁"><a href="#第三章-锁" class="headerlink" title="第三章 锁"></a>第三章 锁</h3><ul><li>锁使得临界区代码的执行好比执行一条原子指令；</li><li>任何临界区都使用一个粗粒度大锁，称为<strong>粗粒度锁策略</strong>；使用多个锁保护不同的数据和结构，称为<strong>细粒度锁策略</strong>；</li><li>评价锁的性能：<ul><li><strong>互斥性</strong>，即锁能否完成最基本的任务；</li><li><strong>公平性</strong>，是否每一个线程都有公平的机会抢到锁；</li><li><strong>性能</strong>，即使用锁增加的时间开销；</li></ul></li><li>锁的实现方案之<strong>控制中断</strong>，即在临界区关闭中断。<ul><li>优点：简单；</li><li>缺点：<ul><li>过分信任线程；</li><li>不支持多处理器，每个处理器都有自己的中断，关闭自己的中断并不能阻止其他处理器上的线程访问临界区；</li><li>中断丢失，使得操作系统无法处理其他即时操作，如输入输出；</li><li>效率低；</li></ul></li></ul></li></ul><table><thead><tr><th align="center">Thread1</th><th align="center">Thread2</th></tr></thead><tbody><tr><td align="center">call lock()<br>while(flag == 1)<br>interrupt:switch to Thread2</td><td align="center"></td></tr><tr><td align="center">-</td><td align="center">call lock()<br>while(flag == 1)<br>flag == 1<br>interrupt:switch to Thread2</td></tr><tr><td align="center">flag == 1</td><td align="center"></td></tr></tbody></table><ul><li>锁的实现方案之<strong>test-and-set指令&lt;基于软件&gt;</strong>，也叫做<strong>原子交换</strong>。该方案设置一个标志位，通过检查标志位是否位1，决定线程能否进入临界区。<ul><li>上图显示了该方案的一种状态，起始时<code>flag = 0</code>，很显然，两个线程都获得了进入临界区的权限；</li><li>另外，这一方案的性能较差，它采用<strong>自旋等待技术</strong>，在等待其他线程释放锁的过程中会十分浪费时间；</li></ul></li></ul><pre><code class="C">int TestAndSet(int *old_ptr, int new) {    int old = *old_ptr;    *old_ptr = new;    return old;}</code></pre><ul><li>锁的实现方案之<strong>test-and-set指令&lt;基于硬件&gt;</strong>，上述代码是测试并设置指令的伪代码。使用<code>TestAndSet()</code>函数即可实现简单的自旋锁。那么自旋锁的性能如何呢：<ul><li>满足锁的基本要求；</li><li>缺乏公平性保证；</li><li>在单核的性能较差，多核性能较好；</li></ul></li></ul><pre><code class="C">int CompareAndExchange(int *ptr, int expected, int new) {    int actual = *ptr;    if(actual == expected) *ptr = new;    return actual;}</code></pre><ul><li>锁的实现方案之<strong>compare-and-exchange指令</strong>，上述代码是比较并交换指令的伪代码。基于此实现的自旋锁等价于test-and-set指令。这一指令在无等待同步时作用更大；</li></ul><pre><code class="C">int LoadLinked(int *ptr) {    return *ptr;}int StoreConditional(int *ptr, int value) {    if(no one has updated *ptr since the LoadLinked to this address) {        *ptr = value;        return 1;    }    else {        return 0;    }}// lock codevoid lock(lock_t *lock) {    while(1) {        while(LoadLinked(&amp;lock-&gt;flag) == 1) ;        if(StoreConditional(&amp;lock-&gt;flag, 1) == 1)return;    }}void unlock(lock_t *lock) {    lock-&gt;flag = 0;}</code></pre><ul><li>锁的实现方案之<strong>链接的加载于条件式存储指令</strong>，其C伪代码如上所示，虽然两个线程可以都进入到StroeConditional，但只有首先进入的能获得锁；</li></ul><pre><code class="C">int FetchAndAdd(int *ptr) {    int old = *ptr;    *ptr = old + 1;    return old;}// lock code typedef struct lock_t {    int ticket;    int turn;} lock_t;void lock_init(lock_t *lock) {    lock-&gt;ticket = 0;    lock-&gt;turn = 0;}void lock(lock_t *lock) {    int myturn = FetchAndAdd(&amp;lock-&gt;ticket);    while(lock-&gt;turn != myturn) ;}void unlock(lock_t *lock) {    FetchAndAdd(&amp;lock-&gt;turn);}</code></pre><ul><li>锁的实现之<strong>fetch-and-add指令</strong>，其伪代码如上所示。当一个线程需要访问临界区时，就会获得一个ticket，当一个线程退出临界区时，就会将turn加1，当ticket和涂然诺相等时，对应的线程就可以进入临界区。<ul><li>这种算法能保证所有的线程都能抢到锁；</li></ul></li><li><strong>自旋问题</strong>，在一个处理器上运行多线程程序，未获取锁的线程要不断自旋以等待锁的释放，因而会浪费很多时间片，这就需要操作系统的支持：<ul><li><strong>自旋时，放弃CPU</strong>，假设存在操作系统原语yield，条用它即可使线程由运行态变为就绪态。这种算法缓解一些效率问题。但当线程过多时，问题好事很明显；</li><li><strong>队列：休眠代替自旋</strong>，<code>park()/unpark()</code>分别负责使线程休眠或唤醒线程的任务<ul><li>提供<code>park()</code>函数，当线程无法获得锁时，把自己加入队列并调用此函数进入休眠；</li><li>提供<code>unpark(ttid)</code>函数，唤醒ttid标记的线程；</li><li>另外，为了避免<strong>唤醒等待竞争</strong>，需要引入<code>setpark()</code>函数。</li></ul></li></ul></li></ul><h3 id="第四章-基于锁的并发数据结构"><a href="#第四章-基于锁的并发数据结构" class="headerlink" title="第四章 基于锁的并发数据结构"></a>第四章 基于锁的并发数据结构</h3><ul><li><strong>并发计数器</strong>：<ul><li><strong>不可扩展</strong>——创建计数器时，定义一个锁，每次访问临界区代码都获取锁，从而实现并发的计数器。但这种技术器在多线程运行时性能会大打折扣；</li><li><strong>可扩展</strong>——<strong>懒惰计数器</strong>，懒惰计数器设置多个局部计数器和一个全局计数器，其中每个CPU核心一个局部计数器。另外和需要设置锁，每个计数器一个锁。当一个线程需要计数时，便增加局部计数器。使用计数器对应的锁同步的。当局部计数器的值等于阈值时，更新全局计数器时，获取全局锁，将局部计数器的值转移给全局计数器，并将局部计数器置零。局部计数器的阈值影响懒惰计数器的性能；</li></ul></li><li><strong>并发链表</strong>：<ul><li><strong>基础款</strong>，创建链表时，定义一个锁，每次向链表插入或者查询都获得锁，工作完成后释放锁。</li><li><strong>扩展链表</strong>，其中一种技术叫做<strong>过手锁</strong>，他给每个节点分配一个锁，代替基础款中整个链表一个锁，遍历链表时首先抢占下一个节点的锁并释放当前节点的锁。但这种方案的效率仍值得研究。</li></ul></li></ul><pre><code class="C">void Queue_Init(queue_t *q) {    node_t *tmp = malloc(sizeof(node_t)); // fake node    tmp-&gt;next = NULL;    q-&gt;head = q-&gt;tail = tmp;    pthread_mutex_init(&amp;q-&gt;headLock, NULL);    pthread_mutex_init(&amp;q-&gt;tailLock, NULL);}</code></pre><ul><li><strong>并发队列</strong>，上述创建并发数据结构的方法时创建一把大锁。但创建并发队列时，我们选择给队头和队尾各一个锁。当需要入队或出队时，获取锁。工作完成后释放锁。Michael和Scott在实现队列时，添加了一个加假节点将队头和对队尾分开，如上述代码所示：</li></ul><h3 id="第五章-条件变量"><a href="#第五章-条件变量" class="headerlink" title="第五章 条件变量"></a>第五章 条件变量</h3><ul><li>当线程之间具有依赖关系时，就需要使用条件变量。比如父线程等待子线程结束。当然也可以通过检查标志位让父线程自旋，知道满足条件。但这中自旋是有代价的，有时候甚至是错误的。</li><li>条件变量显式队列，当条件不满足时，线程把自己加入队列，等待该条件。条件改变时，便可唤醒一个或多个线程。条件变量的两种操作：<ul><li><code>wait()</code>，此调用需要传入互斥量，因为他需要在此处释放锁，让调用进程休眠。是的其他线程可以继续工作，当线程被唤醒时，重新获得锁。</li><li><code>signal()</code>，它只需要传入条件变量</li><li><strong>发出信号时总是持有锁</strong>；</li></ul></li></ul><pre><code class="C">cond_t cond;mutex_t mutex;int count = 0;void *producer(void *arg) {    int i;    int loops = (int) arg;    for(int i = 0; i &lt; &gt;) {        Pthread_mutex_lock(&amp;mutex);        if(count == 1) Pthread_cond_wait(&amp;cond, &amp;mutex);        put(i);        Pthread_cond_signal(&amp;cond);        Pthread_mutex_unlock(&amp;mutex);    }}void *consumer(void *arg) {    int i;    int loops = (int) arg;    for(int i = 0; i &lt; &gt;) {        Pthread_mutex_lock(&amp;mutex);        if(count == 0) Pthread_cond_wait(&amp;cond, &amp;mutex);        int tmp = get(i);        Pthread_cond_signal(&amp;cond);        Pthread_mutex_unlock(&amp;mutex);        printf(&quot;%d\n&quot;, tmp);    }}</code></pre><ul><li><p><strong>生产者/消费者问题</strong>，也叫有界缓冲问题。上述代码展示了生产者/消费者的一个例子。</p><ul><li><strong>Mesa语义</strong>——发出信号将线程唤醒后立即执行；</li><li><strong>Hoare语义</strong>——发出信号后唤醒进程并立即执行；</li><li>当只有一个生产者和一个消费者时，上述代码能够正常运行，但一旦出现多个消费者，上述代码就会出现问题。</li><li>解决这个问题，只需要将上述代码中的if换为while。但此时还存在另外一个问题，假设两个消费者都进入睡眠，此时生产者将数据放入缓冲区，唤醒消费者并进入休眠。再次假设唤醒的是消费者c1，消费者拿出数据，此时唤醒谁呢？消费者c2还是生产者，假设唤醒了c2，c2发现缓冲区为空，继续睡眠，此时三个线程都进入了睡眠状态。</li><li>解决上述问题需要使信号具有指向性——使用多个信号量即可解决上述问题。</li></ul></li><li><p><strong>覆盖条件</strong>，上述第二个问题可以使用此条件进行解决，即使用<code>pthread_cond_broadcast()</code>唤醒所有休眠的线程，但这样做会增加成本。</p></li></ul><h3 id="第六章-信号量"><a href="#第六章-信号量" class="headerlink" title="第六章 信号量"></a>第六章 信号量</h3><pre><code class="C">#include &lt;semaphore.h&gt;sem_t s;/*@param1  信号量对象@param2  信号量是否在多进程共享@param3  信号量初始值*/sem_init(&amp;s, 0, 1);sem_wait() // 递减信号量，信号量小于零挂起sem_post() // 递增信号量，并唤醒睡眠线程之一</code></pre><ul><li><strong>信号量</strong>，同步有关所有工作的唯一原语。它是一个有整数数值的对象，使用<code>sem_wait()/sem_post()</code>进行操作，调用函数对信号量进行操作前，必须初始化。</li><li>信号量需要多线程调用，显然位于临界区；</li></ul><pre><code class="C">sem_t s;sem_init(&amp;s, 0, 1); //初始值为1</code></pre><ul><li><strong>二值信号量用作锁</strong>，假设线程A、B运行，当A调用wait函数时，信号量减一不为负，进入临界区，此时中断线程B调用wait，信号量减一小于0，进入睡眠。中断再次发生A运行post，信号量加一等于0，唤醒B，A执行结束，B进入临界区，执行结束。</li></ul><pre><code class="C">sem_t s;void child(){  sem_post(&amp;s);}int main() {    sem_init(&amp;s, 0, 0); //初始值为0    pthread_t c;    pthread_create(c, NULL, child, NULL);    sem_wait(&amp;s);    return 0;}</code></pre><ul><li><strong>信号量用作条件变量中断</strong>，上述代码即为使用信号量作为条件变量的例子，使主线程等待子线程结束。</li></ul><pre><code class="C">sem_t empty;sem_t full;sem_t mutex;void p(void *args){    int i;    for(i = 0; i &lt; loops; ++i) {      sem_wait(&amp;empty);  // p1      sem_wait(&amp;mutex); //p2      put(i);      sem_post(&amp;mutex);  //p3      sem_post(&amp;full);  //p4    }}void c(void *args) {  int i;  for(i = 0; i &lt; loops; ++i) {    sem_wait(&amp;full);    sem_wait(&amp;mutex);    put(i);    sem_post(&amp;mutex);    sem_post(&amp;empty);  }}int main(int argc, char *argv) {  sem_init(&amp;empty, 0, MAX);  sem_init(&amp;full, 0, 0);  sem_init(&amp;mutex, 0, 1);}</code></pre><ul><li><p><strong>使用信号量实现生产者消费者问题</strong>，代码如上。调p1和p2以及p3和p4的位置，将造成死锁。</p></li><li><p><strong>读者-写者锁</strong>，针对链表的查询与插入操作，一个时间点只能有一个线程进行插入，但可以存在多个读操作。因而就引入了读者-写者锁，这个操作允许多个读者访问临界区，但只允许一个写者访问临界区，同时没有读者访问临界区。这个方案的缺点使缺乏公平性。读者很容易饿死写者。</p></li><li><p><strong>哲学家就餐问题</strong>，假设每个哲学家都先拿左手边餐叉，再拿右手边。某个时刻，每个哲学家都拿到左手边餐叉，等待拿右手边，就会进入死锁。为了解决这一问题，可以让某个哲学家先拿右边的，其余的先拿左边的，如此破除以来，避免死锁。</p></li><li><p>如何<strong>实现信号量</strong>：使用一个条件变量、一个锁和一个状态变量很容实现信号量，反之，则十分困难。</p></li></ul><h3 id="第七章-常见并发问题"><a href="#第七章-常见并发问题" class="headerlink" title="第七章 常见并发问题"></a>第七章 常见并发问题</h3><p><strong>现代应用程序的缺陷</strong><br>应用名称 | 用途 | 非死锁 | 死锁<br>:-:      | :-:  |  :-:   | :-:<br>MySQL   | 数据库 | 14    | 9<br>Apache | Web服务器 | 13  | 4<br>Mozilla | Web浏览器 | 41 | 16<br>OpenOffice | 办公 | 6    | 2<br>合计   |           | 74  | 31</p><h4 id="非死锁缺陷"><a href="#非死锁缺陷" class="headerlink" title="非死锁缺陷"></a>非死锁缺陷</h4><ol><li><strong>违反原子性缺陷</strong>，我们假设代码使原子的，但实际执行过程中却没有强制实现原子性；解决这一问题只需要给临界区代码加锁即可；</li><li><strong>违反顺序缺陷</strong>，两个内存访问的期望顺序被打破了，比如一个线程创建新线程，另一个线程使用新线程。就会出现这种问题，解决它只需要引入条件变量</li></ol><h4 id="死锁缺陷"><a href="#死锁缺陷" class="headerlink" title="死锁缺陷"></a>死锁缺陷</h4><ol><li>产生死锁的原因：<ul><li>大型代码库组件之间存在复杂<strong>依赖</strong>；</li><li><strong>封装</strong>，采用模块化使得软件开发更加容易，然而模块化和锁并不是很契合；</li></ul></li><li>产生死锁的条件，四种条件缺一不可：<ul><li><strong>互斥</strong>：线程对需要的资源进行互斥访问；</li><li><strong>持有并等待</strong>，线程持有资源，并在等待其他资源；</li><li><strong>非抢占</strong>，线程获得的资源不能被抢占；</li><li><strong>循环等待</strong>，线程之间存在一个环路，每个线程都等待相邻线程持有的资源；</li></ul></li><li>预防死锁：<ul><li><strong>避免循环等待</strong>，最直接的算法就是获取锁时提供一个<strong>全序</strong>，按照顺序申请，即可避免产生死锁。然而复杂系统锁的数量庞大，此时就需要使用<strong>偏序</strong>安排锁的获取从而避免死锁。</li><li><strong>持有并等待</strong>，增加一个全局锁一定程度解决这一问题。但这种方案不适用于封装，有可能降低并发性。</li><li><strong>非抢占</strong>，为了避免持有锁的同时尝试获取另一个锁，可使用<code>try_lock()</code>函数实现无死锁的枷锁方式；使用这一函数依然会面临封装难的问题。</li><li><strong>互斥</strong>，如何避免互斥呢？利用强大的硬件指令设计无等待的数据结构。</li><li><strong>通过调度避免死锁</strong>，为此，我们需要了解全局信息，包括不同线程对锁的需求状况。</li></ul></li></ol><h3 id="第八章-基于事件的并发"><a href="#第八章-基于事件的并发" class="headerlink" title="第八章 基于事件的并发"></a>第八章 基于事件的并发</h3><ul><li>基于事件的并发往往出现在基于GUI的应用以及网络服务器上，之所以研究这一问题，原因如下：<ul><li>多线程应用中，处理并发很有难度；</li><li>开发者无法控制线程的调度；</li></ul></li></ul><pre><code class="C">while(1) {  events = getEvents();  for(e in events)    processEvent(e);}</code></pre><ul><li><strong>基本想法</strong>，典型的基于事件的服务器是基于事件循环进行的，事件循环的代码如上。事件处理程序是系统中发生的唯一活动。通过调度可以显式决定接下来处理哪个事件；</li><li><strong>重要的API</strong>，<code>select()或者poll()</code>，检查是否存在即将到来的需要关注的I/O。它检查I/O描述符集合(多个)，检查每个集合中前ndfs个描述符，并使用给定描述符子集替换准备就绪的描述符集合。它的返回值为就绪描述符的总数。<ul><li>通过检查描述符是否可以读取可以确定服务器是否存在新到达需要处理的数据包；</li><li>通过检查描述符是否可以写入可以让服务器知道何时回复</li><li>这些API为我们提供了构建非阻塞事件循环的方法；</li></ul></li><li><strong>异步I/O</strong>，这些接口使应用程序可以发出I/O请求，并在I/O请求完成前立即将控制权返回给调用者，另外的接口能让应用程序判读I/O是否完成。</li><li><strong>事件管理</strong>，当处理程序发出异步I/O请求时，必须打包程序的状态，以便下一个事件处理程序在I/O最终完成时使用。这个工作也叫做<strong>手工栈管理</strong>。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;并发&quot;&gt;&lt;a href=&quot;#并发&quot; class=&quot;headerlink&quot; title=&quot;并发&quot;&gt;&lt;/a&gt;并发&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="OS" scheme="http://sioce.me/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>内存虚拟化</title>
-    <link href="http://sioce.me/2020/08/08/%E5%86%85%E5%AD%98%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
-    <id>http://sioce.me/2020/08/08/%E5%86%85%E5%AD%98%E8%99%9A%E6%8B%9F%E5%8C%96/</id>
-    <published>2020-08-08T13:55:10.000Z</published>
-    <updated>2020-08-11T07:53:27.471Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="虚拟化——内存"><a href="#虚拟化——内存" class="headerlink" title="虚拟化——内存"></a>虚拟化——内存</h2><a id="more"></a><h3 id="第一章-抽象：地址空间"><a href="#第一章-抽象：地址空间" class="headerlink" title="第一章 抽象：地址空间"></a>第一章 抽象：地址空间</h3><ol><li>一个简单的分时共享方法：一个进程单独占用全部内存运行一段时间，然后停止它，并将其状态保存到磁盘中，加载其他进程的状态信息，运行一段时间，如此循环。这种方法可行但速度太慢。</li><li>另一个可行的分时共享方法是为每一个进程分配一小部分内存，这时如何<strong>保护</strong>一个进程的信息不被其他进程读取或修改就尤为重要；</li><li>为了实现上述要求，就需要使用物理内存的抽象——<strong>地址空间</strong>；</li><li><strong>地址空间</strong>：保存运行程序的所有内存状态，主要包括：<ul><li><strong>代码段</strong>：保存程序的代码；</li><li><strong>堆段</strong>：管理动态分配或用户管理的内存，向下增长；</li><li><strong>栈段</strong>：保存当前函数的调用信息，分配空间给局部变量，传递参数和函数返回值；向上增长；</li><li><strong>其他</strong>：如静态初始化的变量；</li><li><strong>未分配段</strong>：未分配等待分配的内存；</li></ul></li><li>如何虚拟化内存：进程认为自己的程序从地址0开始执行加载操作，然而在操作系统的硬件支持下，进程从某个物理地址开始执行。这就是虚拟化的关键操作；</li><li>虚拟内存的目标：<ul><li><strong>透明</strong>：程序感知不到内存被虚拟化了，操作系统辅助它完成所有的工作；</li><li><strong>效率</strong>：这包括时间和空间两个维度，为了实现这种高效的虚拟化技术，需要依靠硬件的支持，如TLB。</li><li><strong>保护</strong>：操作系统确保进程得到保护，不受其他进程影响，同时进程也不会影响到操作系统自身，这种保护特性使得进程间具备互相<strong>隔离特性</strong>；</li></ul></li></ol><h3 id="第二章-内存操作API"><a href="#第二章-内存操作API" class="headerlink" title="第二章 内存操作API"></a>第二章 内存操作API</h3><ol><li>内存类型：<ul><li><strong>栈内存</strong>，它的申请和操作由编译器管理，也称自动内存；比如在函数内定义变量<code>int x</code>，编译器会在进入函数时，在栈上开辟空间并在函数退出时释放内存；</li><li><strong>堆内存</strong>，申请和释放都由程序员显式管理；<code>int *x = (int *) malloc(sizeof(int));</code>，这条指令同时申请栈和堆空间，调用<code>malloc()</code>申请堆空间，并返回整数的地址，然后将其存储在栈空间中供程序使用；</li></ul></li><li><strong>malloc(size_t size)函数</strong>，它的返回值为<strong>无类型指针</strong>，因为是无类型的，所以可以作为左值将任意类型指针赋给它，但作为右值赋给其他类型指针时，C允许而C++需要使用强制类型转换，所以通用的用法是<code>int *x = (int *) malloc(len * sizeof(type_))</code>;</li><li><strong>free()函数</strong>，调用free函数，只需要传入malloc返回的指针，不需要传入分配区域的大小，由内存分配库本身记忆；</li><li><strong>常见错误</strong>：<ul><li>当前许多语言支持<strong>自动内存管理</strong>，使用<strong>垃圾收集器</strong>寻找不需要的内存并释放；</li><li>忘记分配内存，如例一：</li><li>未分配足够内存，如例二：</li><li>未初始化分配的内存，调用malloc分配空间后，未初始化即访问该空间中的内容；</li><li>未释放内存，将造成内存泄漏。因为缓慢泄露的内存会导致内存不足，而不得不重启。</li><li>用完之前释放，造成的错误叫做悬挂指针，随后的调用将造成程序崩溃或覆盖有效内容；</li><li>错误调用free，必须传入从malloc返回的地址；</li></ul></li></ol><pre><code class="C">// 例一 未分配内存char *src = &quot;hello&quot;;char *dst; //未分配内存 正确用法char *dst = (char *) malloc(strlen(src) + 1)strcpy(dst, src);// 例二 未分配足够内存char *src = &quot;hello&quot;;char *dst = (char *) malloc(strlen(src)); //未分配内存 缓冲区溢出strcpy(dst, src);</code></pre><ol start="5"><li>操作系统存在<strong>两级内存管理</strong>：<ul><li>操作系统执行的内存管理：进程运行时将内存交给进程，进程结束时回收属于该进程的内存；</li><li>进程内部的内存管理，使用malloc和free函数，在堆内管理</li><li>因此在短暂运行的进程中的内存泄露并不会造成太大的问题；</li></ul></li><li>其他调用：<ul><li><strong>calloc(size_t num, size_t size)</strong>，这个调用会自动将申请的空间初始化为零，并返回地址；</li><li><strong>realloc()</strong>，这个函数会创建一个更大的新内存区域，并将旧区域复制到其中；</li></ul></li><li>底层支持，malloc和free只是库调用，并非系统调用，这两个函数是通过<strong>brk</strong>和<strong>sbrk</strong>实现的：<ul><li><strong>brk/sbrk</strong>，它用于改变<strong>程序分断</strong>的位置，即堆结束的位置，它根据传入的参数决定增加还是减少堆的大小；</li><li><strong>mmap()</strong>，它用于从系统获取内存，它可以在程序中创建一个<strong>匿名内存区域</strong>，它只与交换空间相关联。</li></ul></li></ol><h3 id="第三章-机制——地址转换"><a href="#第三章-机制——地址转换" class="headerlink" title="第三章 机制——地址转换"></a>第三章 机制——地址转换</h3><ol><li>LDE让程序直接访问硬件，而在关键点介入，确保程序正确运行，这是虚拟化CPU的基本内容，要求高效和控制；</li><li>虚拟CPU同样要求实现高效和控制的同时，提供期望的虚拟化：<ul><li><strong>高效</strong>，这点要求决定必须利用硬件支持；</li><li><strong>控制</strong>，这意味着操作系统要确保进程只能访问属于自己的地址空间；</li></ul></li><li><strong>基于硬件的地址转换</strong>，简称<strong>地址转换</strong>。利用这一技术，硬件将处理每次地址访问，将指令中的虚拟地址转换为实际存储的物理地址；</li><li>地址转换不足以实现虚拟内存，它只提供底层机制提高效率，操作系统必须在关键位置介入，设置硬件。因此它必须<strong>管理内存</strong>，记录已占用和空闲的地址。</li><li><strong>基于软件的重定位</strong>，也叫静态重定位，名为加载程序的软件将进程的虚拟地址转化为期望的偏移地址，它的缺点如下：<ul><li>不提供访问保护；</li><li>一旦完成重定位，就无法再定位到其他位置；</li></ul></li><li><strong>动态重定位(基于硬件)</strong>，这是基于基址加界限机制实现的，具体说是每个CPU需要一个<strong>基址寄存器</strong>和一个<strong>限制寄存器</strong>，它们共同作用保证地址空间可位于物理内存的任何位置，同时每个进程只能访问自己的地址空间；每个CPU的基址寄存器和限制寄存器共同构成CPU的内存管理单元；</li><li><strong>空闲列表</strong>，操作系统必须记录哪些空闲内存没有使用，保存未使用地址的最简单的数据结构就是空闲列表；</li><li>动态重定位的硬件支持：</li></ol><table><thead><tr><th align="center">硬件要求</th><th align="center">解释</th></tr></thead><tbody><tr><td align="center">特权模式</td><td align="center">需要，以防用户态进程执行内核态操作</td></tr><tr><td align="center">基址/界限寄存器</td><td align="center">每个CPU需要一对该寄存器，进行地址转换和界限检查</td></tr><tr><td align="center">能够转换虚拟地址并进行检查是否越界</td><td align="center">电路完成</td></tr><tr><td align="center">修改基址和界限寄存器的内核态指令</td><td align="center">进程运行之前，操作系统必须对其进行设置</td></tr><tr><td align="center">注册异常处理程序的特权指令</td><td align="center">操作系统需告知硬件，异常处理程序的入口地址</td></tr><tr><td align="center">触发异常</td><td align="center">进程试图使用特权指令或访问越界内存</td></tr></tbody></table><ol start="9"><li>动态重定位操作系统的职责：</li></ol><table><thead><tr><th align="center">操作系统要求</th><th align="center">解释</th></tr></thead><tbody><tr><td align="center">内存管理</td><td align="center">为新进程分配内存<br>从终止进程回收内存<br>使用空闲列表管理内存</td></tr><tr><td align="center">基址/界限寄存器</td><td align="center">在上下文切换时正确设置这两个寄存器</td></tr><tr><td align="center">异常处理</td><td align="center">发生异常时，需执行的代码</td></tr></tbody></table><ol start="10"><li>动态重定位的效率其实并不高，当进程的堆区和栈区并不大时，就会造成地址空间内的空间浪费问题，也叫做<strong>内部碎片化</strong>；</li></ol><h3 id="第四章-分段"><a href="#第四章-分段" class="headerlink" title="第四章 分段"></a>第四章 分段</h3><ol><li>为了解决第三章遇到的效率低问题，提出了<strong>分段</strong>的概念——泛化的基址/界限。这一概念是在MMU中引入不止一个基址和界限寄存器，而是给地址空间的每个段一对基址/界限寄存器；</li><li><strong>段定义</strong>，地址空间中连续定长的区域，典型的有三种：代码、栈和堆，这样就解决了内部碎片化问题，但同时也引入了新问题：<strong>外部碎片化</strong>；</li><li>通过分段技术，只有已使用的内存在会分配空间，物理地址空间中会包含大量未使用地址，称为<strong>稀疏地址空间</strong>；</li><li><em>如何判断当前引用哪个段呢？</em><ul><li><strong>显式</strong>：使用虚拟地址的开头几位标识不同的段，如使用两位，00标识代码段，01标识堆段···，但这回造成一个段的地址浪费，因此有些系统将栈和堆当作一个段，只需一位即可标识</li><li><strong>隐式</strong>：通过地址长生的方式决定使用哪个段，如程序计数器则为代码段，基于栈或基址指针，则在栈段，其他在堆段；</li></ul></li><li>分段过程中，栈的地址转换——它是负增长的，为了实现这一特性，还需要使用硬件标识增长方向，一般使用一位标识；</li><li><strong>支持共享</strong>：为了支持共享，需要额外的硬件支持——<strong>保护位</strong>，根据保护位检查程序能否读写其中的代码</li><li><strong>分段的粒度</strong>——细粒度和粗粒度：<ul><li>上文讲解的分段属于粗粒度分段；</li><li>一些早期系统，如<em>Multics</em>支持细粒度分段，细粒度分段需要进一步的硬件支持并在内存中保存段表；</li></ul></li><li>操作系统堆分段的支持：<ul><li>操作系统需要保存和恢复更多寄存器寄存器信息；</li><li>管理物理内存的空闲空间，使用段技术可以增大内存的利用率，但同时会导致物理内存中充满许多小洞，这些小空间不足以分配给任何一个段，这中问题就是<strong>外部碎片化</strong>；</li></ul></li><li>外部碎片化的解决办法：<ul><li><strong>紧凑物理内存</strong>，重新安排原有的段。这种做法需要大量拷贝数据，占用大量CPU资源；</li><li><strong>空闲列表管理算法</strong>，这一算法试图保留大的内存用于分配，包括最优匹配、最坏匹配、首次匹配等</li></ul></li></ol><h3 id="第五章-空闲空间管理"><a href="#第五章-空闲空间管理" class="headerlink" title="第五章 空闲空间管理"></a>第五章 空闲空间管理</h3><ol><li>空闲空间管理：<ul><li><strong>分页</strong>，将管理的空间划分为固定大小的单元，维护划分的列表，每次请求返回列表的第一项；</li><li>管理的空间不同大小的单元组成，一般出现在用户级的内存分配库或操作系统使用分段实现内存虚拟化，这时会出现外部碎片化问题，空闲空间大于所需空间，但由于分为多个快，导致分配请求出错；</li></ul></li><li>讲解本章内容的几个假设：<ul><li>使用基本接口，如malloc和free，使用这一库管理的空间成为堆，在堆上管理空闲空间的数据结构叫做空闲列表，它不一定真的时列表；</li><li>我们主要关心外部碎片</li><li>内存一旦分配，就不可重定位到其他位置</li><li>分配程序管理连续的内存，其长度固定；事实上长度可以使用sbrk申请增加；<br>图1<img src="https://mivezw.bl.files.1drv.com/y4m4uJ47spJx-PXftSHdTjG1jY4IResTZf467lxNaDTOR8y2C90boQGPXEqVgYJuyKnuMbsYN4bsc8Ct6tJDE3_s_8eBLzGN-eh8qBVoxm8vUDPBcyJgqI9D8kJm8GKJEHSBJzNTRr4ld-3OtzpCsWqHwX8TBMjaHpPtwuTEO9NhfK4GYu1O4OSRK6nzCUHHcjlaGuhY-WbYZ-vr3yKfEF0lw?width=297&height=63&cropmode=none" alt="图一"><br>图2<img src="https://l4vezw.bl.files.1drv.com/y4msIx-QVRStqYk-Lzh1Vc-wRA61wtTn1Rddis3MZxPPP2ZeG0Rv1mwjoUveaXuyBR-Ip3asIGRNl2ogepXtfSot6YIAdL-6vGEW7h50ss4hwwP4_kXHF4aqKieNPxG7hlnsJTVGMpkWYDFTZiXV-yWHI3Jf0Zwrkssmy2K-laEgSpMDdRaVZB--TdEMXHgNmdtkZpB7rrerKM7YevBXInGag?width=286&height=64&cropmode=none" alt="图二"> -&gt;<img src="https://lovezw.bl.files.1drv.com/y4mjGIWP4zd3SZye27ITzWqoIPJAuD8BfM65kHaiw_YjU0uSeXDxuPXigX6Qae7LbodtAHtSUcoyxH7647C_igXcnWaqIIVPrDMvyWEvH7r4Kv4_-S1B8XLSno77DV8O782gsH4LztRxYlGa_b6WP1HsYkN-ZVxz-oKyXKCSKT6uMARyw5Pg_JaVdg-4Xjly8AclGerO_UlKbdlcq_-Nnc1SQ?width=208&height=52&cropmode=none" alt="图二"></li></ul></li><li>底层机制：<ul><li><strong>分割与合并</strong>，如上图，申请任何大于10的空间都会失败；申请小于10的空间，分配程序将会对空闲空间进行分割；申请释放中间大小为10的空间，分配程序会在释放内存的同时合并可用空间；图2展示了空闲列表的状态变化：</li><li><strong>追踪已分配空间的大小</strong>，free接口如何知道自己要释放多大的内存空间呢？mallco分配空间时会额外申请一小部分空间用于保存申请空间的尺寸以及用于检查完整性的幻数(magic)，这个额外的空间叫做头块，调用free，库通过简单的运算得到头块的位置；</li><li><strong>管理空闲空间的基本策略</strong>，理想的分配程序应保证快速和碎片最小化，然而，做到这点并不容易；<ul><li><strong>最优匹配</strong>，遍历空闲列表，寻找所有空间不小于请求空间的空闲块，返回符合条件的最小空闲块，虽然简单，但便利比较耗费性能；</li><li><strong>最差匹配</strong>，与最优匹配相反，它寻找最大的空闲块，分割并返回，研究表明其表现很差，产生过量碎片，同时计算开销也很大；</li><li><strong>首次匹配</strong>，找到足够大的块即返回，首次匹配具有速度优势，但会导致空闲列表开头出现大量小块，为了避免这一现象，需要基于地址对空闲列表进行排序，方便进行合并操作，减少碎片；</li><li><strong>下次匹配</strong>，下次匹配维护一个指针，指向上次查找结束的位置，避免列表开头的频繁分割；</li><li><strong>分离空闲列表</strong>，维护一个独立的列表，服务于那些经常申请一种或几种大小内存空间的应用程序，其他大小的内存申请交给更通用的内存分配程序。但应该拿出多少内存用于这种特殊的空间请求呢？其中一个解决思路时<strong>厚块分配程序</strong>。</li><li><strong>伙伴系统</strong>，合并对分配程序来说很关键，为了使合并更简单，就提出了<strong>二分伙伴分配程序</strong>——它的思路是递归二分空闲空间，直到满足用户请请求的空间，在合并时，当一块内存被释放时，会检查其伙伴内存(二者地址只有一位不同)是否空闲，空闲则递归合并；</li><li>上述算法虽然简单，但缺乏扩展性，即列表查找效率低，更高级的分配程序采用更复杂的数据结构牺牲易用性换取性能，如平衡二叉树、伸展树、偏序树等；</li></ul></li></ul></li></ol><h3 id="第六章-分页"><a href="#第六章-分页" class="headerlink" title="第六章 分页"></a>第六章 分页</h3><ol><li>操作系统的空间管理算法：<ul><li>将空间分为不同长度的分片，比如虚拟内存管理中的分段。这个算法回造成空间碎片化。</li><li>将空间分割为固定长度的分片，即虚拟内存中的<strong>分页</strong>，它将进程的地址空间分为大小相同的单元，每个单元称为<strong>一页</strong>，把物理内存看作由定长槽块组成的阵列，称为<strong>页帧</strong>，每个页帧包含一个虚拟内存页；<br>图3 <img src="https://jivezw.bl.files.1drv.com/y4mVJ9p-EtBSnjmgruHFlOgzXaLBJhphtYkXKjwK8DWNYskWDvIwnNnyXDljX9UhBzcDMETNDd21PLyQ1fcbKztZLS1namFEoGxPDudKPwvDY4pqhWmxC9EJ-wllM1VQNJkZsfH2Z4iKNlhJhGhotnJn-yvuFG_hda3OcHhv9t8XNZ4ytnECAGRgVxFda5EAMWSJeqj38yWGXKbTK--1fIrVw?width=354&height=183&cropmode=none" alt="图3">  图4 <img src="https://jyvezw.bl.files.1drv.com/y4mjiYUojeTui8KqKwRKNSLErp6WyuB4kBdj2Dro9Qd2JTnfF0WRfaqRcnOESLK592-hTiaTzlowf9R_vaCh0gDlk1S417RDh0mr0bPNiP_bf7oPc7SE2gdNVHKvmwhLdJPafsGvFdJtvDWcuxRWCrFfQ1is1PaR2oYgX9SAO2sfXKd0mfx_vtQVYKvsbbHOYSonFTa-3akw23cc2wuwlQ-7A?width=373&height=322&cropmode=none" alt="图4"><br>图5 <img src="https://lytrtg.bl.files.1drv.com/y4mR5wp-4IO2jk89wRId5msAoG94TZf1QmlUhtfLoKpo3ed4DJYEO3Xq8mEaG1Op7hM8zGQuSYm61YRFE4HJAiWISnZGe22RyoEBhsArZ9F-dAlFGXiMGM2Nq4Df1WmF3wrKwV_W_JgZD-8i0CYfnBFG07-Qo2uKr4Ot2aoSqZgsNgXFNx1hNwwL0p3dp3eKpNLH0C7AcTf3SSWQg76URpaFQ?width=318&height=291&cropmode=none" alt="图5"></li></ul></li><li>分页的简单例子：<ul><li>图1是一个大小为64字节的地址空间，由四个虚拟页构成，图2是一个大小为128字节的物理内存，由8个页帧构成；</li><li><strong>页表</strong>，操作系统保存的每个虚拟页在物理内存中位置的数据结构；大多数页表都是<strong>pre-process</strong>数据结构，当然也有例外，比如<strong>倒排页表</strong>；</li><li>图3展示了虚拟地址到物理地址的转换原理，虚拟地址由两部分构成：<strong>虚拟页面号</strong>和<strong>页内偏移量</strong>。物理地址也由两部分构成：物理帧号和帧内偏移；给出虚拟地址，操作系统和硬件协作即可将其转化为物理地址。</li></ul></li><li>每个进程页表保存在内存中，而不是特殊的片上硬件，事实上，保存页表需要非常大的空间；</li><li>页表的组织结构，页表是一种数据结构，最简单的形式是<strong>线性页表</strong>，即数组，页表由一项一项的<strong>页表条目PTE</strong>组成，每个PTE的内容包括：<ul><li><strong>有效位</strong>，进程开始时，其地址空间的一端被代码和堆占用，另一端被栈占用，中间的空间被标记为无效，被标记为无效的地址空间无需分配物理帧，节省内存；</li><li><strong>保护位</strong>，表明页内容是否可以读取、写入或执行；</li><li><strong>存在位</strong>，表明该页是在物理存储器上还是在磁盘上，这涉及到使用交换空间扩大内存容量，交换空间中存储很少使用的页面；</li><li><strong>脏位</strong>，表明页面被带入内存后是否修改过；</li><li><strong>参考位或访问位</strong>，追踪页是否被访问，用于确定那些页受欢迎，应保存在内存中；</li></ul></li><li>分页造成的访问速度降低，因为从虚拟地址转换为物理地址(如下代码所示)时需要一个额外的内存引用，以便从分页表中获取地址转换，这个工作量可使进程速度降低两倍，解决这一问题需要克服两个难题：<ul><li>精巧的硬件和软件设计；</li><li>页表占用大量内存；</li></ul></li></ol><pre><code class="C">VPN = (VirtualAddress &amp; VPN_MASK) &gt;&gt; SHIFT;PTEAddr = PageTableBaseRegister + (VPN * sizeof(PTE));PTE = AccessMemory(PTEAddr);if(PTE.Valid == False)   RaiseException(SEGMENTATION_FAULT);else if(CanAccess(PTE.ProtecBits) == False)   RaiseException(PROTECTION_FAULT);else   offset = VirtualAddress &amp; OFFSET_MASK;   physAddr = (PTE.PFN &lt;&lt; PFN_SHIFT) | offset;   Register = AccessMemory(physAddr);</code></pre><ol start="6"><li>采用分页技术时，栈地址还是负增长吗？</li></ol><h3 id="第七章-分页——快速地址转换"><a href="#第七章-分页——快速地址转换" class="headerlink" title="第七章 分页——快速地址转换"></a>第七章 分页——快速地址转换</h3><ol><li>执行指令过程中，分页可能会导致额外的内存访问，一次取代码、显式的存取数据，一次都内存获得地址转换信息；两次内存访问将降低进程的速度，为了解决这一问题，需要使用硬件——<strong>地址转换旁路缓冲存储器(TLB)</strong>，每次内存访问，硬件受限检查TLB，以确定其中是否包含期望的转换映射。</li><li>引入TLB后的地址转换流程如下：</li></ol><pre><code class="C">VPN = (VirtualAddress &amp; VPN_MASK) &gt;&gt; SHIFT;(Success, TlbEntry) = TLB_Lookup(VPN);if(Success == True)   if(CanAccess(TlbEntry.ProtecBits) == True)      offset = VirtualAddress &amp; OFFSET_MASK;      physAddr = (TlbEntry.PFN &lt;&lt; SHIFT) | offset;      AccessMemory(physAddr);   else      RaiseException(PROTECTION_FAULT);else   PTEAddr = PageTableBaseRegister + (VPN * sizeof(PTE));   PTE = AccessMemory(PTEAddr);   if(PTE.Valid == False)      RaiseException(SEGMENTATION_FAULT);   else if(CanAccess(PTE.ProtecBits) == Fault)      RaiseException(PROTECTION_FAULT);   else      offset = VirtualAddress &amp; OFFSET_MASK;      physAddr = (PTE.PFN &lt;&lt; PFN_SHIFT) | offset;      AccessMemory(physAddr);      TLB_Insert(VPN, PTE.FPN, PTE, PTE.ProtecBits)</code></pre><ol start="3"><li>TLB的命中率，和时间和空间局部性有关；</li><li>TLB未命中的处理：<ul><li><strong>硬件处理</strong>，这是老式基于复杂指令集的计算机的行为，为了处理TLB未命中，硬件需要知道页表在内存中的确切位置及页表的格式，硬件遍历页表并更新TLB，<strong>重试产生未命中异常的指令</strong>（<em>注意，这与调用系统调用后，代码继续执行的位置差异</em>）；</li><li>使用精简指令集的计算机，在发生TLB未命中异常时由操作系统处理。</li><li>处理TLB未命中时，需要小心引起TLB未命中的无限递归；为了解决这一问题，可以直接把处理TLB未命中的程序放到物理内存中，这样就不用通过映射。<br>图6<img src="https://litrtg.bl.files.1drv.com/y4mvF5CXedYPqKcfyPFjDRXWO119WgytwLEXXjQEfIesaMM6jvavqZXiRQ1H9f-rVIyHNJYCG1aJqerRqck9voxZmpS-D1Jz1jiFvBb3UVU0iMUw6-LwG2pVaKMtL_Ot1KaDpu--tnORF85Y3WFQgLoKL_3g_9h1IUjuZwKAe5Uq-DOwxABws_0KD-KTlz7VP-UCR5-SFzMfA0lDRoTVc35eQ?width=291&height=50&cropmode=none" alt="图6"></li></ul></li><li>TLB的内容如图6所示：它可能包含32、64或128个条目，被称为<strong>fully associative</strong>，标识任意转换可能出现在TLB的任意位置。上图中的其他位和页表的其他位并非完全相同；</li><li>上下文切换堆TLB的处理，比如进程A的虚拟页10映射到物理地址100，进程B的虚拟页映射到物理帧的170，当由进程A切换到进程B时，会出现如图7(<em>请忽略最后一列</em>)所示的状态，操作系统分不清那个项属于哪个进程，一般有两种解决办法：<ul><li>上下文切换时，清空TLB；</li><li>增加硬件支持，比如有的系统在TLB中增加了<strong>地址空间标识符ASID</strong>。</li></ul></li><li>TLB缓存的更新策略：<ul><li><strong>最近最少使用策略LRU</strong>；</li><li><strong>随机策略</strong>，这样可以避免使用LRU循环访问<em>n+1</em>个页时，每次访问均触发TLB未命中的问题；<br>图7<img src="https://k4trtg.bl.files.1drv.com/y4mGiXAprJ5Wr3hjZly0MrmAncMyS7FQFWse4PZ_1kZ-m5Ob2LRLa1udLJj6XKF6NAKYL4KywTz0e0etIhGWjyEQrleOLi2ate9kxln7vDVq3AccXSAW3oQoUS1GnBmnkgGLGySfY-DlIHFsylgtCSyd7UjLYgoEqhYE089q7e7zl7m3TMGP9HdwpXL7JZoJANKvpHYj-9zfvrCXOH1pjg3LQ?width=728&height=100&cropmode=none" alt="图7"></li></ul></li><li>实际系统(MIPS R4000，软件管理TLB，32位，页大小4KB)的TLB表项示例：<ul><li>理论上，虚拟地址有20位VPN和12位偏移量，但实际只有19位VPN，这是因为用户地址空间只占一半；</li><li>G位全局标识位，用于指示页是否为全局共享</li></ul></li></ol><h3 id="第八章-高级页表"><a href="#第八章-高级页表" class="headerlink" title="第八章 高级页表"></a>第八章 高级页表</h3><ol><li>上一章解决了分页导致的两次内存访问问题，本章解决另一个问题——分页引入的页表过大；</li><li>一个简单的解决办法是使用较大的页，但同时会引入内部碎片问题。所以很多操作系统还是使用较小的页；</li><li>混合方法——结合分页和分段，一个虚拟地址空间中往往存在大量的未使用分页表，但同样需要在页表中对其进行记录，从而造成页表空间的浪费。采用杂合的方法，我们就可以为每个逻辑段提供一个页表，而不是为整个地址空间提供页表。同样假设MMU中包含基址寄存器和界限寄存器，基址寄存器指向保存段页表的物理地址，界限寄存器指示页表的结尾。以下代码展示了杂合模式下地址转换前的操作；<ul><li>混合方法大大节省了内存；</li><li>由于分段的引入，灵活性降低，同时引入外部碎片化等问题；</li></ul></li></ol><pre><code class="C">SN = (VirtualAddress &amp; SEG_MASK) &gt;&gt; SN_SHIFT;VPN = (VirtualAddress &amp; VPN_MASK) &gt;&gt; VPN_SHIFT;AddressOfPTE = Base(SN) + (VPN * sizeof(PTE));</code></pre><p>图8<img src="https://kotrtg.bl.files.1drv.com/y4mOAwHx2ZnSWImyHUjH3sHK6uD92UY5rFLXsJEuTHBQTo05Uk9OlIYsnPftRYP35Uo_Lpt44oAAhwElYVT4TdiiPYCuODrllnKc7SY-iqjCJUzWIXTRe8EMpGiSygKmYILCcPEzhyUzD7SYKZeVtyhtV50rIaC4srmhgiTkgoQ8rDhab5zF3mNgdnPL0fZOvoiGf90sr0mrNhi_7Z6L5JQaA?width=355&height=289&cropmode=none" alt="图8"></p><center>题注</center><ol start="4"><li><strong>多级页表</strong>，为了去掉页表中的无效区域，多级页表将线性页表变为类似树的结构，大多数现代操作系统采用；主要原理：<ul><li>首先将页表分为大小为页的单元，如果某个页表页上的全部页表项无效，则不分配该页的页表。</li><li>使用页目录追踪页表的页是否有效，图8展示了两级页表的一个例子；</li><li><strong>优势</strong>，页表占用的空间大大降低，更加灵活、</li><li><strong>成本</strong>，当TLB未命中时，需要从内存加载两次才能获取正确的地址转换信息，这是一种时空折中的方法，</li><li><strong>注意</strong>：多级页表的每一页都应放入一个单独的页，因此有时需要多级页表。</li></ul></li><li><strong>反向页表</strong>，它的每一项代表物理系统的每个页，页的内容包括使用此页的进程以及该进程映射到此页的虚拟页。堆反向页表的查找构建在散列表的基础之上。</li><li>将页表交换到磁盘：为了减轻物理内存的压力，一些系统会选择将部分页表保存到内核虚拟内存中；</li></ol><h3 id="第九章-超越物理内存——机制"><a href="#第九章-超越物理内存——机制" class="headerlink" title="第九章 超越物理内存——机制"></a>第九章 超越物理内存——机制</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;虚拟化——内存&quot;&gt;&lt;a href=&quot;#虚拟化——内存&quot; class=&quot;headerlink&quot; title=&quot;虚拟化——内存&quot;&gt;&lt;/a&gt;虚拟化——内存&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="OS" scheme="http://sioce.me/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>20200808小记</title>
-    <link href="http://sioce.me/2020/08/08/20200808%E5%B0%8F%E8%AE%B0/"/>
-    <id>http://sioce.me/2020/08/08/20200808%E5%B0%8F%E8%AE%B0/</id>
-    <published>2020-08-08T03:16:17.000Z</published>
-    <updated>2020-08-08T03:45:14.368Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="又是一年选择季"><a href="#又是一年选择季" class="headerlink" title="又是一年选择季"></a>又是一年选择季</h2><a id="more"></a><p>又三年过去了！我得到什么了吗？</p><p>七年前，靠着一丝丝的运气走进这所学校时，人生就失去了目标；<br>三年前，面临人生第二次抉择，无能如我，我逃避了，在拼一次吧！<br>如今，抉择再次如期而至，我退缩吗？再拼博一把吗？<br>优秀的人，良好的习惯、顽强的意志，我有吗？<br>我渴望强大···<br>我不断对自己感到失望···<br>我是个什么样的人呢？<br>自私、邋遢、变态···<br>我多想再拼一次<br>最后一次</p><p>谨记之，以自勉！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;又是一年选择季&quot;&gt;&lt;a href=&quot;#又是一年选择季&quot; class=&quot;headerlink&quot; title=&quot;又是一年选择季&quot;&gt;&lt;/a&gt;又是一年选择季&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="小记" scheme="http://sioce.me/categories/%E5%B0%8F%E8%AE%B0/"/>
-    
-    
-      <category term="心情" scheme="http://sioce.me/tags/%E5%BF%83%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>computer network OSI2</title>
-    <link href="http://sioce.me/2020/08/06/computer-network-OSI2/"/>
-    <id>http://sioce.me/2020/08/06/computer-network-OSI2/</id>
-    <published>2020-08-06T09:27:18.000Z</published>
-    <updated>2020-08-08T04:07:48.903Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><a id="more"></a><h3 id="一、-TCP和UDP"><a href="#一、-TCP和UDP" class="headerlink" title="一、 TCP和UDP"></a>一、 TCP和UDP</h3><ol><li>我们都知道TCP使面向连接的、可靠的、基于字节流的，而UDP是无连接的，二者的差异如下：<ul><li>TCP提供可靠交互，TCP传输的数据无差错、不丢失、不重复且有序到达，而UDP继承了IP包的特性，不保证不丢失和有序性；</li><li>TCP是面向字节流的，发送的是没头没尾的字节流，而UDP继承了IP包的特性，基于数据报，逐个发送；</li><li>TCP是可以有拥塞控制的，会根据网络状态调整发送速度，而UDP没有这种特性；</li><li>TCP是一个有状态的服务，精确记录发送和接受状态，保证发送正确无误，而UDP则是无状态的；</li></ul></li><li>MAC层定义本地局域网的传输行为，IP层定义整个网络端到端的行为，网络传输以包为单位，二层叫帧，三层叫包，四层叫段。将其统称为包，包单独传输，自行选路，再不同的设备间封装解封，不保证到达，UDP完全继承这种特性；</li></ol><h3 id="二、UDP"><a href="#二、UDP" class="headerlink" title="二、UDP"></a>二、UDP</h3><ol><li>根据IP层的8位协议可以区分是TCP还是UDP，内核检查传输层端口并将数据交给监听对应端口的应用程序处理，<a href="https://static001.geekbang.org/resource/image/2c/84/2c9a109f3be308dea901004a5a3b4c84.jpg" target="_blank" rel="noopener">UDP示意图</a>。</li><li>UDP的三大特点：<ul><li><strong>沟通简单</strong>：不需要维护大量数据结构、处理逻辑、包头字段；</li><li><strong>轻信他人</strong>：不建立连接，任何人都可以向其发送数据，反之亦可，甚至可以同时给多个人传输数据；</li><li><strong>不会变通</strong>：无法根据网络状态调整发送行为；</li></ul></li><li>UDP的使用场景：<ul><li><strong>需求资源少，网络状况较佳的内网或对于丢包不敏感的应用；</strong>，比如前文的DHCP和TFTP协议都是基于UDP的；</li><li><strong>不需要一对一沟通建立连接，而实可以广播的应用</strong>，广播协议DHCP，使用D类地址的机器可以将包组播给一组机器，监听使用组播地址机器的机器，需要向路由器发送IGMP包，使得路由器收到组播地址发来的包时，就直接转送给相应的机器，实现跨路由组播；</li><li><strong>需要处理速度块，低时延、能容忍丢包，无视网络状态随时发送的场景</strong>，比如流媒体协议；</li></ul></li><li>UDP的相关协议：<ul><li>移动互联网往往会出现大量重连操作，然而基于TCP的三次握手建立连接会降低速度，因此<strong>快速UDP互联网连接QUIC</strong>应运而生，这是一种基于UDP的改进通信协议，运行在应用层上；</li><li><strong>流媒体协议RTMC</strong>，TCP要求按顺序确认每个包的到达顺序，不符合直播实时性特点，另外视频对关键帧的要求较高，其他帧即使偶尔丢掉影响也可以忽略。而且TCP根据网络状态调整发送速度的特性也严重影响直播观感。所以就需要实现基于UDP的视频传输协议；</li><li><strong>实时游戏</strong>，顾名思义，这类游戏对实时性要求极高，这就需要建立长连接保证实时性，然而服务器可以维护的TCP连接是有限的，无法应对大量玩家。这就需要引入无连接的UDP，以应对海量客户连接策略，另外对于丢包，实时游戏也需要额外处理，采用自定义UDP协议，自定义重传，能把丢包延迟降到最低；</li><li><strong>IOT物联网</strong>，物联网终端资源少，维护TCP代价太大，TCP的实时性也不能满足物联网的需求，因而谷歌提出了基于UDP的物联网通信协议Thread；</li><li><strong>移动通信</strong>：4G网络中移动流量上网面对的协议GTP-U就是基于UDP的</li></ul></li></ol><h3 id="三、TCP"><a href="#三、TCP" class="headerlink" title="三、TCP"></a>三、TCP</h3><ol><li><p><a href="https://static001.geekbang.org/resource/image/64/bf/642947c94d6682a042ad981bfba39fbf.jpg" target="_blank" rel="noopener">TCP头示意图</a>:</p><ul><li>包中的序号可以解决乱序问题；</li><li>确认序号保证发出去的包应该有送达确认；</li><li>状态位：SYN——发起连接、ACK——恢复、RST——重新连接、FIN——结束连接；</li><li>窗口大小，通信双方约定发送速度，进行流量控制；</li></ul></li><li><p>TCP的三次握手：</p><ul><li>为什么是三次握手：为了确定双方具有收发能力。首先A发送YNC请求，<strong>B收到确定A具有发送能力</strong>，B发送ACK应答信号，<strong>A收到确定B具有收发能力</strong>，A发送应答的应答，<strong>B收到确认A具有接收能力</strong>，由此双方建立连接；</li><li>三次握手期间，建立连接同时<strong>确定TCP包的序号问题</strong>，A告诉B自己发起包的起始序号，B也告诉A自己发起包的起始序号；另外序号的起始并非1，由一个32位计数器控制，每四号秒加一，一个周期将近四个小时，从而避免重复问题。</li></ul></li><li><p>TCP的四次挥手：</p><ul><li>首先A发送断开连接FIN请求，进入<strong>FIN_WAIT_1</strong>状态，等待B的应答信号。若未收到，则重新发送。倘若A直接断开，则B的应答信号得不到回复，导致Bug。若B直接断开，A同样因收不到应答出现Bug；</li><li>其次B回复A的FIN请求，说知道了，进入<strong>CLOUSED_WAIT</strong>状态，继续处理未完成的任务，A收到B的ACK信号，进入<strong>FIN_WAIT_2</strong>状态。若此时B直接断开，A将永远处于这个状态(部分系统可以设置超时时间)。</li><li>B发送FIN请求，进入<strong>LAST_ACK</strong>状态；</li><li>A收到B的FIN信号，向B发送ACK信号，进入<strong>TIME_WAIT</strong>状态，防止网络故障时，B因无法收到应答信号而重发FIN信号。等待时间要大于两个最大报文生存时间(<strong>MSL</strong>)，如果超过此时间，B依然没收到ACK，则A收到B的FIN时会发送RST信号，此时B就知道A已断开。</li></ul></li><li><p><a href="https://static001.geekbang.org/resource/image/fd/2a/fd45f9ad6ed575ea6bfdaafeb3bfb62a.jpg" target="_blank" rel="noopener">TCP状态机</a></p></li><li><p>TCP事项可靠连接使用的是<strong>累计应答</strong>机制。</p><ul><li><p>发送端会维护一个队列，内部包括发送并确认的包、发送未确认的包、等待发送的包、暂时不发送的包；接收端会告知发送端一个<strong>Advertised window</strong>，窗口大小等于第二三部分的大小。于是发送端就会维护这样的数据结构：</p><p> <img src="https://static001.geekbang.org/resource/image/16/7b/16dcd6fb8105a1caa75887b5ffa0bd7b.jpg" alt="发送端队列示意图"></p></li><li><p>接收端也会维护一个队列，内容包括接收已确认、等待接收未确认、不能接收吗，数据结构如下</p><p> <img src="https://static001.geekbang.org/resource/image/f7/a4/f7b1d3bc6b6d8e55f0951e82294c8ba4.jpg" alt="发送端队列示意图"></p></li><li><p>假设4的应答收到了，但5的ACK丢了，6、7的数据包丢了。这时就需要启动<strong>确认与重发机制</strong>：</p><ul><li><strong>超时重试</strong>，即发送了但未应答就需要根据计时器重新尝试，计时时间需大于<strong>往返时间RTT</strong>，但不宜过长TCP采用加权法估计RTT，因此RTT是不断变化的，所以又叫做<strong>自适应重传算法</strong>。</li><li>假设一段时间后5，6的ACK都发送了，此时7的ACK丢了，此时TCP的策略是<strong>超时时间加倍</strong>。<strong>每遇到一次超时重传，都会加倍超时时间，两次超时则说明网络环境差，不宜频繁发送</strong>；</li><li><strong>快速重传机制</strong>，当接收方收到序号大于期望序号的报文时，就会发送冗余ACK，发送端收到三个冗余ACK就会在定时器过期之前重发报文段；</li><li><strong>SACK</strong>，这也是一种快速重传方式，它在TCP头中加入一个SACK，将缓存地图发送给发送方，根据地图发送方就知道哪个包丢失；</li></ul></li></ul></li><li><p>TCP的流量控制机制：</p><ul><li>假设接收端一致不读取缓存中的数据，当收到一个包的ACK时，窗口未平移，仅左边界右移一个单位，此时窗口就会不断缩小，直到变为0，停止发送；此时发送方就会发送数据窗口探测包，看是否有机会调整窗口大小</li></ul></li><li><p>TCP的拥塞控制问题：</p><ul><li>TCP的策略就是在不堵塞不丢包的情况下，尽量发挥宽带，同时避免超时和重传；</li><li>为了探测网络的宽带，TCP采用慢启动的方式，开始只发送一个，收到应答后每次发送两个，收到两个的应答后，每次发送四个···，如此循环指数增长，当值大于ssthresh时，每收到一个确认增加cwnd分之一，这样就变成了线性增长。当增长到溢出时，将sshresh设为cwnd/2，cwnd设为一，重新开始慢启动；</li><li>针对上述快速重传机制，当出现丢包时，发送三四前一个包的ACk，即可触发快速重传机制，此时cwnd减半，sshthresh设为cwnd，仍呈线性增长；</li><li>拥塞控制存在的两个问题：<ul><li>丢包不代表宽带耗尽；</li><li>等宽带耗尽发生丢包才启动拥塞控制，为时已晚；</li></ul></li><li>如何优化上述两个问题：<ul><li><strong>TCP BBR拥塞算法</strong>：增加发送速度将宽带填满，但不填中间设备的缓存，寻找到这个平衡点，可以很好的达到高宽带和低时延的平衡；</li></ul></li></ul></li></ol><h3 id="四、-socket"><a href="#四、-socket" class="headerlink" title="四、 socket"></a>四、 socket</h3><ol><li>socker进行的是端到端的通信，无法获知网络中间设备的信息，因此它的参数仅涉及网络层和传输层；<ul><li>网络层的设置主要为指定IP协议版本，使用TCP还是UDP；</li></ul></li><li>基于TCP协议的socket程序函数调用：<ul><li>服务端：<ul><li>调用<code>bind()</code>函数，赋予socket一个IP地址和端口，因为服务端可能包含多张网卡；</li><li>调用<code>listen()</code>函数开始监听，等待客户端发起连接；</li><li>操作系统内核会为每个Socket维护两个队列，一个是处于established状态的连接，另一个是处于syn_rcvd状态的连接；</li><li>调用<code>accept()</code>函数，取一个established状态的连接进行处理；</li></ul></li><li>客户端：<ul><li>调用<code>connect()</code>函数，指明IP和端口，发起三次握手；</li><li>内核分配临时端口给客户端，握手成功，服务端就会返回另一个socket；</li><li><strong>注意：</strong>监听使用的socket和传输数据使用的socket并不是同一个；</li></ul></li></ul></li><li>基于UDP协议的socket程序调用：简单；</li><li>服务器如何维护多个连接：<ul><li>服务器的<strong>最大连接数</strong>，系统使用四元数标识一个TCP连接：<code>{本机IP、本机端口、对端IP、对端端口}</code>，理论上一个服务端socket监听可以容纳2的48次方个TCP连接数，但由于Socket都是文件，受到<strong>文件描述符限制</strong>，另外还受到内存的限制；</li></ul></li></ol><h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h2><h3 id="一、-HTTP1-x"><a href="#一、-HTTP1-x" class="headerlink" title="一、 HTTP1.x"></a>一、 HTTP1.x</h3><ol><li><a href="https://static001.geekbang.org/resource/image/10/74/10ff27d1032bf32393195f23ef2f9874.jpg" target="_blank" rel="noopener">HTTP请求格式示意图</a>:<ul><li><strong>请求行</strong>，其中url就是对应的网址，版本为HTTP版本，目前多为1.1，方法分多种类型：<ul><li><strong>GET</strong>，从服务器获取资源；</li><li><strong>GET</strong>，向服务器传送一些信息；</li><li><strong>PUT</strong>，向指定资源位置上传最新内容；</li><li><strong>DELETE</strong>，删除资源；</li></ul></li><li><strong>首部字段</strong>，采用key-value的格式，用于保存一些重要的字段：<ul><li>缓存：对于网页中的一些静态资源，由于长时间不会改变，所以不用每次请求都发送静态资源，只需发送动态资源，从而节省宽带：<ul><li><strong>cache control</strong>就是控制缓存的，它使用max-age决定客户端是否接收缓存资源；</li><li><strong>If-Modified-Since</strong>也是用于控制缓存的，如果服务器资源从某个时间更新了，则客户端需要下载最新资源；</li></ul></li></ul></li></ul></li><li>HTTP请求的发送，HTTP是基于TCP的，符合TCP的基本行为；</li><li><a href="https://static001.geekbang.org/resource/image/1c/c1/1c2cfd4326d0dfca652ac8501321fac1.jpg" target="_blank" rel="noopener">HTTP请求的返回示意图</a><ul><li><strong>状态码</strong>标识请求的结果，如200、404等，<strong>短语</strong>会描述出现该结果的原因；</li></ul></li></ol><h3 id="二、-HTTP2-0"><a href="#二、-HTTP2-0" class="headerlink" title="二、 HTTP2.0"></a>二、 HTTP2.0</h3><ol><li>HTTP1.x的缺陷：<ul><li>以纯文本的形式通信，每次通信都携带完整HTTP头，实时性和并发性有待提高；</li></ul></li><li>HTTP2.0的改进：<ul><li>对HTTP头进行了压缩，建立key-value的索引，相同的头进发送索引；</li><li>将一个TCP的连接切分为多个流，流具有ID和优先级；</li><li>将传输信息分为更小的消息和帧，如<strong>Header帧</strong>传输头信息，<strong>Data帧</strong>传输正文实体；</li><li>通过这些机制，HTTP2.0将不同的请求分配到不同的流中，进行二进制传输，帧还可以打乱顺序，再根据标识符重组，并根据优先级决定先处理哪个流的数据；</li></ul></li></ol><h3 id="三、-QUIC协议"><a href="#三、-QUIC协议" class="headerlink" title="三、 QUIC协议"></a>三、 QUIC协议</h3><ol><li>这是谷歌提出的基于UDP的通信协议，用于解决TCP丢包重传问题：<ul><li><strong>自定义连接机制</strong>：TCP使用四元数标识一个连接，四元数一旦变化，就需要重新连接，不适用于移动设备。而QUIC使用64位随机数标作为标识，而且使用UDP这种无连接的协议，只要ID不变，即使IP和端口变化也不用重新连接；</li><li><strong>自定义重传机制</strong>：TCP使用序号和应答解决顺序和丢包问题，根据自适应重传算法采样超时时间精确度不够。QUIC也是由序号的，但每个序号的包只发送一次，下次就需要加一，从而保证RTT时间的精确性。那么如何识别不同序号的包是同一个呢？根据每个包在整个数据流中的偏移量进行区分；</li><li><strong>无阻塞多路复用</strong>：同一条QUIC可以创建多个stream，发送多个HTTP请求，同时QUIC是基于UDP的，一个连接上的多个stream间没有以来，即使其中一个stream丢了也不影响其他的流；</li><li><strong>自定义流量控制</strong>：TCP使用<strong>滑动窗口协议</strong>进行流量控制，QUIC也是使用window_update沟通可接收字节数，但QUIC不但在一个连接上控制窗口，还在连接的每个流上控制窗口。QUIC的ACK是基于offset的，每个offset的包到来后即可进行应答。</li></ul></li></ol><h3 id="四、-HTTPS"><a href="#四、-HTTPS" class="headerlink" title="四、 HTTPS"></a>四、 HTTPS</h3><ol><li>为了解决数据传输中的安全问题，需要使用加密技术，分为对称加密和非对称加密；<ul><li><strong>对称加密</strong>，加密和解密使用的是同一个密钥；相对来说效率更高，交互场景多采用对称加密算法，但这种加密传输需要解决密钥约定问题</li><li><strong>非对称加密</strong>，加密和解密使用不同的钥匙，这种技术可以解决对称加密过程中的密钥约定问题；</li></ul></li><li><strong>数字证书</strong>，这是为了解决公钥的权威性问题；数字证书上应该有公钥、所有者、发证机构和有效期；发证的集构称为<strong>CA</strong>，权威集构使用<strong>签名算法</strong>给证书卡章。发证机构也是需要层层背书的；</li><li>HTTPS工作模式：<ul><li>客户端发送client hello消息到服务，使用明文传输TLS版本、加密套件候选表、压缩算法候选表、协商对称密钥的随机数等；</li><li>服务端发送server hello消息，并发送使用的协议版本、加密算法、压缩算法、协商后续密钥的随机数等；</li><li>服务端将自己的证书信息发送给客户端；</li><li>客户端验证服务端证书，生成随机数字Pre-master，同Client Key Exchange信息使用服务端公钥加密后发给服务端；</li><li>根据上文的三个随机数字，客户端和服务端分别生成对称密钥，之后双方使用对称密钥进行数据传输；</li><li>使用对称密钥进行传输之前，先使用对称密钥进行测试；</li></ul></li></ol><h3 id="五、-流媒体协议"><a href="#五、-流媒体协议" class="headerlink" title="五、 流媒体协议"></a>五、 流媒体协议</h3><ol><li>视频传输之前必须进行压缩，使用压缩技术去除视频中的：<ul><li>空间冗余——像素与像素之间具有强关联性，没必要保存每一个像素；</li><li>时间冗余——视频序列帧与帧之间具有相似性；</li><li>视觉冗余——人眼对视频中的某些细节不敏感；</li><li>编码冗余——不同像素出现的概率不同；</li></ul></li><li>两种视频编码标准：<ul><li><strong>VCEG</strong>，侧重传输，H.xxx系列；</li><li><strong>MPEG</strong>，MPEG-x系列，本是做视频存储的；</li><li><strong>ITU-T</strong>，与MPEG共同之内搞定了H.264/MPEG-4 AVC标准</li></ul></li><li>视频直播的基本过程：<ul><li><strong>推流</strong>：采集视频并编码后推送到服务端；</li><li>服务端<strong>接流</strong>后，进行一些处理，如<strong>转码</strong>以适应多种客户端</li><li><strong>拉流</strong>，观众请求流处理完毕的视频流；为了降低服务器压力，服务器需要一个视频<strong>分发</strong>网络，预先将视频加载到就近边缘节点；</li><li><strong>解码</strong>，观众对视频流进行解码播放；</li></ul></li><li>视频编码原理：<ul><li>视频中的三种帧：<ul><li><strong>I帧</strong>，关键帧，里面是完整的图片；、</li><li><strong>P帧</strong>，前向预测编码帧，表示当前帧和前一帧的差异；</li><li><strong>B帧</strong>，双向预测内插编码帧，记录本帧与前后帧的差别</li></ul></li><li>编码过程：<ul><li>首先通过<strong>时序进行编码</strong>，编码后IBBP间隔出现；</li><li><strong>空间编码</strong>，一帧分为多个片，每片分为多个宏块，每个宏块分为多个子块；</li><li>将上述时序空间立体的视频帧压缩位二进制流，该二进制流以<strong>网络提取层单元NALU</strong>为基本结构；</li><li>每个NALU的内容：<ul><li>起始标识符；</li><li>NALU头，配置NALU类型，SPS是序列参数集，PPS是图像参数集，顾名思义，他们表示Payload中保存的是图像相关的参数；IPB帧类型，表示Payload中保存的是真正的视频数据；</li><li>NALU Payload，承载NALU承载的数据；</li></ul></li><li>如此就将一个视频拆分为一些列的帧，每帧拆为一系列的片，每一片都放在一个NALU中，NALU之间通过特殊的标识符分隔，每个I帧的前面必须插入单独保存SPS和PPS的NALU；</li></ul></li></ul></li><li>推流——RTMP协议：<ul><li>RTMP是基于TCP的，建立TCP连接之后还需要建立RTMP连接，之所以建立额外的连接，是因为需要沟通相应的版本号和时间戳，<a href="https://static001.geekbang.org/resource/image/de/c7/de6301500d02c5afa3e6c6f5fa47bac7.jpg" target="_blank" rel="noopener">RTMP连接建立状态示意图</a></li><li>握手完成，双方传递控制信息，如块大小、窗口大小等；</li><li>创建stream流，进行数据传输：<ul><li>将NALU放入Message中，称为RTMP Packet包，<a href="https://static001.geekbang.org/resource/image/1a/4b/1a97a0b90c2304cbdf22a2bc8a8ce94b.jpg" target="_blank" rel="noopener">包格式示意图</a>;</li><li>去掉NALU的起始标识符，将SPS和PPS参数封装为RTMP包进行发送，然后再发送一个个片的NALU数据；、</li><li>RTMP将Message拆分为块，逐个发送；</li></ul></li></ul></li></ol><h3 id="六、-P2P协议"><a href="#六、-P2P协议" class="headerlink" title="六、 P2P协议"></a>六、 P2P协议</h3><ol><li>使用HTTP下载大文件速度过慢，需要使用文件传输协议<strong>FTP</strong>，FTP采用两个TCP连接传送一个文件：<ul><li><strong>控制连接</strong>：服务器以被动的方式打开FTP端口21，客户端发起连接，将命令传送给服务器：常用的命令如：list、reter、store等</li><li><strong>数据连接</strong>：当文件在客户端和服务端进行传输时，就需要创建连接；</li></ul></li><li>FTP的两种工作模式：<ul><li><strong>主动模式PORT</strong>：客户端随机打开大于1024一个端口N，向服务器的端口21发起连接，同时开放监听N+1端口，由服务器从自己的数据端口20主动连接客户端的N+1端口；</li><li><strong>被动模式PASV</strong>：客户端打开本地两个任意端口N和N+1第一个端口连接服务器21端口，提交PASV命令，服务器开启任意大于1024的端口，返回消息，告知客户端FTP服务器开放用来传输数据的端口，客户端连接对应端口进行数据传输；</li></ul></li><li><strong>P2P</strong>，使用HTTP和FTP都会给服务器造成较大的宽带压力，而P2P的诞生解决了这一问题，P2P假设资源分散地存储在多台设备上，下载文件的时候只需要知道那些设备上保存有目标文件，即可通过建立点对点连接就近获取文件，获取文件之后，自己的机器也成为分散存储文件设备的一部分；<ul><li>存储分散存储设备位置的文件——<strong>种子(.torrent文件)</strong>，种子文件由两部分构成：<ul><li><strong>announce(tracker URL)</strong>：</li><li><strong>文件信息</strong>，主要包含：<ul><li><em>info区</em>，指定种子有几个文件，文件长度、目录结构、目录和结构的名字；</li><li><em>Name字段</em>，顶层目录的名字；</li><li><em>每个段的大小</em>，bitTorrent协议把文件分为很多小段，然后分段下载；</li><li><em>段哈希值</em>：将整个种子中每个段的SHA-1哈希值拼接到一起；</li></ul></li></ul></li><li>下载流程：<ul><li>客户端解析种子文件，得到tracker地址；</li><li>客户端向tracker地址请求其他下载者的IP地址；</li><li>客户端连接其他下载者，根据种子文件，与相关下载设备互相告知自己一下载内容，并交换双方为下载内容；</li><li>下载这验证每个得到块的哈希值，一致则保存；</li><li>这种模式需要以来中心tracker中心服务器。</li></ul></li></ul></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;传输层&quot;&gt;&lt;a href=&quot;#传输层&quot; class=&quot;headerlink&quot; title=&quot;传输层&quot;&gt;&lt;/a&gt;传输层&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="computer network" scheme="http://sioce.me/tags/computer-network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>computer network OSI1</title>
-    <link href="http://sioce.me/2020/08/06/computer-network-OSI1/"/>
-    <id>http://sioce.me/2020/08/06/computer-network-OSI1/</id>
-    <published>2020-08-06T08:24:11.000Z</published>
-    <updated>2020-08-08T04:07:49.448Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h2><a id="more"></a><h3 id="一、-网络中的第一层"><a href="#一、-网络中的第一层" class="headerlink" title="一、 网络中的第一层"></a>一、 网络中的第一层</h3><ol><li>当<strong>局域网</strong>中只有一台计算机时，只需要使用交叉网线并配置IP、子网掩码、默认网关即可。当设备数量增加时，就需要使用<strong>集线器Hub</strong>，它工作在物理层，将收到的每一个字节复制到其他端口上。</li></ol><h2 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h2><h3 id="一、-基本内容"><a href="#一、-基本内容" class="headerlink" title="一、 基本内容"></a>一、 基本内容</h3><table><thead><tr><th align="center">×</th><th align="center">目标MAC</th><th align="center">源MAC</th><th align="center"><em>类型</em></th><th align="center">数据</th><th align="center">CRC</th></tr></thead><tbody><tr><td align="center">位数(bytes)</td><td align="center">6</td><td align="center">6</td><td align="center">2</td><td align="center">46~1500</td><td align="center">4</td></tr></tbody></table><table><thead><tr><th align="center"><em>类型</em></th><th align="center">内容</th></tr></thead><tbody><tr><td align="center">0800</td><td align="center">IP数据报</td></tr><tr><td align="center">0806</td><td align="center">ARP请求、应答</td></tr></tbody></table><ol><li>Hub采用广播的模式发送数据，面临一下问题：<ul><li>谁发的包？谁接受包？</li><li>多台设备同时发包的先后顺序？</li><li>发送错误，如何处理？</li></ul></li><li>数据链路层负责解决上述问题：<ul><li><strong>多路访问</strong>解决问题二，主要算法有：<ul><li><em>信道划分</em>——分多个信道，互不干扰；</li><li><em>轮流协议</em>——类似单双号限行；</li><li><em>随机接入协议</em>——需要则发送，拥堵则错过高峰再进行发送，以太网即采用这种方式；</li></ul></li><li><strong>链路层地址</strong>负责解决问题一，该地址也叫做MAC地址，第二层网络包格式如下：<ul><li>网络包中的<strong>类型</strong>大部分为IP数据包，其内部包含TCP、UDP、HTTP等的封装</li></ul></li><li>上表网络包中的<strong>循环冗余检测CRC</strong>用于解决问题三，使用XOR异或算法计算整个包再在发送的过程中是否出错。</li></ul></li><li>如何获取目标机器的MAC地址？<strong>ARP协议</strong>：<ul><li>当已知目标IP时，本机会首先查询本地ARP缓存，求MAC地址，找不到则发送ARP广播；</li><li>目标IP收到广播，在通过ARP广播发送自身MAC地址；</li><li>ARP报文如<a href="https://static001.geekbang.org/resource/image/5f/de/5ff7bcca724b8aa12b11341bb261f3de.jpg" target="_blank" rel="noopener">ARP报文</a>所示；</li></ul></li><li><strong>二层设备——交换机</strong><ul><li>Hub采用广播的方式将每个网络包复制到每个网口，浪费资源且易产生冲突，如果转发设备能够记忆每个网口对应主机的MAC地址，这种情况就能得到缓解，这就是交换机；</li><li>通过不断学习，交换机会维护一个<strong>转发表</strong>，注意转发表也是有过期时间的；</li></ul></li></ol><h3 id="二、-多台交换机——拓扑结构"><a href="#二、-多台交换机——拓扑结构" class="headerlink" title="二、 多台交换机——拓扑结构"></a>二、 多台交换机——拓扑结构</h3><ol><li>拓扑结构中的环路问题<a href="https://static001.geekbang.org/resource/image/1f/ea/1f909508a8253d4842ffe962883421ea.jpg" target="_blank" rel="noopener">示意图</a>;</li><li><strong>STP协议</strong>——计算机网络中的生成树算法<ul><li>基本概念有：<ul><li><strong>根交换机(Root Bridge)</strong>：某棵树的老大，类似掌门；</li><li><strong>指定交换机(Designated Bridge)</strong>：拜此交换机做大哥的的交换机，也是此交换机大哥的小弟；</li><li><strong>网桥协议数据单元(BPDU)</strong>：比较实力的协议；</li><li><strong>优先级向量(Priority Vector)</strong>：实力；</li></ul></li><li>工作过程：<ul><li>起初所有的交换机都以自己为掌门，但网络管理员会根据交换机的性能给交换机分配高优先级；</li><li>所有的交换机互相发送BPDU，进行比较，形成小的从属关系；</li><li>掌门遇掌门，根据优先级决定门派合并；</li><li>掌门与小弟，根据距离决定汇报路径；</li><li>同门遇同门，比较与小弟距离决定从属关系；</li><li>掌门与外派小弟，比较掌门优先级；</li><li>非同门小弟相遇，比较掌门优先级；</li></ul></li></ul></li><li>广播问题和安全问题：<ul><li>为了保障广播的安全和流畅问题，有两种解决方案：<ul><li><strong>物理隔离</strong>，每个部门设置单独交换机、单独子网，部门间使用路由器交流；</li><li><strong>虚拟隔离</strong>，即VLAN虚拟局域网，在原来二层头的基础上增加一个TAG，一共12位，交换机取下二层头，检测VLAN，根据VLAN的值决定是否进行转发。这样这需要配置交换机每个网口的VLAN值即可实现虚拟隔离；此时交换机之间的连接口叫做<strong>Trunck口</strong>，它可以转发属于任何VLAN的口；</li></ul></li></ul></li></ol><h2 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h2><h3 id="一、-IMCP协议"><a href="#一、-IMCP协议" class="headerlink" title="一、 IMCP协议"></a>一、 IMCP协议</h3><ol><li><code>ping</code>指令就是基于IMCP协议工作的。IMCP全称互联网控制报文协议。互联网的状况复杂，需要根据遇到的问题调整传输策略；</li><li>IMCP报文封装在IP包中，因为它需要探测源地址和目标地址之间的网络状况，IMCP报文的类型有很多，常用的为<strong>主动请求</strong>——8，<strong>主动请求应答</strong>——0。<a href="https://static001.geekbang.org/resource/image/20/e2/201589bb205c5b00ad42e0081aa46fe2.jpg" target="_blank" rel="noopener">报文示意图</a><ul><li><strong>查询报文类型</strong>，如ping：<ul><li>它是一种主动请求，并且获得主动应答的ICMP协议，</li><li>对于ping的请求进行网络抓包，叫做<strong>ICMP ECHO REQUEST</strong>；</li><li>主动请求的回复叫做<strong>ICMP ECHO REPLY</strong>。</li><li>相比原生ICMP，ping增加了两个字段：<strong>标识符</strong>和<strong>序号</strong>，标识符用于区分不同的任务，序号用于统计网络状况；</li><li>ping中还可以添加时间，用于计算路程长短；</li></ul></li><li><strong>差错报文类型</strong>，如Traceroute：<ul><li><strong>终点不可达——3</strong>，具体可能为网络不可达、主机不可达、协议不可达、端口不可达、需设置分片；</li><li><strong>源站抑制——4</strong>，即让源站降低发送速度；</li><li><strong>时间超时——11</strong>，超过网络包发送的时间还未送到；</li><li><strong>路由重定向——5</strong>，让下次发给另一个路由；</li></ul></li></ul></li></ol><h3 id="二、-MAC头和IP头细节"><a href="#二、-MAC头和IP头细节" class="headerlink" title="二、 MAC头和IP头细节"></a>二、 MAC头和IP头细节</h3><ol><li><a href="https://static001.geekbang.org/resource/image/36/b0/3647ac6b516df3226ac5c6c2c731f1b0.jpg" target="_blank" rel="noopener">示意图</a><ul><li>MAC头中的协议类型用来说明是IP协议；</li><li>IP头中的版本号，目前主流的是IPv4；</li><li>8位的协议标识表明是TCP还是UDP；</li></ul></li></ol><h3 id="三、-路由器"><a href="#三、-路由器" class="headerlink" title="三、 路由器"></a>三、 路由器</h3><ol><li>任何一个机器方位一个IP时，都会判断是否在同一个网段：<ul><li>倘若是，则使用ARP获取MAC地址，</li><li>不是，就需要使用网关，网关和源IP同一个网段，默认是网段的第一个IP或第二个，通过ARP获取网关MAC地址，放入MAC头中发送到网关；</li></ul></li><li>网关是一个三层设备，但称其为路由器是不准确的，路由器是一台设备，它有五个网口或网卡，分别连着五个局域网，每个网口的IP地址和局域网IP属于同一个网段，每只手都是它握住的局域网的网关；</li></ol><h3 id="四、-静态路由"><a href="#四、-静态路由" class="headerlink" title="四、 静态路由"></a>四、 静态路由</h3><ol><li>送入路由器网关的数据，应该由哪个网口发送出去？IP头和MAC头如何改变？上述问题的解决有两种方案：<strong>静态路由</strong>和<strong>动态路由</strong>。</li><li><strong>静态路由</strong>：原理是在路由器上配置一条条规则，指定访问那些网站从哪些口出去；</li><li>MAC地址是在局域网内有效，因此只要通过网关，必定会改变。</li><li>IP地址是否会改变取决于网关的类型：<ul><li><strong>转发网关</strong>：不改变IP地址。这种情况下局域网之间进行过协调，通过协调网段使得IP不会冲突；</li><li><strong>NAT网关</strong>：改变IP地址。这种情况下局域网各自指定自己的网段，导致IP段冲突，这就设计IP头的更改：<ul><li>首先本地IP是192.168.1.101/24，目的IP也是192.168.1.101/24，此时就需要在中间局域网中使用国际身份证，假设目标IP对应的国际身份证是192.168.56.2。于是源主机访问目标主机就是用目标主机的国际身份证192.168.56.2。</li><li>路由器A收到源主机的网络包，根据路由规则将网络包发送到目的路由，同时更改源主机的IP为其国际IP；</li><li>路由器B收到路由器A的网络包，根据路由规则得知访问192.168.56.2对应访问192.168.1.101，于是更改IP和MAC将网络包发送到目标IP</li><li>NAT映射并不能缓解IP紧张的问题，因此出现了NAPT；</li></ul></li></ul></li></ol><h3 id="五、-路由协议"><a href="#五、-路由协议" class="headerlink" title="五、 路由协议"></a>五、 路由协议</h3><ol><li>路由器会根据路由表正确的转发流量，一个路由表包含多条路由规则，每条规则至少包含三条信息：<ul><li>目的网络；</li><li>出口设备；</li><li>下一跳网关；</li><li>举例如下：</li><li>静态路由维护难度随网络的复杂度上升，因而需要引入动态路由算法；</li></ul></li></ol><pre><code class="{.line-numbers}"># 这种配置的核心思想是根据IP地址配置路由ip route add 10.176.48.0/20 via 10.173.32.1 dev eth0# 配置多个路由表 根据IP、入口设备、TOS选择相应路由表ip rule add from 192.168.1.0/24 table 10</code></pre><ol start="2"><li>动态路由可以根据路由协议算法生成动态路由表，随网络运行状况而变化，那么如何寻找最短路径呢？<ul><li><strong>距离矢量路由算法</strong>：它是基于Bellman-Ford算法的，基本思想如下：<ul><li>每个路由器保存一个路由表；</li><li>路由表中的每一行对应网络中的一个路由器；</li><li>每一行的信息由两部分构成：(1)去目标路由器从哪出去(2)到目标路由器的距离；</li></ul></li><li>上述信息表明每个路由器都知道全局信息，每过几秒，路由器就将自己的路由表告知邻居，同时也收集邻居的路由信息，从而实现路由表的更新；</li><li>这种算法的缺点如下：<ul><li>好消息传得块，坏消息传得慢；</li><li>每次发送都要发送全局路由表，所以它适用于小型网络(小于15跳)</li></ul></li><li><strong>链路状态路由算法</strong>，它是基于Dijkstra算法的，算法的基本思路如下：<ul><li>新路由器启动，首先发现邻居，向邻居发送请求，邻居都恢复。</li><li>然后计算和邻居的距离，发送echo，要求马上返回，除以2就是距离。</li><li>广播自己和邻居之间的链路状态包，则网络上的每个路由都能在本地构建一个完整的图；</li><li>针对图舒勇Dijkstra算法，找到两点之间的最短路径；</li></ul></li></ul></li><li>动态路由协议：<ul><li><strong>基于链路状态路由算法的OSPF——开放式最短路径优先</strong>，广泛应用于数据中心，也称<strong>内部网关协议IGP</strong>。<ul><li>在一个组织内部，最短路径往往是最优的；</li><li>当存在多个最短路径时，它们被称为等价路由，可以在这些等价路由上使用负载均衡；</li></ul></li><li><strong>基于距离矢量路由算法的外网路由协议BGP</strong>，国家之间的路由协议，不光考虑远近问题，还要考虑政策。<ul><li>在网络世界中一个国家就是一个自治系统<strong>AS</strong>，自治系统分为几种：<ul><li><strong>Stub AS</strong>，这种AS不会传输其他AS的包；</li><li><strong>multihomed AS</strong>，可以连接到其他AS，但大都拒绝帮其他AS传输包；</li><li><strong>Transit AS</strong>，由多个连接到其他AS并可以帮助其他AS传输包。</li></ul></li><li>每个自治路由器都有边界路由器，通过该路由器和外界建立联系；</li><li>BGP分为两类：<ul><li><strong>eBGP</strong>，边界路由器之间只用eBGP广播路由；</li><li><strong>iBGP</strong>，使用iBGP寻找内部达到外部路由的最好的边界路由；</li></ul></li></ul></li></ul></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;物理层&quot;&gt;&lt;a href=&quot;#物理层&quot; class=&quot;headerlink&quot; title=&quot;物理层&quot;&gt;&lt;/a&gt;物理层&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="computer network" scheme="http://sioce.me/tags/computer-network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>computer network review</title>
-    <link href="http://sioce.me/2020/08/06/computer-network-review/"/>
-    <id>http://sioce.me/2020/08/06/computer-network-review/</id>
-    <published>2020-08-06T08:21:51.000Z</published>
-    <updated>2020-08-11T07:53:31.218Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h2><a id="more"></a><h3 id="一、-总分为七层，这里忽略应用层后的表示层和会话层"><a href="#一、-总分为七层，这里忽略应用层后的表示层和会话层" class="headerlink" title="一、 总分为七层，这里忽略应用层后的表示层和会话层"></a>一、 总分为七层，这里忽略应用层后的表示层和会话层</h3><table><thead><tr><th align="center">名称</th><th align="center">协议</th></tr></thead><tbody><tr><td align="center">应用层</td><td align="center">DHCP、HTTP、HTTPS、TRTMP、P2P、DNS、GTP、RPC</td></tr><tr><td align="center">传输层</td><td align="center">UDP、TCP</td></tr><tr><td align="center">网络层</td><td align="center">IMCP、IP、OSPF、BGP、IPSec、GRE</td></tr><tr><td align="center">链路层</td><td align="center">ARP、VLAN、STP</td></tr><tr><td align="center">物理层</td><td align="center">网络跳线</td></tr></tbody></table><h3 id="二、-网络层的IP地址和链路层的MAC地址虽均能唯一确定用户"><a href="#二、-网络层的IP地址和链路层的MAC地址虽均能唯一确定用户" class="headerlink" title="二、 网络层的IP地址和链路层的MAC地址虽均能唯一确定用户"></a>二、 网络层的IP地址和链路层的MAC地址虽均能唯一确定用户</h3><ol><li>但IP可能是动态分布的，用户可能随时下线，此时就需要使用MAC进行区分；</li><li>MAC是早期局域网通信的产物；</li><li>之所以提出IP协议是因为MAC的查找效率低下，另外MAC地址是通过ARP协议获取的，不易处理广播风暴问题；</li></ol><h3 id="三、-关于网络分层的四个问题"><a href="#三、-关于网络分层的四个问题" class="headerlink" title="三、 关于网络分层的四个问题"></a>三、 关于网络分层的四个问题</h3><ol><li>TCP三次握手，MAC和IP对应什么操作？</li><li>已知原始地址和目标地址，其间需通过两个中转站B、C，包在中转站时是如何知道最终目的地的呢？</li><li>我们知道二层设备和三层设备，那么二层设备处理的包的内容是否包含第七层的的内容呢？</li><li>SSH登录公有云主机，都经历那些过程呢？<ul><li>解答：复杂的程序都是要分层的，网络协议同样如此，网络中的包可以由下层没上层，反之则不成立；</li><li>经过网口的网络包会被相应的程序处理(混杂模式)：<ul><li>首先摘掉第二层的头进行比对，若MAC地址一致，则交给网络层处理；</li><li>其次摘掉第三层的头比对IP，不一致则进行转发，否则交给传输层处理；</li><li>再其次拿掉第四层的头，交给TCP或者UDP处理，若是一个正常的数据包，则交给监听相应端口的应用程序，若是发起或应答，则需要发送回复包。</li><li>二层设备仅处理链路层的MAC地址，三层设备另外需要处理网络层的IP地址；</li></ul></li></ul></li></ol><h2 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h2><h3 id="一、-查询IP地址的指令：ifconfig、ip-addr、ipconfig"><a href="#一、-查询IP地址的指令：ifconfig、ip-addr、ipconfig" class="headerlink" title="一、 查询IP地址的指令：ifconfig、ip addr、ipconfig"></a>一、 查询IP地址的指令：ifconfig、ip addr、ipconfig</h3><h3 id="二、-IP地址的分类"><a href="#二、-IP地址的分类" class="headerlink" title="二、 IP地址的分类"></a>二、 IP地址的分类</h3><table><thead><tr><th align="center">类别</th><th align="center">头标识</th><th align="center">网络号(bit)</th><th align="center">主机号(bit)</th></tr></thead><tbody><tr><td align="center">A</td><td align="center">0</td><td align="center">7</td><td align="center">24</td></tr><tr><td align="center">B</td><td align="center">10</td><td align="center">14</td><td align="center">16</td></tr><tr><td align="center">C</td><td align="center">110</td><td align="center">21</td><td align="center">8</td></tr></tbody></table><table><thead><tr><th align="center">类别</th><th align="center">头标识</th><th align="center">其他</th></tr></thead><tbody><tr><td align="center">D</td><td align="center">1110</td><td align="center">多播组号(28)</td></tr><tr><td align="center">E</td><td align="center">11110</td><td align="center">留待后用(27)</td></tr></tbody></table><table><thead><tr><th align="center">类别</th><th align="center">IP地址范围</th><th align="center">最大主机数</th><th align="center">私有IP地址范围</th></tr></thead><tbody><tr><td align="center">A</td><td align="center">0.0.0.0-127.255.255.255</td><td align="center">16777214</td><td align="center">10.0.0.0-10.255.255.255</td></tr><tr><td align="center">B</td><td align="center">128.0.0.0-191.255.255.255</td><td align="center">65534</td><td align="center">172.16.0.0-172.31.255.255</td></tr><tr><td align="center">C</td><td align="center">162.0.0.0-233.255.255.255</td><td align="center">254</td><td align="center">192.168.0.0-192.168.255.255</td></tr></tbody></table><ol><li>由上表可见，A、B、C三类IP的主机数分配严重不均，因而出现了无类型域间选路(CIDR):<ul><li>CIDR将IP地址分为两部分，前面是网络号，后面是主机号，如10.100.122.2/24，24表示网络号长度；</li><li>和CIDR共存的是广播地址和子网掩码，如10.100.122.2/24对应的广播地址为10.100.122.255，子网掩码是255.255.255.0，向广播地址发送数据，则10.100.122.:中的所有机器都能收到；将IP和子网掩码进行与操作，即可得网络号。</li></ul></li><li>工作中几乎不涉及IP分类，仅使用CIDR，但需要区分公有IP和私有IP。每个网段中的第一个地址往往是网络的出口地址，最后一个地址则是广播地址；</li><li>组播地址，使用这类地址，属于某个组的机器都能收到；</li><li>MAC地址，它虽然是唯一的，但不具备大范围定位功能。它能避免组网过程中的冲突问题。</li><li>网络的状态标识(net_device flags)：<ul><li>UP：表示网卡启动；</li><li>BROADCAST：表示网卡有广播地址，可发送广播包；</li><li>MULTICAST：表示网卡可发送多播包；</li><li>LOWER_UP：表示L1启动，即网线插入；</li><li>MTU1500：表示最大传输单元，它属于第二层链路层概念，当MAC头加正文大于1500自己时，需要启动分片传输；</li><li>queueing discipline：表示排队规则，内核通过网络接口发送数据，需要为该接口配置排队规则将数据包加入队列</li><li>fifo：先入先出；</li><li>pfifo-fast：它的队列包含三个波段，每个波段先入先出，根据服务类型TOC将数据包放入不同的波段；</li></ul></li></ol><h2 id="IP地址的分配"><a href="#IP地址的分配" class="headerlink" title="IP地址的分配"></a>IP地址的分配</h2><h3 id="一、-手动配置"><a href="#一、-手动配置" class="headerlink" title="一、 手动配置"></a>一、 手动配置</h3><ol><li>使用ifconfig</li></ol><pre><code class="shell">sudo ifconfig eth1 10.0.0.1/24sudo ifconfig eth1 up#使用iproute2sudo ip addr add 10.0.0.1/24 dev eth1sudo ip link set up eth1</code></pre><h3 id="二、-动态主机配置协议-DHCP-，主要机制"><a href="#二、-动态主机配置协议-DHCP-，主要机制" class="headerlink" title="二、 动态主机配置协议(DHCP)，主要机制"></a>二、 动态主机配置协议(DHCP)，主要机制</h3><ol><li>新机器使用IP0.0.0.0向目标IP255.255.255.255发送广播，内部使用UDP封装BOOTP；</li><li>DHCP SERVER，收到广播，辨识MAC，向新机器分配IP，此过程成为DHCP Offer，DHCP Server同样使用0.0.0.0作为本机IP，向广播IP255.255.255.255发送包括IP在内的子网掩码、网关、IP租用期等数据。</li><li>新机器收到广播，向广播IP发送DHCP Request数据包，包括自身MAC、接受的IP、提供IP的DHCP服务器地址等，此时新机器的IP仍为0.0.0.0。</li><li>DHCP Server收到客户端DHCP Request，使用本机IP向客户机发送DHCP ACK消息，接受客户机选择。</li><li>在租用期过去一半时，客户机会向对应的DHCP Server发送DHCP Request消息，并根据服务器返回的ACK消息更新租用期限和TCP/IP参数。</li></ol><h3 id="三、-预启动执行环境-PXE-，使用PXE管理员可以自动给数据中心的服务器安装操作系统"><a href="#三、-预启动执行环境-PXE-，使用PXE管理员可以自动给数据中心的服务器安装操作系统" class="headerlink" title="三、 预启动执行环境(PXE)，使用PXE管理员可以自动给数据中心的服务器安装操作系统"></a>三、 预启动执行环境(PXE)，使用PXE管理员可以自动给数据中心的服务器安装操作系统</h3><ol><li>操作系统的启动：<ul><li>启动BIOS，读取硬盘MBR启动扇区，启动GRUB；</li><li>GRUB加载内核、作为根文件系统initramfs文件；</li><li>内核启动，初始化操作系统；</li></ul></li><li>PXE在BIOS启动之后发挥作用，主要流程如下：<ul><li>PXE客户端放在BIOS中，通过BIOS将PXE加载到内存中；</li><li>PXE客户端发起DHCP请求，HDHCP Server给PXE客户端分配IP，并告知其PXE服务器地址、启动文件位置；</li><li>PXE客户端使用TFTP协议向TFTP服务器请求下载启动文件，所以PXE服务器上还需要配置TFTP服务器；</li><li>PXE客户端根据收到的启动文件向TFTP服务器请求计算机配置信息文件，告知客户端内核、initramfs位置；</li><li>PXE客户端请求内核文件和initramfs文件；</li><li>PXE客户端启动操作系统内核。</li></ul></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;分层&quot;&gt;&lt;a href=&quot;#分层&quot; class=&quot;headerlink&quot; title=&quot;分层&quot;&gt;&lt;/a&gt;分层&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="computer network" scheme="http://sioce.me/tags/computer-network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>20200804小记</title>
-    <link href="http://sioce.me/2020/08/06/20200804%E5%B0%8F%E8%AE%B0/"/>
-    <id>http://sioce.me/2020/08/06/20200804%E5%B0%8F%E8%AE%B0/</id>
-    <published>2020-08-06T08:03:20.000Z</published>
-    <updated>2020-08-08T04:07:05.905Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="无趣"><a href="#无趣" class="headerlink" title="无趣"></a>无趣</h2><a id="more"></a><p>一只蟑螂躺在湿漉漉的洗漱台上，翅膀凌乱，细脚无力的蹬弹，应该是吃下了地上的饵料。<br>它不应该在这儿，如果回到巢穴，还能给子孙儿郎充充饥，在这儿算什么呢？<br>我没有碰它，也许它还能翻过来；<br>你们也太···，室友看着躺在那的蟑螂说，然后就给我们示范了正确处理尸体的方法。<br>垃圾桶，也算是死得其所吧！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;无趣&quot;&gt;&lt;a href=&quot;#无趣&quot; class=&quot;headerlink&quot; title=&quot;无趣&quot;&gt;&lt;/a&gt;无趣&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="小记" scheme="http://sioce.me/categories/%E5%B0%8F%E8%AE%B0/"/>
-    
-    
-      <category term="心情" scheme="http://sioce.me/tags/%E5%BF%83%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>database</title>
-    <link href="http://sioce.me/2020/08/06/database/"/>
-    <id>http://sioce.me/2020/08/06/database/</id>
-    <published>2020-08-06T07:33:28.000Z</published>
-    <updated>2020-08-17T12:01:30.155Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="数据库基础知识"><a href="#数据库基础知识" class="headerlink" title="数据库基础知识"></a>数据库基础知识</h2><a id="more"></a><h3 id="基础架构"><a href="#基础架构" class="headerlink" title="基础架构"></a>基础架构</h3><center><img src="https://lyvq2q.bl.files.1drv.com/y4miHS7P8QcaRpvextd0xEkeA7LtNvT0QidGYBeBZUH_f4hj_65DL_KVaXF1-L2ROfXg_Zo0AsyAXeqfPjBH_4QFqS1v9M1gZDryX8Q40iSa9vazZvbUUE6kAMCn-g1Z4KCJp05fs0ULr_d9TVfRp-McOpKeo40zMMrmsnxznQqI7Lzzm1oEORx59XrCxvNeRuePA_3tqNraBgz59Fw7UhEgA?width=1920&height=1440&cropmode=none" width="40%" /><br>图1   mySQL逻辑架构</center><ul><li>总体上，mySQL分为Server和存储引擎两部分：<ol><li><strong>Server</strong>：涵盖MySQL的大多核心服务功能及所有内置函数，所有跨存储引擎操纵在这一层执行；</li><li><strong>存储引擎</strong>，负责数据的存储与提取，其架构是插件式的，支持多个存储引擎，常用的是InnoDB。</li></ol></li></ul><h4 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h4><ul><li><strong>连接器</strong>：它负责服务端和客户端之间连接的构建、维持与管理，以及权限的分配；<ol><li>连接使用的是TCP，用户密码验证成功，连接器根据权限表给相应用户分配权限；</li><li>连接长时间无操作，将会被断开，由参数<code>wait_timeout</code>进行控制。<ul><li><strong>长连接</strong>：连接成功，持续操作，一置使用一个连接，<em>建议使用此连接，但会占用较大内存。</em>；</li><li><strong>短连接</strong>，连接成功，短暂操作，再次操作需建立新连接；</li></ul></li></ol></li><li><strong>查询缓存</strong>：<ol><li>MySQL收到查询语句，首先查找缓存，缓存中保存语句和语句结果的key-value对，命中则直接返回缓存结果；否则将继续操作并将结果转化为key-value对存入缓存中。</li><li><strong>查询缓存利大于弊</strong>，任何表的更新都将导致缓存中对应表内容的清空，查询缓存就会失效，命中率低下。<em>另外MySQL8.0已删除此功能</em>。</li></ol></li><li><strong>分析器</strong>，缓存未命中，则需要执行语句：<ol><li><strong>词法分析</strong>，它对输入字符串进行分词，识别分词对应的含义；</li><li><strong>语法分析</strong>，判断语法是否符合MySQL语法；</li></ol></li><li><strong>优化器</strong>，当表内存在多个索引时，决定使用哪个索引；或者语句存在多表关联时，决定各个表的连接顺序。一条语句可能存在多个执行方案，优化器将选择效率最高的方案；</li><li><strong>执行器</strong>：<ol><li>首先判断用户是否拥有对表的执行权限；</li><li>根据表的引擎定义，使用引擎提供的接口。对于无索引的表，循环循环判断表的每一行；对于有索引的表，则循环判断满足条件的每一行。</li></ol></li></ul><h3 id="日志系统"><a href="#日志系统" class="headerlink" title="日志系统"></a>日志系统</h3><ul><li>MySQL可以恢复半个月内任意一秒的状态；</li><li>输入一个更新语句，首先会清空对应表的缓存，接下来才是分析、优化和执行。</li></ul><h4 id="redo-log模块"><a href="#redo-log模块" class="headerlink" title="redo log模块"></a>redo log模块</h4><ul><li>这一日志模块为存储引擎层持有；</li><li>为了降低每次更新都写磁盘的IO成本，MySQL使用了<strong>WAL, Write-Ahead Logging</strong>技术，即先写日志，再写磁盘。</li></ul><center><img src="https://livq2q.bl.files.1drv.com/y4mQLbCQYH7Y0CaRtCMm1-ltiQ2p6s8o19AVd36CWOz-ME1094JMacdn2OqNuqSuZHWIG188Jbrd5fzHc9V5sYAKjULA_NmS2puo0N28EMPfT1VAZIQ-Xy1iFffaoMBoJ24MvAF3uXQ17AJdymFtZaGunHmMyTetE_qTQmF9CUk4_KWQAazWJ0BuoiUtpA1E6scnUwnVdV5MpDMo5jPpHPLMw?width=1142&height=856&cropmode=none" width="40%" /><br>图2   redo log示意图</center><ul><li>InnoDB的redo log是固定大小的，比如可以配置一组四个大小为1GB的文件，从头开始写，写到末尾就返回开头循环写。<ol><li>上图中<code>write pos</code>是当前记录的位置，边写边后移；<code>checkpoint</code>是要擦除的位置。</li><li>当write pos追上checkpoint时，就需要停下来，将一些记录写入磁盘，并推进checkpoint。</li></ol></li><li>基于redo log，InnoDB就可以保证数据库发生异常重启时，之前提交的记录不会丢失。这种能力叫做<strong>crash-safe</strong>；</li></ul><h4 id="binlog"><a href="#binlog" class="headerlink" title="binlog"></a>binlog</h4><ul><li>这一日志模块为Server层持有，且此日志智能用于归档；</li><li>之所以存在这一日志模块，是因为MySQL自带的引擎MyISAM没有crash-safe能力。</li><li>与redo log的差异：<ol><li>redo log是InnoDB引擎特有的，binlog是MySQL Server实现的，所有引擎均可使用；</li><li>redo log是物理日志，记录在某个数据页做的修改；binlog是逻辑日志，记录语句的原始逻辑；</li><li>redo log是循环写的；binlog是追加写的，即写到一定大小会自动切换到下一个，并不会覆盖以前的内容；</li></ol></li><li>SQL更新语句的执行：<ol><li>执行器向引擎取某一行，引擎根据树搜索该行。如果该行存在于内存中，则直接返回给执行器；否则，先从磁盘中读入内存，在执行；</li><li>执行器对取到数据进行操作，完成后调用引擎接口写入新数据。</li><li>引擎将新数据存入内存，并在redo log中记录更新操作，redo log进入<strong>prepare状态</strong>。</li><li>引擎通知执行器操作完成，可以随时提交事务；</li><li>执行器生成该操作的binlog，并写入磁盘；</li><li>执行器调用引擎提交事务接口，更改redo log<strong>状态为commit</strong>，更新完成；</li></ol></li><li>redo log的两个状态——<strong>两阶段提交</strong>：<ol><li>将数据库恢复到某个时刻T：<ul><li>找到距T最近的备份，将其恢复到临时库；</li><li>从备份时间点开始，将备份的binlog去除，重放到时刻T；</li></ul></li><li>为什么两阶段提交？假设ID=2的行中字段C的值为0，现在将其值更新为1。但写完第一个日志，发生了crash，此时第二个日志未更新：<ul><li><strong>先写redo log再写binlog</strong>，由于redo log的crash-safe能力，即使系统崩溃，恢复后字段C的值仍为1，但binlog未记录上述更新操作，导致字段C的值无法恢复；</li><li><strong>先写binlog后写redo-log</strong>，此时恢复数据，redo log未写入，字段C的值仍为0，但binlog记录了更新操作，就会更新字段C的值为1，与原库值不同。</li></ul></li></ol></li></ul><h3 id="事务隔离"><a href="#事务隔离" class="headerlink" title="事务隔离"></a>事务隔离</h3><ul><li>事务的目标是保证一组操作要么完全完成，要么全部失败。MySQL中事务的支持是在引擎层实现的。并非所有的引擎都支持事务。</li><li>事务的特点：<strong>ACID(Atomicity, Consistency, Isolation, Durability)</strong>;</li></ul><center><img src="https://k4vq2q.bl.files.1drv.com/y4mdp5cyZzcYHtFg1gy9sPrWZrhKEoLtcnJIfcSQAZWN9s2pVPw8pVL7AprpHZCCZMPQ-Atc8Fapi94mH2C7aDkV9aRvfCaM4jbEi9axowTjini6ZBN13nc5zhppj9SZ7K3VT6o_QGZLAhkHWEdWoarwbW8aw1_lAzT9dU5ztUR4VrckRXEwt54AYUEhBVsycJk1zw5qrgYfg7jIODY1lqGpQ?width=1142&height=737&cropmode=none" width="40%" /><br>图3   回滚操作示意图</center><ul><li>事务之<strong>隔离</strong>：<ol><li>当数据库上同时执行多个事务时，就可能出现脏读、不可重复读、幻读等问题，隔离就是为解决这些问题而诞生的。</li><li>隔离带来的性能损失与隔离级别成正比。分为以下几个级别：<ul><li><strong>读未提交</strong>，一个事务未提交，它做的变更能被其他事务看到；</li><li><strong>读提交</strong>，一个事务提交后，他做的变更才能被其他事务看到；</li><li><strong>可重复读</strong>，一个事务执行看到的数据，与其启动时看到的数据一致。这种模式下未提交变更其他事务是不可见的；</li><li><strong>串行化</strong>，对同一行数据的读写需要申请锁。一旦锁被占用，他就要等待。</li></ul></li><li>不同级别隔离的实现原理——<strong>视图</strong>：数据库内会创建视图，访问时的结果以视图为准。<ul><li>“可重复读”隔离级别下，事务启动时创建试图，且整个事务存在期间都使用这个视图。</li><li>“读提交”隔离级别下，视图在每个SQL语句执行前创建；</li><li>“读未提交”隔离级别不存在视图的概念；</li></ul></li><li>事务隔离的实现：<ul><li>MySQL更新每条记录的同时会就一条回滚操作，通过回滚操作都可得到前一个状态的值；</li><li>如图3，途中视图A、B、C中记录的值分别为1、2、4；数据库内一条记录存在多个版本叫做<strong>数据库的多版本并发控制</strong>；</li><li>当没有视图需要回滚日志时，回滚日志会被删除；</li></ul></li><li>事务的启动方式：<ul><li>显式启动：使用<code>begin/start transaction</code>，配套的提交语句为<code>commit</code>，回滚语句为<code>rollback</code>。</li><li><code>set autocommit=0</code>，这个命令会关闭线程自动提交，也就是说事务会一直存在，直到主动执行<code>commit</code>或者<code>rollback</code>。</li><li>设置<code>set autocommit=1</code>时，每个事务的开始都得执行<code>begin</code>，为了省去begin语句的开销可以使用<code>commit work and chain</code>，表示提交事务并自动开启下一个事务；</li></ul></li></ol></li></ul><h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul><li>索引的出现是为了提高数据查询的效率。</li><li>实现索引的三种方式：<ol><li><strong>哈希表</strong>，输入键值，通过哈希函数将器转换到保存值数组的固定位置，<strong>适用于等值查询场景</strong>。</li><li><strong>有序数组</strong>，它在等值查询和范围查询等场景的表现都很优秀，但是它的插入成本太高，只适用于静态存储场景。</li><li><strong>搜索树</strong>，在二叉搜索树中的查询复杂度为$O(log(N))$，为了维持其搜索复杂度，需要保证其为平衡二叉树。也存在多叉树，每个节点的儿子从左到右递增。二叉搜索树的效率时最高的，但考虑到索引有时需要存储到磁盘上，数据库并未使用二叉树。</li><li>为了使查询尽可能少的访问数据块，就需要使用N叉树，N叉树以其优秀的读写性能和其对磁盘读写模式的契合，广泛应用于数据库索引中；</li></ol></li><li>MySQL中索引是在存储引擎实现的。</li></ul><pre><code class="mysql">mysql&gt; create table T(  id int primary key,  k int not null,  name archar(16),  index (k)) engine=InnoDB;</code></pre><ul><li>InnoDB的索引模型：<ol><li>InnoDB使用B+树索引模型，其中表根据主键顺序以索引的形式存放，即为<strong>索引组织表</strong>。</li><li>上述代码创建了一个带有两个索引的表T，假设其中存在五条记录，每条记录(ID, k)为(100，1)、(200，2)、(300， 3)、(400，4)、(500，5)，其索引如图4所示。</li><li>从图4可以看出，索引类型分别为<strong>主键索引</strong>和<strong>非主键索引</strong>。<ul><li>主键索引，叶子节点存放整行数据。采用主键查询，只需要搜索主键的B+索引树；</li><li>非主键索引，叶子节点存储的是主键的值。采用非主键查询，需要先查询非主键对应的B+索引树，在查询主键对应的B+所引树，此过程称为<strong>回表</strong>。</li></ul></li></ol></li></ul><center><img src="https://kovq2q.bl.files.1drv.com/y4mQmXjscCp2T7JGn1uKm8GkYmy7un2J5T5Xnpxl7MnMCZ0MU4P7ODQpnZHDFeMFlHlUbUNZLb2Gb9eCnuy4hPDEe5y6uLwlgEgd1cTJf6JVK9dBCg9Yx21tiS5ivs7uoERndxMXsNsBxaWtLlt1fOhqzx1d6exokJZJkc14rE69jvmo8ebOvSpgnP6iUNazQI2vU10tV5UyLxqj062GFtVCA?width=1142&height=856&cropmode=none" width="40%" /><br>图4   索引示意图</center><ul><li><strong>索引维护</strong>：<ol><li>在图4的索引中插入ID为700的新行，则可直接插入到R5之后。若插入ID为400的新行，就需要逻辑上挪动后面的数据。另外，倘若R5所在的数据页已满，就需要申请新的数据页并挪动数据，性能会严重下降。这叫做<strong>页分裂</strong>。</li><li>存在页分裂就存在<strong>页合并</strong>，页分裂会降低空降利用率，页合并则反之。</li><li>使用自增主键时插入不涉及挪动其他字段。但并不适用于所有场景。</li><li>主键的长度越小，普通索引的叶子节点就越小。</li></ol></li><li>对图4对应的索引执行<code>select * from T where k between 3 and 5</code>，需要指定五次树的查询操作，三次查找k索引树和两次回表操作。如何优化索引，避免回表操作呢》</li><li><strong>覆盖索引</strong>，如果执行<code>select ID from T where k between 3 and 5</code>，这时就可以只查询k的B+索引树；</li><li><strong>最左前缀原则</strong>，数据库中不可能为每一种查询都设计一个索引，但一让些不频繁的请求走全表扫描效率不高。此时使用最左前缀原则可以很好解决这个问题。这里有一个关键问题，<strong>建立联合索引时，如何安排索引内的字段</strong><ol><li>通过调整顺寻，可以少维护一个索引，那么此顺序就需要优先考虑采用；</li><li>尽量降低空间需求；</li></ol></li><li><strong>索引下推</strong>。</li></ul><h3 id="全局锁和表锁"><a href="#全局锁和表锁" class="headerlink" title="全局锁和表锁"></a>全局锁和表锁</h3><ul><li>MySQL的锁大致可以分为三类：<strong>全局锁、表级锁和行锁</strong></li></ul><h4 id="全局锁"><a href="#全局锁" class="headerlink" title="全局锁"></a>全局锁</h4><ul><li>使用命令<code>flush table with read lock(FTWRL)</code>，可以使整个库处于只读状态，任何线程的更新库操作都将被阻塞。</li><li>全局锁的经典使用场景是<strong>全库逻辑备份</strong>。使用FTWRL命令的缺点是业务不能使用。此时备份数据库将产生错误的结果。<ul><li>为了避免FTWRL带来的问题，可以使用事务进行备份，但遗憾的是并非所有的引擎都支持事务。</li><li>另外一个全局只读的命令是<code>set global readonly=true</code>，但不建议在做备份时使用：<ol><li>readonly值会被用来做其他逻辑，修改global变量影响范围太大；</li><li>FTWRL指令在客户端发生异常断开时会自动释放锁，以便继续进行数据库更新。使用readonly发生异常将导致数据库长时间不能更新。</li></ol></li></ul></li></ul><h4 id="表级锁"><a href="#表级锁" class="headerlink" title="表级锁"></a>表级锁</h4><ul><li>MySQL中表级别的锁有两种：<strong>表锁和元数据锁</strong>。</li><li><strong>表锁</strong>：<ol><li>语法：<code>unlock/lock tables ... read/write</code>，客户端异常断开时，锁会自动释放。该语句不仅能限制其他线程读写，也会限制自身的操作。</li></ol></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;数据库基础知识&quot;&gt;&lt;a href=&quot;#数据库基础知识&quot; class=&quot;headerlink&quot; title=&quot;数据库基础知识&quot;&gt;&lt;/a&gt;数据库基础知识&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="技术笔记" scheme="http://sioce.me/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="database" scheme="http://sioce.me/tags/database/"/>
     
   </entry>
   
